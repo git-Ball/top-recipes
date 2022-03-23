@@ -1,0 +1,165 @@
+header {
+  position: relative;
+  /* padding: 10px; */
+}
+
+header h1 {
+  display: inline-block;
+  background-color: #29303c;
+  color: white;
+  margin-bottom: auto;
+}
+
+header nav {
+  font-size: auto;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  /* position: absolute;
+  right: 0;
+  bottom: 26px;
+  margin-right: 16px; */
+  margin: 0;
+  /* margin-left: 10px; */
+}
+
+.navbar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  /* background: #141719d4; */
+  background-color: #141719d4;
+}
+
+.navbar:hover {
+  background-color: #141719fa;
+  /* color: rgb(118, 201, 98); */
+}
+
+.all-offers-btn {
+  margin-left: 15px;
+}
+
+.navbar-links {
+  text-decoration: none;
+  margin: 0;
+}
+
+.navbar-links ul {
+  margin: 0;
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  /* text-align: center; */
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  list-style: none;
+}
+
+.navbar-links li {
+  list-style: none;
+}
+
+.navbar-links a, #welcome {
+  text-decoration: none;
+  color: white;
+  display: block;
+  padding: 1rem;
+}
+
+.brand-title {
+  font-size: 1.5rem;
+  margin: 0;
+  padding: 13px;
+  -webkit-transition: 2s;
+  transition: 2s;
+}
+
+.home {
+  padding: 10px;
+  color: white;
+  margin: 0;
+  text-decoration: none;
+}
+
+#second-home {
+  display: none;
+}
+
+header nav > * {
+  float: left;
+}
+
+nav a {
+  margin: 0 0.5em;
+}
+
+nav a:hover {
+  cursor: pointer;
+  /* color: #6f9665; */
+  font-weight: bolder;
+  background-color: #8080804f;
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+
+/* nav a.welcome:hover{
+  color: rgb(255, 255, 255);
+  font-weight: bolder;
+}
+nav a.welcome{
+  margin-right: 14px;
+  
+   */
+/* } */
+.home:hover {
+  cursor: pointer;
+  font-weight: bolder;
+  color: white;
+  overflow: hidden;
+}
+
+.toggle-button {
+  position: absolute;
+  top: .75rem;
+  right: 1rem;
+  display: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 30px;
+  height: 21px;
+}
+
+.toggle-button .bar {
+  height: 3px;
+  width: 100%;
+  background-color: white;
+  border-radius: 10px;
+}
+
+#welcome {
+  font-weight: bold;
+  /* border: solid 0.7px;
+  padding: 3.4px;
+  border-radius: 24px;
+  background: #3b515c;
+  border-color: rgb(96, 230, 118); */
+}
+
+.user,
+.guest {
+  margin: 0;
+  padding: 0;
+}
+/*# sourceMappingURL=header.component.css.map */
