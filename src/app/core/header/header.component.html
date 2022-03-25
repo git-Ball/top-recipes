@@ -48,7 +48,7 @@
    
     <div class='brand-title'>
         <a routerLink="/" class="home">Home</a>
-        <a href="#" class="toggle-button">
+        <a  class="toggle-button">
             <span class="bar"></span>
             <span class="bar"></span>
             <span class="bar"></span>
@@ -75,9 +75,9 @@
     <div *ngIf="!testa" class="navbar-links">
       <ul>
          
-          <li> <a class="home" id="second-home" routerLink="/">Home</a></li>
+          <li> <a routerLink="/" class="home" id="second-home">Home</a> </li>
 
-          <li><a href="/all-offers" class='all-offers-btn'>All Recipes</a></li>
+          <li><a routerLink="/recipes" class='all-offers-btn'>All Recipes</a></li>
         
           <li class="guest"><a routerLink="/login">Login</a></li>
           <li class="guest"><a routerLink="/register">Register</a></li>

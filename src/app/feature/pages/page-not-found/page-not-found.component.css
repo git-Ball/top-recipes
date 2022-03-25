@@ -1,52 +1,40 @@
-.mainbox {
+.not-found-wrapper {
+  background: #000000bd;
   margin: auto;
-  height: 550px;
-  width: 550px;
-  position: relative;
+  width: 60%;
+  margin-top: 150px;
+  height: 340px;
+  border: solid grey 2px;
+  border-radius: 10px;
 }
 
-.err {
-  color: #95c2de;
-  font-family: 'Nunito Sans', sans-serif;
-  font-size: 11rem;
-  position: absolute;
-  left: 20%;
-  top: 8%;
+.not-found {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
 }
 
-.far {
-  position: absolute;
-  font-size: 8.5rem;
-  left: 42%;
-  top: 15%;
-  color: #95c2de;
+.not-found > div {
+  font-size: 3.5rem;
+  color: white;
+  margin-top: 100px;
+  margin-right: 10px;
 }
 
-.err2 {
-  color: #95c2de;
-  font-family: 'Nunito Sans', sans-serif;
-  font-size: 11rem;
-  position: absolute;
-  left: 68%;
-  top: 8%;
-}
-
-.msg {
-  text-align: center;
-  font-family: 'Nunito Sans', sans-serif;
-  font-size: 1.6rem;
-  position: absolute;
-  left: 16%;
-  top: 45%;
-  width: 75%;
-}
-
-a {
+.not-found-wrapper > p > a {
   text-decoration: none;
-  color: #95c2de;
+  color: #9ef465;
 }
 
-a:hover {
-  text-decoration: underline;
+.not-found-text {
+  margin-top: 50px;
+  color: white;
+  text-align: center;
+  font-size: 1em;
 }
 /*# sourceMappingURL=page-not-found.component.css.map */

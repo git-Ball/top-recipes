@@ -1,0 +1,19 @@
+.auth-heading {
+  background: rgba(128, 128, 128, 0.5);
+  color: white;
+  font-size: 1.5rem;
+  text-align: center;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  padding: 8px;
+  margin-top: 50px;
+}
+
+.auth-page-wrapper {
+  background: #000000b0;
+  border-radius: 20px;
+  margin: auto;
+  width: 96%;
+  height: 500px;
+}
+/*# sourceMappingURL=login.component.css.map */

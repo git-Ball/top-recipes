@@ -20,6 +20,7 @@ import { PagesModule } from './feature/pages/pages.module';
 import { UserService } from './core/user.service';
 import { CommonModule } from '@angular/common';
 import { AuthRoutingModule } from './auth/auth-routing.module';
+import { CoreModule } from './core/core.module';
 // import { StorageService } from './core/storage.service';
 
 @NgModule({
@@ -42,7 +43,8 @@ import { AuthRoutingModule } from './auth/auth-routing.module';
     AuthModule,
     RecipesModule,
     PagesModule,
-    AuthRoutingModule
+    AuthRoutingModule,
+    CoreModule
   ],
   providers: [
     UserService,

@@ -1,10 +1,11 @@
 import { RouterModule, Routes } from "@angular/router";
+import { AllRecipesComponent } from "./all-recipes/all-recipes.component";
 // 
 const routes:Routes =[
-    // {
-    //     path:'recipes',
-    //     component:,
-    // },
+    {
+        path:'recipes',
+        component:AllRecipesComponent,
+    },
     // {
     //     path:'recipes/new',
     //     component:,
