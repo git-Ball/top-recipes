@@ -45,20 +45,16 @@
 
   <header>
     <nav class="navbar">
-        <!-- <div id="user">
-           
-            <a class="welcome" href="javascript:void(0)"></a> -->
-        <!-- </div> -->
-        <!-- <a id="user" class="welcome" href="javascript:void(0)"></a> -->
+   
     <div class='brand-title'>
-        <a class="home" href="/">Home</a>
+        <a routerLink="/" class="home">Home</a>
         <a href="#" class="toggle-button">
             <span class="bar"></span>
             <span class="bar"></span>
             <span class="bar"></span>
         </a>
     </div>
-    <div class="navbar-links">
+    <div *ngIf="testa" class="navbar-links">
         <ul>
             <li class="user" >
                 <span id="welcome">Welcome, </span>
@@ -69,11 +65,31 @@
             <li><a href="/all-offers" class='all-offers-btn'>All Recipes</a></li>
             <li class="user"><a routerLink="/create">Create Recipes</a></li>
             <li class="user"><a routerLink="/my-offers">My Recipes</a></li>
-            <li class="guest"><a routerLink="/login">Login</a></li>
-            <li class="guest"><a routerLink="/register">Register</a></li>
+            <!-- <li class="guest"><a routerLink="/login">Login</a></li>
+            <li class="guest"><a routerLink="/register">Register</a></li> -->
             <li class="user"><a class="logout" href="javascript:void(0)">Logout</a></li>
         
         </ul>
-    </div>    
+    </div> 
+    
+    <div *ngIf="!testa" class="navbar-links">
+      <ul>
+         
+          <li> <a class="home" id="second-home" routerLink="/">Home</a></li>
+
+          <li><a href="/all-offers" class='all-offers-btn'>All Recipes</a></li>
+        
+          <li class="guest"><a routerLink="/login">Login</a></li>
+          <li class="guest"><a routerLink="/register">Register</a></li>
+      
+      
+      </ul>
+  </div>    
     </nav>
 </header>
+
+     <!-- <div id="user">
+           
+            <a class="welcome" href="javascript:void(0)"></a> -->
+        <!-- </div> -->
+        <!-- <a id="user" class="welcome" href="javascript:void(0)"></a> -->
