@@ -7,16 +7,16 @@ import { UserService } from '../user.service';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
-  testa:boolean = false;
-// get isLoggedIn(): boolean{
-//   return true;
-//   // return this.userService.isLogged;
-// }
+  // testa:boolean = false;
+get isLoggedIn(): boolean{
+  // return true;
+  return this.userService.isLogged;
+}
   constructor(private userService:UserService) { }
 
   ngOnInit(): void {
     // console.log(this.userService.isLogged)
-    console.log('Check',this.testa)
+    // console.log('Check',this.testa)
   }
 loginHandler():void {
 this.userService.login()
