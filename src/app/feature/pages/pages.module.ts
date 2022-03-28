@@ -10,7 +10,8 @@ import { RecipesModule } from '../recipes/recipes.module';
 @NgModule({
   declarations: [
     HomePageComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+ 
   ],
   imports: [
     CommonModule,

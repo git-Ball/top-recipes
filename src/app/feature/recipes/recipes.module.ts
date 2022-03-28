@@ -4,13 +4,15 @@ import { RecipesPageComponent } from './recipes-page/recipes-page.component';
 import { AllRecipesComponent } from './all-recipes/all-recipes.component';
 import { RouterModule } from '@angular/router';
 import { RecipesRoutingModule } from './recipes-routing-module';
+import { CreatePageComponent } from './create-page/create-page.component';
 
 
 
 @NgModule({
   declarations: [
     RecipesPageComponent,
-    AllRecipesComponent
+    AllRecipesComponent,
+    CreatePageComponent
   ],
   imports: [
     CommonModule,
@@ -19,7 +21,9 @@ import { RecipesRoutingModule } from './recipes-routing-module';
   ],
   exports:[
     RecipesPageComponent,
-    AllRecipesComponent
+    AllRecipesComponent,
+    CreatePageComponent
+    
   ]
 })
 export class RecipesModule { }
