@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
+
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -46,7 +48,8 @@ import { CreatePageComponent } from './feature/recipes/create-page/create-page.c
     RecipesModule,
     PagesModule,
     AuthRoutingModule,
-    CoreModule
+    CoreModule,
+    HttpClientModule
   ],
   providers: [
     UserService,
