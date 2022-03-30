@@ -1,1 +1,87 @@
-<p>create-page works!</p>
+<!-- <p>create-page works!</p>
+<section
+    id="create-page"
+    class="auth"
+  >
+<form  id="create">
+  <h1 class="create-heading">Create Offer</h1>
+
+    <div class="container">
+      <label for="leg-title"
+        >Offer title: <span class="red-star"> *</span></label
+      >
+      <input
+        type="text"
+        id="title"
+        name="title"
+        placeholder="Enter offer title..."
+      />
+      <label for="manufacturer"
+        >Manufacture: <span class="red-star"> *</span></label
+      >
+      <input
+        type="text"
+        id="manufacturer"
+        name="manufacturer"
+        placeholder="Enter item manufacture..."
+      />
+
+      <label for="offer-img">Image:</label>
+      <input
+        type="text"
+        id="img"
+        name="img"
+        placeholder="Upload image url here..."
+      />
+      <label for="description"
+        >Description: <span class="red-star"> *</span></label
+      >
+      <textarea name="description" id="description"></textarea>
+      <input class="btn submit" type="submit" value="Create Offer" />
+    </div>
+  </form>
+</section> -->
+
+
+<form id="create">
+  <!-- <div class="container"> -->
+
+    <h1 class="create-heading">Create Recipe</h1>
+    
+     <!-- <div class="error-msg"></div> -->
+     
+    <label for="recipeName">Recipe title*:</label>
+    <input type="text" id="recipeName" name="recipeName" placeholder="Chicken with BBQ Souse" />
+
+    <label for="recipe-img">Image</label>
+    <input
+      type="text"
+      id="img"
+      name="img"
+      placeholder="Upload image url here..."
+    />
+    <label for="ingredients">Ingredients*</label>
+
+    <!-- <label for="description"
+          >Description: <span class="red-star"> *</span></label
+        > -->
+        <textarea name="ingredients" id="ingredients" placeholder="salt 10g, black peper 15g..."></textarea>
+    <!-- <input type="textarea" id="ingredients" name="ingredients" /> -->
+    <label for="preparation:">Preparation*</label>
+    <!-- <input type="text" id="preparation" name="preparation" /> -->
+    <textarea name="preparation" id="preparation" placeholder="1.Wash and cut mashrooms.."></textarea>
+
+ 
+    <button type="submit" id="submit-button" class="btn-submit" value="Create">Create recipe</button>
+    <p class="field">
+      <!-- <span> -->
+      
+        <!-- <a @click=${(event) => redirect(event)} href="/register"
+          >here</a -->
+       <!-- </span -->
+      >
+    </p>
+  <!-- </div> -->
+</form>
+
+<!-- <div class="spacer"></div> -->

@@ -5,6 +5,8 @@ import { AllRecipesComponent } from './all-recipes/all-recipes.component';
 import { RouterModule } from '@angular/router';
 import { RecipesRoutingModule } from './recipes-routing-module';
 import { CreatePageComponent } from './create-page/create-page.component';
+import { RecipeListItemComponent } from './recipe-list-item/recipe-list-item.component';
+import { RecipeListComponent } from './recipe-list/recipe-list.component';
 
 
 
@@ -12,7 +14,9 @@ import { CreatePageComponent } from './create-page/create-page.component';
   declarations: [
     RecipesPageComponent,
     AllRecipesComponent,
-    CreatePageComponent
+    CreatePageComponent,
+    RecipeListItemComponent,
+    RecipeListComponent
   ],
   imports: [
     CommonModule,
@@ -22,7 +26,10 @@ import { CreatePageComponent } from './create-page/create-page.component';
   exports:[
     RecipesPageComponent,
     AllRecipesComponent,
-    CreatePageComponent
+    CreatePageComponent,
+
+    RecipeListItemComponent,
+    RecipeListComponent
     
   ]
 })
