@@ -24,11 +24,13 @@ import { CommonModule } from '@angular/common';
 import { AuthRoutingModule } from './auth/auth-routing.module';
 import { CoreModule } from './core/core.module';
 import { CreatePageComponent } from './feature/recipes/create-page/create-page.component';
+import { RecipeService } from './core/recipe.service';
 // import { StorageService } from './core/storage.service';
 
 @NgModule({
   declarations: [
     AppComponent,
+    
     // HomePageComponent,
     // PageNotFoundComponent,
     // RecipesPageComponent,
@@ -53,6 +55,7 @@ import { CreatePageComponent } from './feature/recipes/create-page/create-page.c
   ],
   providers: [
     UserService,
+    RecipeService
     // StorageService
   ],
   bootstrap: [

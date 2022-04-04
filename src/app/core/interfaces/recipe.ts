@@ -1,9 +1,16 @@
 import { IUser } from "./user";
 
-export interface IRecipe{
-    recipeName:string,
-    _id:IUser;
-    created_at:string;
-    updateAt:string;
-    __v:number;
+export interface IRecipe {
+
+    recipeName: string,
+    img: string,
+    ingredients: string,
+    preparation: string,
+    objectId: string;
+    updateAt: string;
+    created_at: string;
+
+    owner: IUser,
+    // _id:IUser;
+    // __v:number;
 }
