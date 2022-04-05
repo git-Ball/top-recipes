@@ -40,7 +40,9 @@
         color: white;
     }
     .recipe-details{
-        display: inline-block;
+        display: block;
+       
+        width: fit-content;
         margin-top: 15px;
         color: #555;
         padding: 7px;
@@ -49,12 +51,21 @@
         border: 1px solid rgba(218, 181, 181, 0.829);
         color: white;
         margin: 10px;
+        .bold{
+            font-weight: bold;
+            color: #abb2b0c7;
+            margin-right: 5px;
+            margin-bottom: 10px;
+
+        }
     }
 }
 .recipe-main-details{
     margin-left:50px;
     .recipe-details{
-        display: inline-block;
+        display: block;
+      
+        width: fit-content;
         margin-top: 15px;
         color: #555;
         padding: 7px;
@@ -63,6 +74,17 @@
         border: 1px solid rgba(218, 181, 181, 0.829);
         color: white;
         margin: 10px;
+        .bold{
+            font-weight: bold;
+            margin-right: 5px;
+            color: #abb2b0c7;
+            margin-bottom: 10px;
+
+        }
+        
     }
 
+}
+.details-spacer{
+    padding-bottom: 30px;
 }

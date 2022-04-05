@@ -12,22 +12,24 @@
     <h2>Title: {{ recipe.recipeName }}</h2>
   
     <span class="recipe-details">
-        Owner:{{recipe.owner}}
+        <span class="bold">Owner</span>:{{recipe.owner}}
     </span>
     <span class="recipe-details">
-        Created:{{recipe.created_at}}
+      <span class="bold">Created</span>: {{ recipe.createdAt}}
+        <!-- {{}} -->
     </span>
     
   </div>
   <div class="recipe-main-details">
     <p class="recipe-details">
-     Ingredients: {{recipe.ingredients}}
+      <span class="bold">Ingredients</span>: {{recipe.ingredients}}
     </p>
-    <p class="recipe-details">
-      Preparation{{recipe.preparation}}
+    <p class="recipe-details prep">
+      <span class="bold">Preparation</span>{{recipe.preparation}}
         
     </p>
   </div>
+  <div class="details-spacer"></div>
 </div>
 
 <!-- <div *ngIf="!!theme; else loadingIndicator" class="theme-content"> -->
