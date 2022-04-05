@@ -1,6 +1,49 @@
-<!-- <p>{{recipe.recipeName}}</p> -->
-
 <div class="details-page-wrapper">
-    <div class="details-heading">Details</div>
-    <app-recipe-list-item></app-recipe-list-item> 
+  <div class="details-heading" *ngIf="recipe">Details</div>
+  <!-- <div class="recipe-img"> -->
+    <div class="img-wrapper" *ngIf="recipe.img == ''">
+      <img src="../../../../assets/no-image.jpg" alt="" />
     </div>
+    <div class="img-wrapper" *ngIf="recipe.img.length > 0">
+      <img src="{{ recipe.img }}" alt="" />
+    </div>
+  <!-- </div> -->
+  <div class="recipe-title">
+    <h2>Title: {{ recipe.recipeName }}</h2>
+  
+    <span class="recipe-details">
+        Owner:{{recipe.owner}}
+    </span>
+    <span class="recipe-details">
+        Created:{{recipe.created_at}}
+    </span>
+    
+  </div>
+  <div class="recipe-main-details">
+    <p class="recipe-details">
+     Ingredients: {{recipe.ingredients}}
+    </p>
+    <p class="recipe-details">
+      Preparation{{recipe.preparation}}
+        
+    </p>
+  </div>
+</div>
+
+<!-- <div *ngIf="!!theme; else loadingIndicator" class="theme-content"> -->
+<!-- theme-title 
+        <div class="theme-title">
+            <div class="theme-name-wrapper">
+                <div class="theme-name">
+                    <h2>{{ theme.themeName}}</h2>
+                    <p>Date: <time> {{theme.created_at}}</time></p>
+                </div>
+                <div class="subscribers">
+                    <p>Subscribers: <span>{{theme.subscribers.length}}</span></p>
+                    <ng-container *ngIf="isLoggedIn">
+                        <button *ngIf="canSubscribe" class="subscribe">Subscribe</button>
+                        <button *ngIf="!canSubscribe" class="unsubscribe">Unsubscribe</button>
+                    </ng-container>
+                </div>
+            </div>
+        </div>  -->

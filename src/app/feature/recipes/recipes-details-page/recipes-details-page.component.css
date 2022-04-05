@@ -1,4 +1,4 @@
-.all-heading {
+.details-heading {
   background: rgba(128, 128, 128, 0.5);
   color: white;
   font-size: 1.5rem;
@@ -9,11 +9,15 @@
   margin-top: 50px;
 }
 
-.all-page-wrapper {
+.details-page-wrapper {
   background: #000000b0;
   border-radius: 20px;
   margin: auto;
   width: 96%;
   height: 500px;
+}
+
+.recipe-title p {
+  color: wheat;
 }
 /*# sourceMappingURL=recipes-details-page.component.css.map */

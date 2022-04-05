@@ -9,7 +9,8 @@ import { RecipeService } from 'src/app/core/recipe.service';
   styleUrls: ['./recipes-details-page.component.scss']
 })
 export class RecipesDetailsPageComponent implements OnInit {
-  recipe: IRecipe[];
+  recipe:any;
+ 
   constructor(
     private recipeService: RecipeService,
     private activatedRoute: ActivatedRoute
