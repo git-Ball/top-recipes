@@ -8,6 +8,7 @@ import { CreatePageComponent } from './create-page/create-page.component';
 import { RecipeListItemComponent } from './recipe-list-item/recipe-list-item.component';
 import { RecipeListComponent } from './recipe-list/recipe-list.component';
 import { RecipesDetailsPageComponent } from './recipes-details-page/recipes-details-page.component';
+import { RecipeLimitedComponent } from './recipe-limited/recipe-limited.component';
 
 
 
@@ -18,7 +19,8 @@ import { RecipesDetailsPageComponent } from './recipes-details-page/recipes-deta
     CreatePageComponent,
     RecipeListItemComponent,
     RecipeListComponent,
-    RecipesDetailsPageComponent
+    RecipesDetailsPageComponent,
+    RecipeLimitedComponent
   ],
   imports: [
     CommonModule,

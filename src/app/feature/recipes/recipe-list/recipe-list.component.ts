@@ -1,5 +1,5 @@
 import { AfterViewInit, Component, OnInit } from '@angular/core';
-import { ITheme,IRecipe} from 'src/app/core/interfaces';
+import { IRecipe} from 'src/app/core/interfaces';
 import { RecipeService } from 'src/app/core/recipe.service';
 
 @Component({

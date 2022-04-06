@@ -4,8 +4,9 @@
     <div class="img-wrapper" *ngIf="recipe.img == ''">
       <img src="../../../../assets/no-image.jpg" alt="" />
     </div>
-    <div class="img-wrapper" *ngIf="recipe.img.length > 0">
-      <img src="{{ recipe.img }}" alt="" />
+    <div class="img-wrapper" >
+      <img *ngIf="recipe.img" src="{{ recipe.img }}" alt="" />
+      <img *ngIf="!recipe.img" src="../../../../assets/no-image.jpg" alt="" />
     </div>
   <!-- </div> -->
   <div class="recipe-title">

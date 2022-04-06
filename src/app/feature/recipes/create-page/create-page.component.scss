@@ -126,6 +126,7 @@
 #create{
     // padding-bottom: 50px;
     border-radius: 10px;
+    padding-bottom: 15px;
 }
 
 // #login-page {
@@ -176,7 +177,7 @@
   padding: 30px;
   padding-left: 20px;
   height: 50px;
-  margin-top: 10px;
+  margin-bottom: 15px;
   margin-top: 50px;
   border-radius: 50px;
   border: solid 1px transparent;
@@ -362,4 +363,7 @@ textarea:hover {
 }
 .spacer{
     margin: 200px;
+}
+.red-star{
+    color: red;
 }

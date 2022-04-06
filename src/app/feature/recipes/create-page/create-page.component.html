@@ -50,7 +50,7 @@
     
      <!-- <div class="error-msg"></div> -->
      
-    <label for="recipeName">Recipe title*:</label>
+    <label for="recipeName">Recipe title<span class="red-star">*</span></label>
     <input type="text" id="recipeName" name="recipeName" placeholder="Chicken with BBQ Souse" />
 
     <label for="recipe-img">Image</label>
@@ -60,14 +60,14 @@
       name="img"
       placeholder="Upload image url here..."
     />
-    <label for="ingredients">Ingredients*</label>
+    <label for="ingredients">Ingredients<span class="red-star">*</span></label>
 
     <!-- <label for="description"
           >Description: <span class="red-star"> *</span></label
         > -->
         <textarea name="ingredients" id="ingredients" placeholder="salt 10g, black peper 15g..."></textarea>
     <!-- <input type="textarea" id="ingredients" name="ingredients" /> -->
-    <label for="preparation:">Preparation*</label>
+    <label for="preparation:">Preparation<span class="red-star">*</span></label>
     <!-- <input type="text" id="preparation" name="preparation" /> -->
     <textarea name="preparation" id="preparation" placeholder="1.Wash and cut mashrooms.."></textarea>
 
@@ -79,7 +79,7 @@
         <!-- <a @click=${(event) => redirect(event)} href="/register"
           >here</a -->
        <!-- </span -->
-      >
+      <!-- > -->
     </p>
   <!-- </div> -->
 </form>

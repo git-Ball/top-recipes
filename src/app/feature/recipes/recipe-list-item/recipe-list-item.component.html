@@ -1,6 +1,7 @@
 
 <div class="display-content" *ngIf="recipe">
-    <img src="{{recipe.img}}" alt=""> -->
+    <img *ngIf="recipe.img" src="{{recipe.img}}" alt="">
+    <img *ngIf="!recipe.img" src="../../../../assets/no-image.jpg" alt="">
     <!-- <img src="./../../../assets/mandja.jpg" alt=""> -->
   <a class="img-details" href="recipes/{{recipe.objectId}}">Details</a>
    
