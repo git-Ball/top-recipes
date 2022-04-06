@@ -367,3 +367,14 @@ textarea:hover {
 .red-star{
     color: red;
 }
+.error-msg{
+    margin: 0 auto;
+    text-align: center;
+    color: #ff1010;
+    font-size: 1.5rem;
+    font-weight: bold;
+    background-color: rgba(0, 0, 0, 0.722);
+    width: fit-content;
+    padding: 0px 8px 0px 8px;
+    border-radius: 6px;
+}

@@ -9,6 +9,7 @@ import { RecipeListItemComponent } from './recipe-list-item/recipe-list-item.com
 import { RecipeListComponent } from './recipe-list/recipe-list.component';
 import { RecipesDetailsPageComponent } from './recipes-details-page/recipes-details-page.component';
 import { RecipeLimitedComponent } from './recipe-limited/recipe-limited.component';
+import { FormsModule } from '@angular/forms';
 
 
 
@@ -25,7 +26,8 @@ import { RecipeLimitedComponent } from './recipe-limited/recipe-limited.componen
   imports: [
     CommonModule,
     // RouterModule
-    RecipesRoutingModule
+    RecipesRoutingModule,
+    FormsModule
   ],
   exports:[
     RecipesPageComponent,

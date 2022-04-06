@@ -2,7 +2,7 @@
     <!-- <app-theme-list-item *ngFor="let theme of themeList" [theme]="theme"></app-theme-list-item> -->
     <app-recipe-list-item *ngFor="let recipe of recipeListLimited" [recipe]="recipe"></app-recipe-list-item>
     <!-- <div *ngIf="!recipeList">No Themes!</div> -->
-    <div *ngIf="recipeListLimited.length === 0">No Themes!</div>
+    <div *ngIf="recipeListLimited.length == 0">No Themes!</div>
   </div>
 
   <app-recipe-list-item></app-recipe-list-item>

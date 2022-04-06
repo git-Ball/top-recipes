@@ -43,7 +43,7 @@
 </section> -->
 
 
-<form id="create">
+<form #createForm="ngForm" id="create" (ngSubmit)="onSubmit()">
   <!-- <div class="container"> -->
 
     <h1 class="create-heading">Create Recipe</h1>
@@ -51,25 +51,55 @@
      <!-- <div class="error-msg"></div> -->
      
     <label for="recipeName">Recipe title<span class="red-star">*</span></label>
-    <input type="text" id="recipeName" name="recipeName" placeholder="Chicken with BBQ Souse" />
 
-    <label for="recipe-img">Image</label>
+    <ng-container *ngIf="recipeName.touched && recipeName.invalid">
+      <div *ngIf="recipeName.errors?.['required']" class="error-msg">
+        Recipe title is required!
+      </div>
+      <div *ngIf="recipeName.errors?.['minlength']" class="error-msg">
+        Recipe title must be at least 5 characters long!
+      </div>
+    </ng-container>
+
+    <input #recipeName="ngModel" type="text" id="recipeName" name="recipeName" ngModel  required minlength="5" placeholder="Chicken with BBQ Souse" />
+  
+
+    <label for="img">Image</label>
     <input
       type="text"
       id="img"
       name="img"
+      ngModel
       placeholder="Upload image url here..."
     />
+    <!-- Ingredients -->
     <label for="ingredients">Ingredients<span class="red-star">*</span></label>
 
-    <!-- <label for="description"
-          >Description: <span class="red-star"> *</span></label
-        > -->
-        <textarea name="ingredients" id="ingredients" placeholder="salt 10g, black peper 15g..."></textarea>
-    <!-- <input type="textarea" id="ingredients" name="ingredients" /> -->
+    <ng-container *ngIf="ingredients.touched && ingredients.invalid">
+      <div *ngIf="ingredients.errors?.['required']" class="error-msg">
+        Ingredients are required!
+      </div>
+      <div *ngIf="ingredients.errors?.['minlength']" class="error-msg">
+       Ingredients must be at least 18 characters long!
+      </div>
+    </ng-container>
+  
+        <textarea #ingredients="ngModel" name="ingredients" ngModel required minlength="18" id="ingredients" placeholder="salt 10g, black peper 15g..."></textarea>
+   
+        <!-- Preparation -->
     <label for="preparation:">Preparation<span class="red-star">*</span></label>
-    <!-- <input type="text" id="preparation" name="preparation" /> -->
-    <textarea name="preparation" id="preparation" placeholder="1.Wash and cut mashrooms.."></textarea>
+   
+    <ng-container *ngIf="preparation.touched && preparation.invalid">
+   
+      <div *ngIf="preparation.errors?.['required']" class="error-msg">
+        Preparation is required!
+      </div>
+      <div *ngIf="preparation.errors?.['minlength']" class="error-msg">
+        Preparation must be at least 20 characters long!
+      </div>
+    </ng-container>
+
+    <textarea #preparation="ngModel" name="preparation" ngModel required minlength="20" id="preparation" placeholder="1.Wash and cut mashrooms.."></textarea>
 
  
     <button type="submit" id="submit-button" class="btn-submit" value="Create">Create recipe</button>
