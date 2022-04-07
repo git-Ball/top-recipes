@@ -21,7 +21,23 @@ ngAfterViewInit(): void {
   console.log(this.recipeName)
 }
 onSubmit():void{
-  console.log(this.createForm.value)
+  if(this.recipeName.errors){
+    // this.recipeName.invalid;
+    console.log('recipeName')
 
+  }
+  if(this.ingredients.errors){
+    // this.ingredients.invalid;
+
+    console.log('ingredients')
+
+  }
+  if(this.preparation.errors){
+    // this.preparation.invalid;
+    // this.preparation.touched;
+
+    console.log('preparation')
+
+  }
 }
 }

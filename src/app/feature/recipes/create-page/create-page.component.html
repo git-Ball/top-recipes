@@ -101,8 +101,8 @@
 
     <textarea #preparation="ngModel" name="preparation" ngModel required minlength="20" id="preparation" placeholder="1.Wash and cut mashrooms.."></textarea>
 
- 
-    <button type="submit" id="submit-button" class="btn-submit" value="Create">Create recipe</button>
+    <!-- [disabled]="createForm.invalid" -->
+    <button [disabled]="createForm.invalid"    type="submit" id="submit-button" class="btn-submit" value="Create">Create new recipe</button>
     <p class="field">
       <!-- <span> -->
       

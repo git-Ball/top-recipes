@@ -4,17 +4,37 @@
 </div> -->
 
 <!-- <section id="login-page" class="auth"> -->
-    <form id="login">
+    <form id="login" [formGroup]="loginFormGroup" (ngSubmit)="handleLogin()">
       <!-- <div class="container"> -->
   
         <h1 class="auth-heading">Login</h1>
         
          <!-- <div class="error-msg"></div> -->
-         
+
+         <!-- Username -->
         <label for="username">Username:</label>
-        <input type="text" id="username" name="username" />
+        <ng-container *ngIf="loginFormGroup.controls['username'].touched && loginFormGroup.controls['username'].invalid">
+          <div  class="error-msg">
+            Username is required!
+          </div>
+        </ng-container>
+
+        <input formControlName="username" type="text" id="username" name="username" />
+   
+       
+        <!-- Password -->
         <label for="login-pass">Password:</label>
-        <input type="password" id="login-password" name="password" />
+
+        <ng-container *ngIf="loginFormGroup.controls['password'].touched && loginFormGroup.controls['password'].invalid">
+          <div *ngIf="loginFormGroup.controls['password'].errors['required']" class="error-msg">
+            Password is required!
+          </div>
+          <div *ngIf="loginFormGroup.controls['password'].errors['minlength']" class="error-msg">
+            Password must be at least 5 characters long!
+          </div>
+        </ng-container>
+
+        <input formControlName="password" type="password" id="login-password" name="password" />
         <button type="submit" id="submit-button" class="btn-submit" value="Login"> Login</button>
         <p class="field">
           <!-- <span> -->

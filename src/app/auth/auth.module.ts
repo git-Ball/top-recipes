@@ -5,6 +5,7 @@ import { LoginComponent } from './login/login.component';
 import { MyRecipesComponent } from './my-recipes/my-recipes.component';
 import { AuthRoutingModule } from './auth-routing.module';
 import { RouterModule } from '@angular/router';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -12,12 +13,14 @@ import { RouterModule } from '@angular/router';
   declarations: [
     RegisterComponent,
     LoginComponent,
-    MyRecipesComponent
+    MyRecipesComponent,
   ],
   imports: [
     CommonModule,
     AuthRoutingModule,
     // RouterModule
+    ReactiveFormsModule
+
    
   ],
   exports:[

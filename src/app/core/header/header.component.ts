@@ -9,7 +9,7 @@ import { UserService } from '../user.service';
 export class HeaderComponent implements OnInit {
   // testa:boolean = false;
 get isLoggedIn(): boolean{
-  return true;
+  return false;
   // return this.userService.isLogged;
 }
   constructor(private userService:UserService) { }
