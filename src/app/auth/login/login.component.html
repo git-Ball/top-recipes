@@ -14,12 +14,17 @@
          <!-- Username -->
         <label for="username">Username:</label>
         <ng-container *ngIf="loginFormGroup.controls['username'].touched && loginFormGroup.controls['username'].invalid">
-          <div  class="error-msg">
+       
+          <div *ngIf="loginFormGroup.controls['username'].errors['required']" class="error-msg">
             Username is required!
+          </div>
+
+          <div *ngIf="loginFormGroup.controls['username'].errors['minlength']" class="error-msg">
+            Username must be at least 5 characters long!
           </div>
         </ng-container>
 
-        <input formControlName="username" type="text" id="username" name="username" />
+        <input formControlName="username"  [class.error-input]="loginFormGroup.controls['username'].touched && loginFormGroup.controls['username'].invalid" type="text" id="username" name="username" />
    
        
         <!-- Password -->
@@ -34,7 +39,7 @@
           </div>
         </ng-container>
 
-        <input formControlName="password" type="password" id="login-password" name="password" />
+        <input formControlName="password" [class.error-input]="loginFormGroup.controls['password'].touched && loginFormGroup.controls['password'].invalid" type="password" id="login-password" name="password" />
         <button type="submit" id="submit-button" class="btn-submit" value="Login"> Login</button>
         <p class="field">
           <!-- <span> -->
