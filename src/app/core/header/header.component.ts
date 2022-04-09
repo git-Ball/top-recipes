@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { UserService } from '../user.service';
 
 @Component({
@@ -9,10 +10,16 @@ import { UserService } from '../user.service';
 export class HeaderComponent implements OnInit {
   // testa:boolean = false;
 get isLoggedIn(): boolean{
-  return false;
-  // return this.userService.isLogged;
+  // return false;
+  return this.userService.isLogged;
 }
-  constructor(private userService:UserService) { }
+get getUser():string{
+  return this.userService.currentUser;
+}
+  constructor(
+    private userService:UserService,
+    private router:Router,
+    ) { }
 
   ngOnInit(): void {
     // console.log(this.userService.isLogged)
@@ -23,6 +30,7 @@ this.userService.login()
 }
 logoutHandler():void {
 this.userService.logout()
+this.router.navigate(['/home']);
   
 }
 }

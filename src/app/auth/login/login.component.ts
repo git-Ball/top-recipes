@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { RegisterModel } from 'src/app/core/interfaces';
 import { UserService } from 'src/app/core/user.service';
 
 @Component({
@@ -28,27 +29,38 @@ console.log('form is submitted',this.loginFormGroup);
 
   }
   handleLogin():void{
-console.log('form must be submitted');
+    const body:RegisterModel={
+      username:this.loginFormGroup.value.username,  
+      password:this.loginFormGroup.value.password,  
+      }
+      // const userData:Object={};
+      // console.log(body)
+      // return body;
+      this.userService.login$(body).subscribe(()=>{
+        this.userService.login()
+        this.userService.currentUser = body.username;
+        // console.log('Current User --- >', this.userService.getUser)
+        console.log('Current User2 --- >', this.userService.currentUser)
+        this.router.navigate(['/home']);
+        
+      })
 
   }
   onSubmit():void{
-    // if(this.recipeName.errors){
-    //   // this.recipeName.invalid;
-    //   console.log('recipeName')
-  
-    // }
-    // if(this.ingredients.errors){
-    //   // this.ingredients.invalid;
-  
-    //   console.log('ingredients')
-  
-    // }
-    // if(this.preparation.errors){
-    //   // this.preparation.invalid;
-    //   // this.preparation.touched;
-  
-    //   console.log('preparation')
-  
-    // }
+    // const body:RegisterModel={
+    //   username:this.loginFormGroup.value.username,  
+    //   password:this.loginFormGroup.value.password,  
+    //   }
+    //   // const userData:Object={};
+    //   // console.log(body)
+    //   // return body;
+    //   this.userService.login$(body).subscribe(()=>{
+    //     this.userService.login()
+    //     this.userService.currentUser = body.username;
+    //     console.log('Current User --- >', this.userService.getUser)
+    //     console.log('Current User2 --- >', this.userService.currentUser)
+    //     this.router.navigate(['/home']);
+        
+    //   })
   }
 }

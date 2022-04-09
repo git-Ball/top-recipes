@@ -45,7 +45,10 @@ export class RegisterComponent implements OnInit {
     // console.log(body)
     // return body;
     this.userService.register$(body).subscribe(()=>{
+      this.userService.login()
+      this.userService.currentUser = body.username;
       this.router.navigate(['/home']);
+      
     })
   }
 }

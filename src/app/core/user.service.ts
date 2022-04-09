@@ -10,10 +10,13 @@ import { IUser, RegisterModel } from './interfaces';
 export class UserService {
   
 isLogged:boolean = false;
+currentUser:string ='';
   constructor(
     private http:HttpClient
+   
   ) { }
   
+
   login():void{
     this.isLogged = true;
   }
@@ -50,6 +53,10 @@ isLogged:boolean = false;
      register$(user :RegisterModel):Observable<RegisterModel>{
   return this.http.post<RegisterModel>(`${environment.apiUrl}/users`,user,this.httpOptions)
   }
+// TODO change registerModel if add more props for register!!!!
+  login$(user :RegisterModel):Observable<RegisterModel>{
+    return this.http.post<RegisterModel>(`${environment.apiUrl}/login`,user,this.httpOptions)
+    }
 }
 // export class UserService {
 

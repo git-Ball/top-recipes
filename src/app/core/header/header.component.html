@@ -57,7 +57,7 @@
     <div *ngIf="isLoggedIn" class="navbar-links">
         <ul>
             <li class="user" >
-                <span id="welcome">Welcome, </span>
+                <span id="welcome">Welcome,[ {{ getUser }} ]  </span>
                
             </li>
             <li> <a class="home" id="second-home" routerLink="/">Home</a></li>
@@ -67,7 +67,7 @@
             <li class="user"><a routerLink="/profile">My Recipes</a></li>
             <!-- <li class="guest"><a routerLink="/login">Login</a></li>
             <li class="guest"><a routerLink="/register">Register</a></li> -->
-            <li class="user"><a class="logout" href="javascript:void(0)">Logout</a></li>
+            <li class="user"><a class="logout" (click)="logoutHandler()" href="javascript:void(0)">Logout</a></li>
         
         </ul>
     </div> 
