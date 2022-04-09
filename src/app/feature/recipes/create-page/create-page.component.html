@@ -51,7 +51,7 @@
      <!-- <div class="error-msg"></div> -->
      
     <label for="recipeName">Recipe title<span class="red-star">*</span></label>
-
+<!-- TODO Check validations -->
     <ng-container *ngIf="recipeName.touched && recipeName.invalid">
       <div *ngIf="recipeName.errors?.['required']" class="error-msg">
         Recipe title is required!
@@ -60,8 +60,8 @@
         Recipe title must be at least 5 characters long!
       </div>
     </ng-container>
-
-    <input #recipeName="ngModel" type="text" id="recipeName" name="recipeName" ngModel  required minlength="5" placeholder="Chicken with BBQ Souse" />
+    <!-- [class.error-input]="createForm.controls['recipeName'].touched && createForm.controls['recipeName'].invalid"  -->
+    <input  #recipeName="ngModel"  ngModel  required minlength="5" placeholder="Chicken with BBQ Souse" />
   
 
     <label for="img">Image</label>
@@ -84,7 +84,7 @@
       </div>
     </ng-container>
   
-        <textarea #ingredients="ngModel" name="ingredients" ngModel required minlength="18" id="ingredients" placeholder="salt 10g, black peper 15g..."></textarea>
+        <textarea #ingredients="ngModel"  name="ingredients" ngModel required minlength="18" id="ingredients" placeholder="salt 10g, black peper 15g..."></textarea>
    
         <!-- Preparation -->
     <label for="preparation:">Preparation<span class="red-star">*</span></label>
