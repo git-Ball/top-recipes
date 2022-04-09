@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
+import { RegisterModel } from 'src/app/core/interfaces';
+import { UserService } from 'src/app/core/user.service';
 import { passwordMatch } from '../util';
 
 @Component({
@@ -24,11 +27,25 @@ export class RegisterComponent implements OnInit {
 
 
   })
-  constructor(private formBuilder: FormBuilder) { }
+  constructor(
+    private formBuilder: FormBuilder,
+    private userService:UserService,
+    private router:Router,
+    ) { }
 
   ngOnInit(): void {
   }
   handleRegister():void{
-    
+    // console.log(this.registerFormGroup.value)
+    const body:RegisterModel={
+    username:this.registerFormGroup.value.username,  
+    password:this.registerFormGroup.value.passwords.password,  
+    }
+    // const userData:Object={};
+    // console.log(body)
+    // return body;
+    this.userService.register$(body).subscribe(()=>{
+      this.router.navigate(['/home']);
+    })
   }
 }
