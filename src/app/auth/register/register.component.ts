@@ -27,6 +27,8 @@ export class RegisterComponent implements OnInit {
 
 
   })
+errorMessage:string='';
+
   constructor(
     private formBuilder: FormBuilder,
     private userService:UserService,
@@ -36,6 +38,7 @@ export class RegisterComponent implements OnInit {
   ngOnInit(): void {
   }
   handleRegister():void{
+    this.errorMessage =''
     // console.log(this.registerFormGroup.value)
     const body:RegisterModel={
     username:this.registerFormGroup.value.username,  
@@ -44,10 +47,17 @@ export class RegisterComponent implements OnInit {
     // const userData:Object={};
     // console.log(body)
     // return body;
-    this.userService.register$(body).subscribe(()=>{
-      this.userService.login()
-      this.userService.currentUser = body.username;
-      this.router.navigate(['/home']);
+    this.userService.register$(body).subscribe({
+      next:()=>{
+        this.userService.login()
+        this.userService.currentUser = body.username;
+        this.router.navigate(['/home']);
+      },
+      error:(err)=>{
+        this.errorMessage = err.error.error;
+
+      }
+    
       
     })
   }

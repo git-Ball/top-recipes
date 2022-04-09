@@ -6,9 +6,11 @@
 <!-- <section id="login-page" class="auth"> -->
     <form id="login" [formGroup]="loginFormGroup" (ngSubmit)="handleLogin()">
       <!-- <div class="container"> -->
-  
+
         <h1 class="auth-heading">Login</h1>
-        
+        <p *ngIf="errorMessage" class="error-msg">
+          {{errorMessage}}
+        </p>
          <!-- <div class="error-msg"></div> -->
 
          <!-- Username -->

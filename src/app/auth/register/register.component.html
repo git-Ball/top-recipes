@@ -12,7 +12,9 @@
 
   <h1 class="auth-heading">Register</h1>
 
-  <!-- <div class="error-msg"></div> -->
+  <p *ngIf="errorMessage" class="error-msg">
+    {{errorMessage}}
+  </p>
   <!-- Username -->
   <label for="username">Username:</label>
 

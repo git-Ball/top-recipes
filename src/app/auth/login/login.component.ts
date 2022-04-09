@@ -14,6 +14,7 @@ loginFormGroup:FormGroup = this.formBuilder.group({
 'username':new FormControl('',[Validators.required,Validators.minLength(5)]),
 'password':new FormControl('',[Validators.required,Validators.minLength(5)]),
 });
+errorMessage:string='';
   constructor(
     private formBuilder:FormBuilder,
     private userService:UserService,
@@ -29,6 +30,7 @@ console.log('form is submitted',this.loginFormGroup);
 
   }
   handleLogin():void{
+    this.errorMessage =''
     const body:RegisterModel={
       username:this.loginFormGroup.value.username,  
       password:this.loginFormGroup.value.password,  
@@ -36,14 +38,48 @@ console.log('form is submitted',this.loginFormGroup);
       // const userData:Object={};
       // console.log(body)
       // return body;
-      this.userService.login$(body).subscribe(()=>{
-        this.userService.login()
+
+      //raboteshto
+      // this.userService.login$(body).subscribe(()=>{
+      //   this.userService.login()
+      //   this.userService.currentUser = body.username;
+      //   // console.log('Current User --- >', this.userService.getUser)
+      //   console.log('Current User2 --- >', this.userService.currentUser)
+      //   this.router.navigate(['/home']);
+        
+      // })
+      // ()=>{
+      //   this.userService.login()
+      //   this.userService.currentUser = body.username;
+      //   // console.log('Current User --- >', this.userService.getUser)
+      //   console.log('Current User2 --- >', this.userService.currentUser)
+      //   this.router.navigate(['/home']);
+        
+      // }
+      this.userService.login$(body).subscribe({
+        next:()=>{
+             this.userService.login()
         this.userService.currentUser = body.username;
         // console.log('Current User --- >', this.userService.getUser)
-        console.log('Current User2 --- >', this.userService.currentUser)
+        console.log('Current User --- >', this.userService.currentUser)
         this.router.navigate(['/home']);
-        
+        },
+        error:(err) =>{
+          this.errorMessage = err.error.error;
+      
+        }
       })
+
+      // Simple geolocation API check provides values to publish
+  // if ('geolocation' in navigator) {
+  //   watchId = navigator.geolocation.watchPosition((position: GeolocationPosition) => {
+  //     observer.next(position);
+  //   }, (error: GeolocationPositionError) => {
+  //     observer.error(error);
+  //   });
+  // } else {
+  //   observer.error('Geolocation not available');
+  // }
 
   }
   onSubmit():void{
