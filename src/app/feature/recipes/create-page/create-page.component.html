@@ -43,7 +43,7 @@
 </section> -->
 
 
-<form #createForm="ngForm" id="create" (ngSubmit)="onSubmit()">
+<form #createForm="ngForm" id="create" (ngSubmit)="onSubmit(createForm)">
   <!-- <div class="container"> -->
 
     <h1 class="create-heading">Create Recipe</h1>
@@ -61,7 +61,7 @@
       </div>
     </ng-container>
     <!-- [class.error-input]="createForm.controls['recipeName'].touched && createForm.controls['recipeName'].invalid"  -->
-    <input  #recipeName="ngModel"  ngModel  required minlength="5" placeholder="Chicken with BBQ Souse" />
+    <input  #recipeName="ngModel"  ngModel name="recipeName" required minlength="5" placeholder="Chicken with BBQ Souse" />
   
 
     <label for="img">Image</label>
@@ -80,11 +80,11 @@
         Ingredients are required!
       </div>
       <div *ngIf="ingredients.errors?.['minlength']" class="error-msg">
-       Ingredients must be at least 18 characters long!
+       Ingredients must be at least 20 characters long!
       </div>
     </ng-container>
   
-        <textarea #ingredients="ngModel"  name="ingredients" ngModel required minlength="18" id="ingredients" placeholder="salt 10g, black peper 15g..."></textarea>
+        <textarea #ingredients="ngModel"  name="ingredients" ngModel required minlength="20" id="ingredients" placeholder="salt 10g, black peper 15g..."></textarea>
    
         <!-- Preparation -->
     <label for="preparation:">Preparation<span class="red-star">*</span></label>

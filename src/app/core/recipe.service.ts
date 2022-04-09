@@ -38,12 +38,12 @@ export class RecipeService {
     return this.http.get<IRecipe[]>(`${apiUrl}/classes/recipes/${id}`, { headers });
 
   }
-// createRecipe(recipe:ICreateRecipe):Observable<ICreateRecipe>{
-//   const headers = {
-//     'Content-Type': 'application/json',
-//     'X-Parse-Application-Id': '0EVXYNppxGut8Cu7AcspZgM7VbEJiVQGj3aANItw',
-//     'X-Parse-REST-API-Key': 'zrgbHE3WQom9AF1ocIugdG1WGFaooWQFukuS4BuR'
-//   }
-//   return this.http.post(`${apiUrl}/classes/recipes`,recipe,{headers})
-// }
+createRecipe$(recipe:ICreateRecipe):Observable<ICreateRecipe>{
+  const headers = {
+    'Content-Type': 'application/json',
+    'X-Parse-Application-Id': '0EVXYNppxGut8Cu7AcspZgM7VbEJiVQGj3aANItw',
+    'X-Parse-REST-API-Key': 'zrgbHE3WQom9AF1ocIugdG1WGFaooWQFukuS4BuR'
+  }
+  return this.http.post<ICreateRecipe>(`${apiUrl}/classes/recipes`,recipe,{headers})
+}
 }
