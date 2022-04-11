@@ -1,3 +1,28 @@
 <div class="auth-page-wrapper">
     <div class="auth-heading">My recipes</div>
+    <div class="recipe-wrapper" *ngIf="recipeList; else Loading">
+        <!-- <app-theme-list-item *ngFor="let theme of themeList" [theme]="theme"></app-theme-list-item> -->
+       <app-recipe-list-item *ngFor="let recipe of recipeList" [recipe]="recipe"></app-recipe-list-item>
+         <!-- <div class="no-recipes" *ngIf="!recipeList">No recipes!</div> -->
+      <div class="no-recipes" *ngIf="recipeList.length === 0">
+        <p class="no-recipes-text">No recipes!! Let's go <a routerLink="/create" >create your first recipe.</a> </p>
+        </div>
+      </div>
+    
+      <app-recipe-list-item></app-recipe-list-item>
     </div>
+
+
+  
+      
+    
+         
+    
+      <ng-template #Loading>
+        Loading...
+    </ng-template>
+
+
+    <!-- <div *ngIf="!recipeListLimited">
+          Loading...
+        </div> --> 

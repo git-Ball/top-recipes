@@ -6,6 +6,7 @@ import { MyRecipesComponent } from './my-recipes/my-recipes.component';
 import { AuthRoutingModule } from './auth-routing.module';
 import { RouterModule } from '@angular/router';
 import { ReactiveFormsModule } from '@angular/forms';
+import { RecipesModule } from '../feature/recipes/recipes.module';
 
 
 
@@ -19,7 +20,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     CommonModule,
     AuthRoutingModule,
     // RouterModule
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    RecipesModule
 
    
   ],

@@ -19,3 +19,25 @@
     width: 96%;
     height: 500px;
 }
+.no-recipes{
+    background: #000000bd;
+    margin: auto;
+    width: 40%;
+    margin-top: 150px;
+    height: 200px;
+    border: solid grey 2px;
+    border-radius: 10px;
+}
+
+
+
+  .no-recipes>p>a{
+    text-decoration: none;
+    color:rgb(111, 227, 33)
+  }
+  .no-recipes-text{
+    margin-top: 80px;
+    color: white;
+    text-align: center;
+    font-size: 2em;
+  }
