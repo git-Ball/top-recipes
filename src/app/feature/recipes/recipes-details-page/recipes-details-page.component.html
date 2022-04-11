@@ -1,19 +1,23 @@
 <div class="details-page-wrapper">
   <div class="details-heading" *ngIf="recipe">Details</div>
   <!-- <div class="recipe-img"> -->
-    <div class="img-wrapper" *ngIf="recipe.img == ''">
+    <!-- <div class="img-wrapper" *ngIf="recipe.img == ''">
       <img src="../../../../assets/no-image.jpg" alt="" />
-    </div>
+    </div> -->
     <div class="img-wrapper" >
       <img *ngIf="recipe.img" src="{{ recipe.img }}" alt="" />
       <img *ngIf="!recipe.img" src="../../../../assets/no-image.jpg" alt="" />
     </div>
   <!-- </div> -->
   <div class="recipe-title">
-    <h2>Title: {{ recipe.recipeName }}</h2>
+    <h2> {{ recipe.recipeName }}</h2>
+    <div class="buttons" *ngIf="recipe.owner.objectId == ownerId">
+      <a routerLink="/edit/" class="button" id="edit">Edit</a>
+      <a  routerLink="/home" class="button" id="delete">Delete</a>
+    </div>
   
     <span class="recipe-details">
-        <span class="bold">Owner</span>:{{recipe.owner}}
+        <span class="bold">Owner</span>:{{recipe.owner.ownerUsername}}
     </span>
     <span class="recipe-details">
       <span class="bold">Created</span>: {{ recipe.createdAt}}
@@ -50,3 +54,7 @@
                 </div>
             </div>
         </div>  -->
+
+
+
+       

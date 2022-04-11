@@ -4,7 +4,7 @@
     <img *ngIf="!recipe.img"  src="../../../../assets/no-image.jpg" alt="" >
     <!-- <img src="./../../../assets/mandja.jpg" alt=""> -->
   <a class="img-title" >{{recipe.recipeName}}</a>
-  <a class="img-details" href="recipes/{{recipe.objectId}}">Details</a>
+  <a class="img-details" routerLink="{{recipe.objectId}}">Details</a>
    
 </div>
 <!-- *ngIf="!recipe.img" [.img-title.color ='black'] -->
