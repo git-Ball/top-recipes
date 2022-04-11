@@ -46,4 +46,12 @@ createRecipe$(recipe:ICreateRecipe):Observable<ICreateRecipe>{
   }
   return this.http.post<ICreateRecipe>(`${apiUrl}/classes/recipes`,recipe,{headers})
 }
+deleteRecipe$(id: string):Observable<any>{
+  const headers = {
+    'Content-Type': 'application/json',
+    'X-Parse-Application-Id': '0EVXYNppxGut8Cu7AcspZgM7VbEJiVQGj3aANItw',
+    'X-Parse-REST-API-Key': 'zrgbHE3WQom9AF1ocIugdG1WGFaooWQFukuS4BuR'
+  }
+  return this.http.delete<any>(`${apiUrl}/classes/recipes/${id}`,{headers})
+}
 }

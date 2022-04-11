@@ -157,20 +157,21 @@ margin-left: 15px;
 
 header nav>* {
   float: left;
+
 }
 
 
 
 nav a {
   margin: 0 0.5em;
+  transition: 1s;
 }
 
 nav a:hover {
   cursor: pointer;
-  /* color: #6f9665; */
-  font-weight: bolder;
+
   background-color: #8080804f;
-  transform: scale(1.05);
+  
 
 
   
@@ -188,7 +189,7 @@ nav a.welcome{
 .home:hover {
   cursor: pointer;
 
-  font-weight: bolder;
+  // font-weight: bolder;
   color: white;
 
  
