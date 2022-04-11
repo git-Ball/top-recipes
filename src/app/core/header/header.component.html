@@ -57,7 +57,8 @@
     <div *ngIf="isLoggedIn" class="navbar-links">
         <ul>
             <li class="user" >
-                <span id="welcome">Welcome,[ {{ getUser }} ]  </span>
+              <!--  {{ getUser.username }}-->
+                <span id="welcome">Welcome,[ {{getUser.ownerUsername}}  ]  </span>
                
             </li>
             <li> <a class="home" id="second-home" routerLink="/">Home</a></li>

@@ -46,7 +46,21 @@ console.log('form is submitted',this.loginFormGroup);
       //   // console.log('Current User --- >', this.userService.getUser)
       //   console.log('Current User2 --- >', this.userService.currentUser)
       //   this.router.navigate(['/home']);
-        
+
+
+      // this.userService.login$(params).subscribe({
+      //   next: data => {
+      //     localStorage.setItem('userData', JSON.stringify(data));
+      //   },
+      //   complete: () => {
+      //     this.router.navigate(['/'])
+      //   },
+      //   error: (err) => {
+      //     this.errorMessage = err.error.error
+      //   }
+      // }) 
+
+
       // })
       // ()=>{
       //   this.userService.login()
@@ -59,9 +73,10 @@ console.log('form is submitted',this.loginFormGroup);
       this.userService.login$(body).subscribe({
         next:()=>{
              this.userService.login()
-        this.userService.currentUser = body.username;
+        // this.userService.currentUser = body.username;
         // console.log('Current User --- >', this.userService.getUser)
         console.log('Current User --- >', this.userService.currentUser)
+        // console.log('Current User --- >', body.username._id)
         this.router.navigate(['/home']);
         },
         error:(err) =>{

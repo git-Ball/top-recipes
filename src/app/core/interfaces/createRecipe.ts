@@ -1,5 +1,6 @@
 import { UserService } from "../user.service";
 import { IUser } from "./user";
+// const userId= UserService["getUsername"]
 
 export interface ICreateRecipe {
 
@@ -9,7 +10,7 @@ export interface ICreateRecipe {
     preparation: string,
 // ownerInfo:UserService['currentUser'];
 
-    // owner: IUser.objectId,
+    owner: string;
     // _id:IUser;
     // __v:number;
 }

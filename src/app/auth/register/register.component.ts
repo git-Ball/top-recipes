@@ -40,7 +40,7 @@ errorMessage:string='';
   handleRegister():void{
     this.errorMessage =''
     // console.log(this.registerFormGroup.value)
-    const body:RegisterModel={
+    const body:RegisterModel = {
     username:this.registerFormGroup.value.username,  
     password:this.registerFormGroup.value.passwords.password,  
     }
@@ -49,16 +49,64 @@ errorMessage:string='';
     // return body;
     this.userService.register$(body).subscribe({
       next:()=>{
+        this.userService.register$(body)
+        .pipe().subscribe(res => {
+            console.log(res)
+            // console.log(res.objectId)
+            for (const prop in res) {
+              console.log(res[prop])
+              if (prop == 'objectId') {
+                this.userService.currentUser.objectId = res[prop];
+              }
+              // if (prop == 'username') {
+              //   this.currentUser.ownerUsername = res[prop];
+              // }
+            }
+            this.userService.currentUser.ownerUsername = body.username;
+            
+          
+            // console.log(this.currentUser.ownerUsername)
+            console.log(this.userService.currentUser)
+            // console.log(this.currentUser.userId = res.objectId)
+          
+          })
+
+       
+        
+      },
+      complete:() =>{
         this.userService.login()
-        this.userService.currentUser = body.username;
+        // this.userService.currentUser = body.username;
+        console.log('Current User ---  sled register>', this.userService.currentUser)
         this.router.navigate(['/home']);
+        console.log('vechte trqbva navigate')
       },
       error:(err)=>{
         this.errorMessage = err.error.error;
-
+console.log(this.errorMessage)
       }
     
       
     })
   }
 }
+
+// .pipe().subscribe(res => {
+//   console.log(res)
+//   // console.log(res.objectId)
+//   for (const prop in res) {
+//     if (prop == 'objectId') {
+//       this.currentUser.objectId = res[prop];
+//     }
+//     // if (prop == 'username') {
+//     //   this.currentUser.ownerUsername = res[prop];
+//     // }
+//   }
+//   this.currentUser.ownerUsername = user.username;
+  
+
+//   console.log(this.currentUser.ownerUsername)
+//   console.log(this.currentUser)
+//   // console.log(this.currentUser.userId = res.objectId)
+
+// })

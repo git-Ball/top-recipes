@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { IUser } from '../interfaces';
+import { IUserInfo } from '../interfaces/userInfo';
 import { UserService } from '../user.service';
 
 @Component({
@@ -13,7 +15,8 @@ get isLoggedIn(): boolean{
   // return false;
   return this.userService.isLogged;
 }
-get getUser():string{
+get getUser():IUserInfo{
+  return this.userService.currentUser;
   return this.userService.currentUser;
 }
   constructor(

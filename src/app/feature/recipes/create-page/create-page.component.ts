@@ -2,6 +2,7 @@ import { AfterViewInit, Component, OnInit, ViewChild } from '@angular/core';
 import { NgForm, NgModel } from '@angular/forms';
 import { Router } from '@angular/router';
 import { RecipeService } from 'src/app/core/recipe.service';
+import { UserService } from 'src/app/core/user.service';
 
 @Component({
   selector: 'app-create-page',
@@ -14,9 +15,11 @@ export class CreatePageComponent implements OnInit,AfterViewInit {
 @ViewChild('ingredients') ingredients!:NgModel;
 @ViewChild('preparation') preparation!:NgModel;
 
+errorMessage:string='';
   constructor(
     private router:Router,
-    private recipeService:RecipeService
+    private recipeService:RecipeService,
+    private userService:UserService
     ) { }
 
   ngOnInit(): void {
@@ -27,13 +30,20 @@ ngAfterViewInit(): void {
 }
 onSubmit(createForm:NgForm):void{
 console.log(createForm.value);
+let userId = this.userService.currentUser   //.userId;
+console.log('All for owner ->>>>>>>>',userId)
+createForm.value.owner = userId;
+// createForm.value.owner = this.userService.currentUser.userId;
 this.recipeService.createRecipe$(createForm.value).subscribe({
   next:(recipe)=>{
-    console.log(recipe)
+    console.log('next >',recipe)
     this.router.navigate(['/recipes'])
+    console.log('after next -->')
+
   },
   error:(error)=>{
-
+    this.errorMessage == error.error.error;
+    
   }
 })
 }
