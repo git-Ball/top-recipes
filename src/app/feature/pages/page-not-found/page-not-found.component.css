@@ -32,9 +32,20 @@
 }
 
 .not-found-text {
-  margin-top: 50px;
   color: white;
   text-align: center;
-  font-size: 1em;
+  font-size: 1.5em;
+}
+
+.not-found-err {
+  font-size: 2.5rem;
+  color: white;
+  padding: 50px 47px 50px 47px;
+  border: 2px solid #861616a3;
+  border-radius: 83px;
+  background: #861b1bb5;
+  margin-bottom: 10px;
+  -webkit-box-shadow: 0px 0px 30px 0px #e45454;
+          box-shadow: 0px 0px 30px 0px #e45454;
 }
 /*# sourceMappingURL=page-not-found.component.css.map */
