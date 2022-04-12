@@ -2,7 +2,16 @@
 body{
     margin: 0px;
     min-height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-between;
 }
 html{
+    margin: 0;
     background-image: url(./assets/spices.jpg);
+    background-repeat: repeat-y;
+    background-size: auto;
+    width: 100%;
 }

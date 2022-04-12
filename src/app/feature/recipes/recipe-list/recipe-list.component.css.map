@@ -1,6 +1,6 @@
 {
     "version": 3,
-    "mappings": "",
+    "mappings": "AAAA,AAAA,eAAe,CAAA;EACX,OAAO,EAAE,IAAI;EACb,WAAW,EAAE,MAAM;EACnB,eAAe,EAAE,aAAa;EAC9B,SAAS,EAAE,IAAI;CAOlB;;AAXD,AAKI,eALW,CAKX,gBAAgB,CAAA;EACZ,YAAY,EAAE,IAAI;CACrB;;AAPL,AAQI,eARW,CAQX,KAAK,CAAA;EACD,UAAU,EAAE,GAAG;CAClB",
     "sources": [
         "recipe-list.component.scss"
     ],

@@ -33,6 +33,8 @@ console.log(createForm.value);
 let userId = this.userService.currentUser   //.userId;
 console.log('All for owner ->>>>>>>>',userId)
 createForm.value.owner = userId;
+createForm.value.ownerUsername =this.userService.currentUser.ownerUsername;
+createForm.value.likes = [];
 // createForm.value.owner = this.userService.currentUser.userId;
 this.recipeService.createRecipe$(createForm.value).subscribe({
   next:(recipe)=>{

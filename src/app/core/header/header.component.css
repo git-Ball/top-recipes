@@ -98,15 +98,13 @@ header nav > * {
 
 nav a {
   margin: 0 0.5em;
+  -webkit-transition: 1s;
+  transition: 1s;
 }
 
 nav a:hover {
   cursor: pointer;
-  /* color: #6f9665; */
-  font-weight: bolder;
   background-color: #8080804f;
-  -webkit-transform: scale(1.05);
-          transform: scale(1.05);
 }
 
 /* nav a.welcome:hover{
@@ -120,7 +118,6 @@ nav a.welcome{
 /* } */
 .home:hover {
   cursor: pointer;
-  font-weight: bolder;
   color: white;
   overflow: hidden;
 }

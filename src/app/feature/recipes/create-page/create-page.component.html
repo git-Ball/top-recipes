@@ -59,9 +59,12 @@
       <div *ngIf="recipeName.errors?.['minlength']" class="error-msg">
         Recipe title must be at least 5 characters long!
       </div>
+      <div *ngIf="recipeName.errors?.['maxlength']" class="error-msg">
+        Recipe title max length is 16 charcters!
+      </div>
     </ng-container>
     <!-- [class.error-input]="createForm.controls['recipeName'].touched && createForm.controls['recipeName'].invalid"  -->
-    <input  #recipeName="ngModel"  ngModel name="recipeName" required minlength="5" placeholder="Chicken with BBQ Souse" />
+    <input  #recipeName="ngModel"  ngModel name="recipeName" required minlength="5" maxlength="16" placeholder="Chicken with BBQ Souse" />
   
 
     <label for="img">Image</label>

@@ -3,7 +3,7 @@
     <img *ngIf="recipe.img" src="{{recipe.img}}" alt="">
     <img *ngIf="!recipe.img"  src="../../../../assets/no-image.jpg" alt="" >
     <!-- <img src="./../../../assets/mandja.jpg" alt=""> -->
-  <a class="img-title" >{{recipe.recipeName}}</a>
+  <a class="img-title" id="image-title">{{recipe.recipeName}}</a>
   <a class="img-details" routerLink="{{recipe.objectId}}">Details</a>
    
 </div>

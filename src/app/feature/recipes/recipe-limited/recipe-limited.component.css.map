@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,eAAe,CAAA;EACX,OAAO,EAAE,IAAI;EACb,WAAW,EAAE,MAAM;EACnB,SAAS,EAAE,MAAM;CAIpB;;AAPD,AAII,eAJW,CAIX,gBAAgB,CAAA;EACZ,YAAY,EAAE,IAAI;CACrB",
+    "sources": [
+        "recipe-limited.component.scss"
+    ],
+    "names": [],
+    "file": "recipe-limited.component.css"
+}

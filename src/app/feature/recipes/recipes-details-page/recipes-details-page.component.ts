@@ -81,6 +81,9 @@ this.router.navigate([`/login`])}
 })
 }
 onEditMode():void{
+  if(this.recipe.owner.objectId != this.ownerId){
+    this.router.navigate(['/recipes'])
+  }
   this.editMode = true;
 
   setTimeout(()=>{
@@ -103,11 +106,12 @@ onSubmit(createForm:NgForm):void{
   // createForm.value.owner = this.userService.currentUser.userId;
   this.recipeService.updateRecipe$(createForm.value,recipeId).subscribe({
     next:(recipe)=>{
-      console.log('next >',recipe)
-      this.router.navigate(['/recipes'])
-      console.log('after next -->')
-  
-    },
+ console.log('sled',recipe)
+      this.router.navigate([`/recipes/${recipeId}`])
+   },
+   complete:()=>{
+
+   },
     error:(error)=>{
       this.router.navigate([`/login`])}
       

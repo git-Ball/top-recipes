@@ -10,7 +10,7 @@ import { FooterComponent } from './core/footer/footer.component';
 import { HeaderComponent } from './core/header/header.component';
 import { HomePageComponent } from './feature/pages/home-page/home-page.component';
 import { PageNotFoundComponent } from './feature/pages/page-not-found/page-not-found.component';
-import { RecipesHomeComponent } from './feature/recipes/recipes-home/recipes-home.component';
+
 import { RecipesPageComponent } from './feature/recipes/recipes-page/recipes-page.component';
 import { LoginComponent } from './auth/login/login.component';
 import { RegisterComponent } from './auth/register/register.component';

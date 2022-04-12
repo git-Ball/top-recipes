@@ -18,7 +18,7 @@
     </div>
   
     <span class="recipe-details">
-        <span class="bold">Owner</span>:{{recipe.owner.ownerUsername}}
+        <span class="bold">Owner</span>: {{ recipe.ownerUsername }}
     </span>
     <span class="recipe-details">
       <span class="bold">Created</span>: {{ recipe.createdAt}}
@@ -35,7 +35,6 @@
         
     </p>
   </div>
-  <div class="details-spacer"></div>
   
 
 </div>
@@ -111,6 +110,7 @@
     <!-- </div> -->
   </form>
 </div>
+<div class="details-spacer"></div>
 
 <!-- <div *ngIf="!!theme; else loadingIndicator" class="theme-content"> -->
 <!-- theme-title 

@@ -1,1 +1,23 @@
-/* No CSS *//*# sourceMappingURL=recipe-list.component.css.map */
+.recipe-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.recipe-wrapper .display-content {
+  margin-right: 30px;
+}
+
+.recipe-wrapper .flex {
+  -ms-flex-preferred-size: 30%;
+      flex-basis: 30%;
+}
+/*# sourceMappingURL=recipe-list.component.css.map */

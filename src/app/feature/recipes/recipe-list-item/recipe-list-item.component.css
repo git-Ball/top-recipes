@@ -13,6 +13,13 @@
   padding: 4px;
   margin-top: 50px;
   margin-bottom: 50px;
+  margin: 30px;
+}
+
+#image-title {
+  background: #34353578;
+  margin: 162px 4px 162px 4px;
+  border-radius: 0%;
 }
 
 .display-content img {
@@ -26,6 +33,11 @@
 .display-content:hover .img-details {
   visibility: visible;
   opacity: 1;
+}
+
+.display-content:hover .img-title {
+  visibility: hidden;
+  opacity: 0;
 }
 
 .img-details {
@@ -50,8 +62,33 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-transition: opacity .4s, visibility .4s;
-  transition: opacity .4s, visibility .4s;
+  -webkit-transition: opacity .8s, visibility .8s;
+  transition: opacity .8s, visibility .8s;
+  text-decoration: none;
+}
+
+.img-title {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  color: white;
+  opacity: 1;
+  border-radius: 50px;
+  font-size: 1.5em;
+  text-transform: uppercase;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: opacity .8s, visibility .8s;
+  transition: opacity .8s, visibility .8s;
   text-decoration: none;
 }
 /*# sourceMappingURL=recipe-list-item.component.css.map */
