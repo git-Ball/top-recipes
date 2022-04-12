@@ -90,7 +90,7 @@ onEditMode():void{
   setTimeout(()=>{
     this.createForm.setValue({
       recipeName:this.recipe.recipeName,
-      img:this.recipe.img && this.recipe.img!= 'no-image.jpg'? '':this.recipe.img,
+      img:this.recipe.img,
       ingredients:this.recipe.ingredients,
       preparation:this.recipe.preparation,
       
