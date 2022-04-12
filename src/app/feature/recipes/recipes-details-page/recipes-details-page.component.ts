@@ -1,5 +1,7 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { tap } from 'rxjs';
 import { IRecipe } from 'src/app/core/interfaces';
 import { RecipeService } from 'src/app/core/recipe.service';
 import { UserService } from 'src/app/core/user.service';
@@ -17,7 +19,8 @@ export class RecipesDetailsPageComponent implements OnInit {
     private recipeService: RecipeService,
     private activatedRoute: ActivatedRoute,
     private userService:UserService,
-    private router:Router
+    private router:Router,
+    private http:HttpClient
   ) { }
 
   ngOnInit(): void {
@@ -34,29 +37,59 @@ console.log('ID ---->',this.ownerId)
       })
     });
   }
-  onDelete(){
-    // this.activatedRoute.params.subscribe(params => {
-    //   const recipeId = params['recipeId'] // ?
-    //   console.log('ID ---->',recipeId)
-    //    this.recipeService.deleteRecipe$(recipeId).subscribe({
-    //     next:(recipe)=>{
-    //       console.log('next >',recipe)
-    //       this.router.navigate(['/recipes'])
-    //       console.log('after next -->')
+//   onDelete():void{
+//     this.activatedRoute.params.subscribe(params => {
+//       const recipeId = params['recipeId'] // ?
+//       console.log('ID ---->',recipeId)
+
+// //       this.recipeService.deleteRecipe$(recipeId).subscribe({
+// //         next:(recipe)=>{
+// //           console.log('next >',recipe)
+// //           this.router.navigate(['/recipes'])
+// //           console.log('after next -->')
       
-    //     },
-    //     error:(error)=>{
-    //       this.errorMessage == error.error.error;
-    //       this.router.navigate([`/recipes/${recipeId}`])
+// //         },
+// //         error:(error)=>{
+// //           this.errorMessage == error.error.error;
+// //           this.router.navigate([`/recipes/${recipeId}`])}
+// // });
+//       }
+//   }
+onDelete(){
+this.activatedRoute.params.subscribe(params => {
+          const recipeId = params['recipeId'] // ?
+    //       console.log('ID ---->',recipeId)
+this.recipeService.deleteRecipe$(recipeId).subscribe({
+next:()=>{
+       console.log('Recipe deleted!')
+       this.router.navigate([`/home`])
+},
+ error:(error)=>{
+this.router.navigate([`/login`])}
 
-          
-    //     };
-    //   });
-    //   }
-    };
-  }
+ });
+})
+}
+}
+  // this.activatedRoute.params.subscribe(params => {
+  //   const recipeId = params['recipeId'] // ?
+  //   console.log('ID ---->',recipeId)
 
+    // this.recipeService.deleteRecipe$(recipeId).subscribe({
+    //   next:(recipe)=>{
+    //     console.log('next >',recipe)
+    //     this.router.navigate(['/recipes'])
+    //     console.log('after next -->')
     
+    //   },
+    //   error:(error)=>{
+    //     this.errorMessage == error.error.error;
+    //     this.router.navigate([`/recipes/${recipeId}`])
+
+        
+    //   });
+    // };
+    // }
 
 
         // this.recipe = recipe['results']

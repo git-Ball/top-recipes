@@ -13,7 +13,7 @@
     <h2> {{ recipe.recipeName }}</h2>
     <div class="buttons" *ngIf="recipe.owner.objectId == ownerId">
       <a routerLink="/edit/" class="button" id="edit">Edit</a>
-      <a (click)="onDelete()" routerLink="/home" class="button" id="delete">Delete</a>
+      <a (click)="onDelete()"  class="button" id="delete">Delete</a>
     </div>
   
     <span class="recipe-details">
