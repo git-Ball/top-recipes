@@ -1,5 +1,6 @@
-<div class="details-page-wrapper">
-  <div class="details-heading" *ngIf="recipe">Details</div>
+<div *ngIf="!editMode" class="details-page-wrapper">
+ 
+    <div class="details-heading" *ngIf="recipe">Details</div>
   <!-- <div class="recipe-img"> -->
     <!-- <div class="img-wrapper" *ngIf="recipe.img == ''">
       <img src="../../../../assets/no-image.jpg" alt="" />
@@ -12,7 +13,7 @@
   <div class="recipe-title">
     <h2> {{ recipe.recipeName }}</h2>
     <div class="buttons" *ngIf="recipe.owner.objectId == ownerId">
-      <a routerLink="/edit/" class="button" id="edit">Edit</a>
+      <a (click)="onEditMode()"  class="button" id="edit">Edit</a>
       <a (click)="onDelete()"  class="button" id="delete">Delete</a>
     </div>
   
@@ -35,6 +36,80 @@
     </p>
   </div>
   <div class="details-spacer"></div>
+  
+
+</div>
+<div *ngIf="editMode">
+  <form #createForm="ngForm" id="create" (ngSubmit)="onSubmit(createForm)">
+    <!-- <div class="container"> -->
+  
+      <h1 class="create-heading">Edit Recipe</h1>
+      
+       <!-- <div class="error-msg"></div> -->
+       
+      <label for="recipeName">Recipe title<span class="red-star">*</span></label>
+  <!-- TODO Check validations -->
+      <ng-container *ngIf="recipeName.touched && recipeName.invalid">
+        <div *ngIf="recipeName.errors?.['required']" class="error-msg">
+          Recipe title is required!
+        </div>
+        <div *ngIf="recipeName.errors?.['minlength']" class="error-msg">
+          Recipe title must be at least 5 characters long!
+        </div>
+      </ng-container>
+      <!-- [class.error-input]="createForm.controls['recipeName'].touched && createForm.controls['recipeName'].invalid"  -->
+      <input  #recipeName="ngModel"  ngModel name="recipeName" required minlength="5" placeholder="Chicken with BBQ Souse" value="{{recipe.recipeName}}"/>
+    
+  
+      <label for="img">Image</label>
+      <input
+        type="text"
+        id="img"
+        name="img"
+        ngModel
+        placeholder="Upload image url here..."
+      />
+      <!-- Ingredients -->
+      <label for="ingredients">Ingredients<span class="red-star">*</span></label>
+  
+      <ng-container *ngIf="ingredients.touched && ingredients.invalid">
+        <div *ngIf="ingredients.errors?.['required']" class="error-msg">
+          Ingredients are required!
+        </div>
+        <div *ngIf="ingredients.errors?.['minlength']" class="error-msg">
+         Ingredients must be at least 20 characters long!
+        </div>
+      </ng-container>
+    
+          <textarea #ingredients="ngModel"  name="ingredients" ngModel required minlength="20" id="ingredients" placeholder="salt 10g, black peper 15g..."></textarea>
+     
+          <!-- Preparation -->
+      <label for="preparation:">Preparation<span class="red-star">*</span></label>
+     
+      <ng-container *ngIf="preparation.touched && preparation.invalid">
+     
+        <div *ngIf="preparation.errors?.['required']" class="error-msg">
+          Preparation is required!
+        </div>
+        <div *ngIf="preparation.errors?.['minlength']" class="error-msg">
+          Preparation must be at least 20 characters long!
+        </div>
+      </ng-container>
+  
+      <textarea #preparation="ngModel" name="preparation" ngModel required minlength="20" id="preparation" placeholder="1.Wash and cut mashrooms.."></textarea>
+  
+      <!-- [disabled]="createForm.invalid" -->
+      <button [disabled]="createForm.invalid"    type="submit" id="submit-button" class="btn-submit" value="Create">Edit recipe</button>
+      <p class="field">
+        <!-- <span> -->
+        
+          <!-- <a @click=${(event) => redirect(event)} href="/register"
+            >here</a -->
+         <!-- </span -->
+        <!-- > -->
+      </p>
+    <!-- </div> -->
+  </form>
 </div>
 
 <!-- <div *ngIf="!!theme; else loadingIndicator" class="theme-content"> -->
@@ -58,3 +133,6 @@
 
 
        
+
+      
+        

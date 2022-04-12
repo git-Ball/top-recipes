@@ -1,6 +1,8 @@
 import { HttpClient } from '@angular/common/http';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { NgForm, NgModel } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
+
 import { tap } from 'rxjs';
 import { IRecipe } from 'src/app/core/interfaces';
 import { RecipeService } from 'src/app/core/recipe.service';
@@ -15,6 +17,14 @@ export class RecipesDetailsPageComponent implements OnInit {
   recipe:any;
  ownerId:string = this.userService.currentUser.objectId;
  errorMessage:string='';
+ editMode:boolean =false;
+ currentUser:any=this.userService.currentUser;
+
+@ViewChild('createForm') createForm!:NgForm;
+@ViewChild('recipeName') recipeName!:NgModel;
+@ViewChild('ingredients') ingredients!:NgModel;
+@ViewChild('preparation') preparation!:NgModel;
+
   constructor(
     private recipeService: RecipeService,
     private activatedRoute: ActivatedRoute,
@@ -70,7 +80,46 @@ this.router.navigate([`/login`])}
  });
 })
 }
+onEditMode():void{
+  this.editMode = true;
+
+  setTimeout(()=>{
+    this.createForm.setValue({
+      recipeName:this.recipe.recipeName,
+      img:this.recipe.img && this.recipe.img!= 'no-image.jpg'? '':this.recipe.img,
+      ingredients:this.recipe.ingredients,
+      preparation:this.recipe.preparation,
+      
+    })
+  })
 }
+onSubmit(createForm:NgForm):void{
+  this.activatedRoute.params.subscribe(params => {
+    const recipeId = params['recipeId']
+  console.log(createForm.value);
+  // let userId = this.userService.currentUser   //.userId;
+  // console.log('All for owner ->>>>>>>>',userId)
+  // createForm.value.owner = userId;
+  // createForm.value.owner = this.userService.currentUser.userId;
+  this.recipeService.updateRecipe$(createForm.value,recipeId).subscribe({
+    next:(recipe)=>{
+      console.log('next >',recipe)
+      this.router.navigate(['/recipes'])
+      console.log('after next -->')
+  
+    },
+    error:(error)=>{
+      this.router.navigate([`/login`])}
+      
+      
+    });
+
+  })
+  this.editMode = false;
+
+  }
+}
+
   // this.activatedRoute.params.subscribe(params => {
   //   const recipeId = params['recipeId'] // ?
   //   console.log('ID ---->',recipeId)
@@ -95,6 +144,5 @@ this.router.navigate([`/login`])}
         // this.recipe = recipe['results']
         // console.log('after Results-->',this.recipe)
 
-   
 
   
