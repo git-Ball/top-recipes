@@ -1,5 +1,5 @@
 import { HttpClient } from '@angular/common/http';
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, Input, OnInit, ViewChild } from '@angular/core';
 import { NgForm, NgModel } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 
@@ -25,6 +25,7 @@ export class RecipesDetailsPageComponent implements OnInit {
 @ViewChild('ingredients') ingredients!:NgModel;
 @ViewChild('preparation') preparation!:NgModel;
 
+// @Input() data:IRecipe
   constructor(
     private recipeService: RecipeService,
     private activatedRoute: ActivatedRoute,
@@ -106,11 +107,10 @@ onSubmit(createForm:NgForm):void{
   // createForm.value.owner = this.userService.currentUser.userId;
   this.recipeService.updateRecipe$(createForm.value,recipeId).subscribe({
     next:(recipe)=>{
- console.log('sled',recipe)
-      this.router.navigate([`/recipes/${recipeId}`])
-   },
+ console.log('>',recipe)
+    },
    complete:()=>{
-
+    this.ngOnInit()
    },
     error:(error)=>{
       this.router.navigate([`/login`])}
@@ -150,3 +150,10 @@ onSubmit(createForm:NgForm):void{
 
 
   
+
+
+          // this.router.navigate([`/recipes/${recipeId}`]);
+      // this.router.routeReuseStrategy.shouldReuseRoute=() => false;
+      // this.router.onSameUrlNavigation = 'reload';
+      // this.router.navigate(['/']),
+      // {relativeTo: this.route }
