@@ -33,6 +33,8 @@
 .display-content:hover .img-details {
   visibility: visible;
   opacity: 1;
+  -webkit-box-shadow: 2px 2px 45px 10px #808080ae;
+          box-shadow: 2px 2px 45px 10px #808080ae;
 }
 
 .display-content:hover .img-title {

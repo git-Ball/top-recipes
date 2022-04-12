@@ -14,6 +14,7 @@
   border-radius: 20px;
   margin: auto;
   width: 96%;
+  padding-bottom: 70px;
 }
 
 .recipe-wrapper {
@@ -43,6 +44,7 @@
   height: 200px;
   border: solid grey 2px;
   border-radius: 10px;
+  margin-bottom: 50px;
 }
 
 .no-recipes > p > a {

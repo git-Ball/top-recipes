@@ -33,11 +33,14 @@ margin-top: 50px;
 .display-content:hover .img-details {
     visibility: visible;
     opacity: 1;
+    box-shadow: 2px 2px 45px 10px #808080ae;
+ 
  
 }
 .display-content:hover .img-title{
   visibility: hidden;
   opacity: 0;
+
 
 }
 
@@ -60,6 +63,9 @@ margin-top: 50px;
   align-items: center;
   transition: opacity .8s, visibility .8s;
   text-decoration: none;
+
+  // margin: 162px 4px 162px 4px;
+  // background: #1d1e1e8e;
 }
 .img-title{
   position: absolute;

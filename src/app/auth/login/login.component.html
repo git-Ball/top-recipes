@@ -42,7 +42,7 @@
         </ng-container>
 
         <input formControlName="password" [class.error-input]="loginFormGroup.controls['password'].touched && loginFormGroup.controls['password'].invalid" type="password" id="login-password" name="password" />
-        <button type="submit" id="submit-button" class="btn-submit" value="Login"> Login</button>
+        <button [disabled]="loginFormGroup.invalid" type="submit" id="submit-button" class="btn-submit" value="Login"> Login</button>
         <p class="field">
           <!-- <span> -->
                <a routerLink="/register">Sign in</a>
