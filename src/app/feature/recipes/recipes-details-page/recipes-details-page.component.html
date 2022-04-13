@@ -21,7 +21,7 @@
         <span class="bold">Owner</span>: {{ recipe.ownerUsername }}
     </span>
     <span class="recipe-details">
-      <span class="bold">Created</span>: {{ recipe.createdAt}}
+      <span class="bold">Created</span>: {{ recipe.createdAt |date:'fullDate'}}
         <!-- {{}} -->
     </span>
     
