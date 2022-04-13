@@ -7,6 +7,7 @@ import { AuthRoutingModule } from './auth-routing.module';
 import { RouterModule } from '@angular/router';
 import { ReactiveFormsModule } from '@angular/forms';
 import { RecipesModule } from '../feature/recipes/recipes.module';
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 
 
 
@@ -21,8 +22,8 @@ import { RecipesModule } from '../feature/recipes/recipes.module';
     AuthRoutingModule,
     // RouterModule
     ReactiveFormsModule,
-    RecipesModule
-
+    RecipesModule,
+    MatProgressSpinnerModule
    
   ],
   exports:[

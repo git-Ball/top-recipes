@@ -63,4 +63,10 @@
   -ms-flex-preferred-size: 30%;
       flex-basis: 30%;
 }
+
+.spinner {
+  height: 5px;
+  margin: 0 auto;
+  background: pink;
+}
 /*# sourceMappingURL=my-recipes.component.css.map */

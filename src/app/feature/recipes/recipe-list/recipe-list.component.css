@@ -17,4 +17,16 @@
   -ms-flex-preferred-size: 30%;
       flex-basis: 30%;
 }
+
+.spinner {
+  color: grey;
+  height: 5px;
+  margin: 0 auto;
+}
+
+.loading {
+  color: white;
+  margin: 0 auto;
+  font: 1rem;
+}
 /*# sourceMappingURL=recipe-list.component.css.map */

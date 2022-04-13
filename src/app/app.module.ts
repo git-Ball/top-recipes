@@ -25,6 +25,7 @@ import { AuthRoutingModule } from './auth/auth-routing.module';
 import { CoreModule } from './core/core.module';
 import { CreatePageComponent } from './feature/recipes/create-page/create-page.component';
 import { RecipeService } from './core/recipe.service';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 // import { StorageService } from './core/storage.service';
 
 @NgModule({
@@ -51,7 +52,8 @@ import { RecipeService } from './core/recipe.service';
     PagesModule,
     AuthRoutingModule,
     CoreModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule
   ],
   providers: [
     UserService,
