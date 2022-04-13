@@ -26,8 +26,8 @@ this.recipeService.loadRecipesFromBack4App().subscribe(recipe =>{
   //TODO limit(3)>?
   this.recipeListLimited = recipe['results'].slice(0, 3) //.limit(3);
   this.recipeList = recipe['results']
-  console.log('limit >',this.recipeListLimited)
-console.log('no limit >',this.recipeList)
+  // console.log('limit >',this.recipeListLimited)
+console.log('no limit  >  >>>>',this.recipeList)
 
 
 

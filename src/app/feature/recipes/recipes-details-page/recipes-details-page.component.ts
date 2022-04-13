@@ -107,10 +107,11 @@ onSubmit(createForm:NgForm):void{
   // createForm.value.owner = this.userService.currentUser.userId;
   this.recipeService.updateRecipe$(createForm.value,recipeId).subscribe({
     next:(recipe)=>{
- console.log('>',recipe)
+      this.ngOnInit()
     },
    complete:()=>{
-    this.ngOnInit()
+ console.log('>',this.recipe)
+    
    },
     error:(error)=>{
       this.router.navigate([`/login`])}

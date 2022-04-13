@@ -1,8 +1,16 @@
-<div class="all-page-wrapper">
+<div class="all-page-wrapper" *ngIf="!hasSearch">
     <div class="all-heading">All Recipes</div>
+    <form #form="ngForm" (submit)="search(form.value)">
+      <!-- <h1 class="auth-heading">Search</h1> -->
+  <label for="username">Search for recipe:</label>
+      <input   type="text" id="search" name="search" ngModel />
+      <button  type="submit" id="submit-button" class="btn-submit" value="Submit"> Submit</button>
+    </form>
     <app-recipe-list></app-recipe-list> 
     </div>
 <div class="spacer"></div>
+
+
 
     <!-- <div class="home-page-wrapper">
         <div class="home-heading">
@@ -13,3 +21,16 @@
         <app-recipe-list></app-recipe-list> 
       </div>
     </div> -->
+    <div class="all-page-wrapper" *ngIf="hasSearch">
+      <div class="all-heading">All Recipes</div>
+      <form #form="ngForm" (submit)="search(form.value)">
+        <!-- <h1 class="auth-heading">Search</h1> -->
+    <label for="username">Search for recipe:</label>
+        <input   type="text" id="search" name="search" ngModel />
+        <button  type="submit" id="submit-button" class="btn-submit" value="Submit"> Submit</button>
+      </form>
+      <!-- <app-recipe-list></app-recipe-list>  -->
+      <app-recipe-search-list></app-recipe-search-list>
+      
+      </div>
+  <div class="spacer"></div>

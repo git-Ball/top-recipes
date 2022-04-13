@@ -11,15 +11,27 @@ const apiUrl = environment.apiUrl;
 })
 
 export class RecipeService {
+  currentSearch: Array<IRecipe> = [];
   //  headers:Object = {
   //   'Content-Type': 'application/json',
   //   'X-Parse-Application-Id':'0EVXYNppxGut8Cu7AcspZgM7VbEJiVQGj3aANItw',
   //   'X-Parse-REST-API-Key':'zrgbHE3WQom9AF1ocIugdG1WGFaooWQFukuS4BuR'
   // }
   // httpOptions = {headers: this.headers }
+  // getSearch
   constructor(private http: HttpClient) { }
 
   loadRecipesFromBack4App(): Observable<IRecipe[]> {
+
+    const headers = {
+      'Content-Type': 'application/json',
+      'X-Parse-Application-Id': '0EVXYNppxGut8Cu7AcspZgM7VbEJiVQGj3aANItw',
+      'X-Parse-REST-API-Key': 'zrgbHE3WQom9AF1ocIugdG1WGFaooWQFukuS4BuR'
+    }
+    return this.http.get<IRecipe[]>(`${apiUrl}/classes/recipes`, { headers });
+
+  }
+  searchRecipesFromBack4App$(): Observable<IRecipe[]> {
 
     const headers = {
       'Content-Type': 'application/json',
@@ -39,6 +51,7 @@ export class RecipeService {
     return this.http.get<IRecipe[]>(`${apiUrl}/classes/recipes/${id}`, { headers });
 
   }
+
 createRecipe$(recipe:ICreateRecipe):Observable<ICreateRecipe>{
   const headers = {
     'Content-Type': 'application/json',

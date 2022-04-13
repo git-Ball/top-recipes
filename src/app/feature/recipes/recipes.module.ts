@@ -12,6 +12,7 @@ import { RecipeLimitedComponent } from './recipe-limited/recipe-limited.componen
 import { FormsModule } from '@angular/forms';
 // import {MatProgressBarModule} from '@angular/material/progress-bar';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
+import { RecipeSearchListComponent } from './recipe-search-list/recipe-search-list.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
     RecipeListItemComponent,
     RecipeListComponent,
     RecipesDetailsPageComponent,
-    RecipeLimitedComponent
+    RecipeLimitedComponent,
+    RecipeSearchListComponent
   ],
   imports: [
     CommonModule,
@@ -37,7 +39,9 @@ import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 
     RecipeListItemComponent,
     RecipeListComponent,
-    RecipesDetailsPageComponent
+    RecipesDetailsPageComponent,
+    RecipeSearchListComponent
+
 
     
   ]

@@ -1,0 +1,27 @@
+<div class="recipe-wrapper" *ngIf="getSearch; else Loading">
+    <!-- <app-theme-list-item *ngFor="let theme of themeList" [theme]="theme"></app-theme-list-item> -->
+    <!--  --> <app-recipe-list-item class="flex" *ngFor="let recipe of getSearch" [recipe]="recipe"></app-recipe-list-item>
+    <!-- <div *ngIf="!recipeList">No Themes!</div> -->
+    <!-- <div *ngIf="getSearch.length === 0">No Themes!</div> --> 
+    <div *ngIf="getSearch.length === 0" class="not-found-wrapper">
+      <div class="not-found">
+       <!-- <p class="not-found-err">404</p> -->
+      </div>
+    
+      <p class="not-found-text"> Ooops! No recipes found! </p>
+    </div>
+  </div>
+
+  <app-recipe-list-item></app-recipe-list-item>
+ 
+
+      <!-- <div *ngIf="!recipeListLimited">
+      Loading...
+    </div> -->
+
+  <ng-template #Loading>
+    <mat-spinner class="spinner"></mat-spinner>
+</ng-template>
+<!-- <span class="loading">Loading...</span> -->
+
+
