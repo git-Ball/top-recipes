@@ -47,9 +47,13 @@ getUserId: string =
 
   login(): void {
     this.isLogged = true;
+    console.log(localStorage)
   }
   logout(): void {
     this.isLogged = false;
+    localStorage.clear();
+    console.log(localStorage)
+
   }
   headers = {
     "X-Parse-Application-Id": "0EVXYNppxGut8Cu7AcspZgM7VbEJiVQGj3aANItw",
@@ -71,15 +75,27 @@ getUserId: string =
       console.log('v pipe-a ',user)
       // console.log(res.objectId)
       for (const prop in res) {
+        console.log(prop)
         if (prop == 'objectId') {
           this.currentUser.objectId = res[prop];
+          console.log('sessionToken ->>>',localStorage.setItem('objectId',res[prop]))
+
         }
-        // if (prop == 'username') {
-        //   this.currentUser.ownerUsername = res[prop];
-        // }
+        if(prop=='sessionToken'){
+          console.log('sessionToken ->>>',localStorage.setItem('sessionToken',res[prop]))
+        }
+        if (prop == 'username') {
+          // this.currentUser.ownerUsername = res[prop];
+          console.log('sessionToken ->>>',localStorage.setItem('username',res[prop]))
+
+        }
 
       }
       console.log('po dolu',user)
+      console.log('USER DATA',localStorage)
+      console.log('USER sessionToken',localStorage.getItem('sessionToken'))
+      console.log('USER objectId',localStorage.getItem('objectId'))
+      console.log('USER username',localStorage.getItem('username'))
       // console.log(this.currentUser.userId = res.objectId)
     this.currentUser.ownerUsername = user.username;
 
@@ -121,15 +137,30 @@ return this.http.post<RegisterModel>(`${environment.apiUrl}/users`, user, this.h
         console.log(response[prop])
         this.currentUser.objectId = response[prop];
       }
+    
+    if(prop=='sessionToken'){
+      console.log('sessionToken ->>>',localStorage.setItem('sessionToken',response[prop]))
+    }
+    if (prop == 'username') {
+      // this.currentUser.ownerUsername = res[prop];
+      console.log('sessionToken ->>>',)
+
+    }
       // if (prop == 'username') {
       //   this.currentUser.ownerUsername = res[prop];
       // }
     this.currentUser.ownerUsername = user.username;
+    localStorage.setItem('username',user.username)
+
+    console.log('po dolu',user)
+    console.log('USER DATA',localStorage)
+    console.log('USER sessionToken',localStorage.getItem('sessionToken'))
+    console.log('USER objectId',localStorage.getItem('objectId'))
+    console.log('USER username',localStorage.getItem('username'))
 
     }
     
-
-    console.log(user.username)
+   
     console.log(this.currentUser.ownerUsername)
     console.log(this.currentUser)
     // console.log(this.currentUser.userId = res.objectId)

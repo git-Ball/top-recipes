@@ -78,6 +78,7 @@ console.log('form is submitted',this.loginFormGroup);
         console.log('Current User --- >', this.userService.currentUser)
         // console.log('Current User --- >', body.username._id)
         this.router.navigate(['/home']);
+       
         },
         error:(err) =>{
           this.errorMessage = err.error.error;

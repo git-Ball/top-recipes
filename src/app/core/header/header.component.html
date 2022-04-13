@@ -54,11 +54,13 @@
             <span class="bar"></span>
         </a>
     </div>
-    <div *ngIf="isLoggedIn" class="navbar-links">
+    <div *ngIf="userInfo.length>0" class="navbar-links">
+      <!-- <div *ngIf="isLoggedIn" class="navbar-links"> -->
         <ul>
             <li class="user" >
               <!--  {{ getUser.username }}-->
-                <span id="welcome">Welcome,[ {{getUser.ownerUsername}}  ]  </span>
+                <span id="welcome">Welcome,[ {{userInfo.username}}  ]  </span>
+                <!-- <span id="welcome">Welcome,[ {{getUser.ownerUsername}}  ]  </span> -->
                
             </li>
             <li> <a class="home" id="second-home" routerLink="/">Home</a></li>
@@ -73,7 +75,8 @@
         </ul>
     </div> 
     
-    <div *ngIf="!isLoggedIn" class="navbar-links">
+    <div *ngIf="userInfo.length==0" class="navbar-links">
+      <!-- <div *ngIf="!isLoggedIn" class="navbar-links"> -->
       <ul>
          
           <li> <a routerLink="/" class="home" id="second-home">Home</a> </li>
