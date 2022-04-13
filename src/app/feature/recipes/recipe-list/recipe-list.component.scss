@@ -1,12 +1,13 @@
 .recipe-wrapper{
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+ 
+    justify-content: center;
     flex-wrap: wrap;
     .display-content{
         margin-right: 30px;
     }
     .flex{
         flex-basis: 30%;
+        
     }
 }
