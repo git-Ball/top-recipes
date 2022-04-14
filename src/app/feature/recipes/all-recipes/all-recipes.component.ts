@@ -1,5 +1,5 @@
 import { Component, Input, OnInit, Output, ViewChild } from '@angular/core';
-import { NgForm } from '@angular/forms';
+import { NgForm, NgModel } from '@angular/forms';
 import { IRecipe } from 'src/app/core/interfaces';
 import { RecipeService } from 'src/app/core/recipe.service';
 
@@ -11,7 +11,8 @@ import { RecipeService } from 'src/app/core/recipe.service';
 })
 export class AllRecipesComponent implements OnInit {
 @ViewChild('form') form!:NgForm;
-
+// @ViewChild('search') search!:NgModel;
+resetButton:boolean=false;
   recipeList: Array<IRecipe>;
   searchRecipeList: Array<IRecipe>;
 recipeSearchList:Array<IRecipe> = [];
@@ -25,8 +26,17 @@ recipeSearchList:Array<IRecipe> = [];
   get searched(){
     return this.recipeService.hasSearch;
   }
- 
-search(search){
+//   checkMe():void{
+//     console.log('----------------------------->',this.search.viewModel)
+//     if(this.search.viewModel.length>0){
+// this.resetButton = true;
+// console.log(this.resetButton)
+//     }
+// this.resetButton = false;
+// console.log(this.resetButton)
+
+//   }
+searchResult(search){
   this.recipeService.hasSearch = true;
 console.log(search)
 console.log(search.search =='')

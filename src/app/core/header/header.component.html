@@ -54,7 +54,7 @@
             <span class="bar"></span>
         </a>
     </div>
-    <div *ngIf="userInfo.length>0" class="navbar-links">
+    <div *ngIf="isLoggedIn" class="navbar-links">
       <!-- <div *ngIf="isLoggedIn" class="navbar-links"> -->
         <ul>
             <li class="user" >
@@ -75,7 +75,7 @@
         </ul>
     </div> 
     
-    <div *ngIf="userInfo.length==0" class="navbar-links">
+    <div *ngIf="!isLoggedIn" class="navbar-links">
       <!-- <div *ngIf="!isLoggedIn" class="navbar-links"> -->
       <ul>
          

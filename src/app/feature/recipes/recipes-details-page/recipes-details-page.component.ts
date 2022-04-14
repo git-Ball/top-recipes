@@ -22,6 +22,7 @@ export class RecipesDetailsPageComponent implements OnInit {
  currentUser:any=this.userService.currentUser;
 hasOwner:boolean=false;
 hasLiked:boolean=false;
+letsRoll:boolean =false;
 @ViewChild('createForm') createForm!:NgForm;
 @ViewChild('recipeName') recipeName!:NgModel;
 @ViewChild('ingredients') ingredients!:NgModel;
@@ -112,6 +113,7 @@ onEditMode():void{
       ingredients:this.recipe.ingredients,
       preparation:this.recipe.preparation,
       
+      
     })
   })
 }
@@ -123,13 +125,20 @@ onSubmit(createForm:NgForm):void{
   // console.log('All for owner ->>>>>>>>',userId)
   // createForm.value.owner = userId;
   // createForm.value.owner = this.userService.currentUser.userId;
-
-  this.recipeService.updateRecipe$(this.recipe,recipeId).subscribe({
+  // delete this.recipe.createdAt;
+  // delete this.recipe.updatedAt;
+  console.log(this.recipe)
+this.letsRoll =true;
+  this.recipeService.updateRecipe$(createForm.value,recipeId).subscribe({
     next:(recipe)=>{
+     
+     
       this.ngOnInit()
     },
    complete:()=>{
- console.log('>',this.recipe)
+ console.log('>>>>','Done')
+
+ console.log('>>>>',this.recipe)
     
    },
     error:(error)=>{

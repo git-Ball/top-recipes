@@ -30,9 +30,7 @@
 
   }
   .not-found{
-    display: flex;
-    justify-content: center;
-    flex-wrap: nowrap
+    padding: 18px;
   }
   .not-found>div {
     font-size: 3.5rem;
@@ -43,13 +41,15 @@
 
   .not-found-text{
     // margin-top: 50px;
-    color: white;
-    text-align: center;
     font-size: 1.5em;
     text-align: center;
-    margin: 88px;
+    color: white;
     
   }
 .reset{
+  
     color: rgb(72, 174, 72);
+}
+.reset:hover{
+  cursor: pointer;
 }

@@ -28,8 +28,9 @@ get userInfo():any{
     ) { }
 
   ngOnInit(): void {
-    // console.log(this.userService.isLogged)
-    // console.log('Check',this.testa)
+   if(!this.isLoggedIn){
+    localStorage.clear();
+   }
   }
 loginHandler():void {
 this.userService.login()
