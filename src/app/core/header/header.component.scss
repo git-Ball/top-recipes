@@ -227,3 +227,13 @@ nav a.welcome{
   margin: 0;
   padding: 0;
 }
+@media only screen and (max-width: 880px){
+  .navbar-links a, #welcome{
+ 
+    padding: 10px;
+  }
+  .brand-title{
+    padding: 0px
+  }
+ 
+  }

@@ -17,6 +17,70 @@
 }
 
 .spacer {
-  margin-bottom: 450px;
+  padding: 150px;
+}
+
+input {
+  margin-left: 130px;
+  background: #ecf0f3;
+  padding: 20px;
+  padding-left: 20px;
+  height: 9px;
+  font-size: 24px;
+  border-radius: 50px;
+  -webkit-box-shadow: inset 6px 6px 6px #c0c2c5, inset -6px -6px 6px white;
+          box-shadow: inset 6px 6px 6px #c0c2c5, inset -6px -6px 6px white;
+}
+
+input::-webkit-input-placeholder {
+  color: rgba(184, 179, 179, 0.678);
+}
+
+input:-ms-input-placeholder {
+  color: rgba(184, 179, 179, 0.678);
+}
+
+input::-ms-input-placeholder {
+  color: rgba(184, 179, 179, 0.678);
+}
+
+input::placeholder {
+  color: rgba(184, 179, 179, 0.678);
+}
+
+label {
+  display: block;
+  margin: 9px 0px 9px 215px;
+  font-size: 27px;
+  color: white;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+#submit-button {
+  margin-left: 10px;
+  background: rgba(128, 128, 128, 0.5);
+  padding-left: 12px;
+  padding-right: 12px;
+  border-radius: 50px;
+  border: solid 1px transparent;
+  color: white;
+  font-size: 1.5em;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+#submit-button:hover {
+  background: #74ed55a7;
+  -webkit-box-shadow: 0px 0px 30px 0px #26d17d;
+          box-shadow: 0px 0px 30px 0px #26d17d;
+}
+
+@media only screen and (max-width: 850px) {
+  input {
+    margin-left: 12px;
+  }
+  label {
+    margin: 9px 0px 9px 24px;
+  }
 }
 /*# sourceMappingURL=all-recipes.component.css.map */

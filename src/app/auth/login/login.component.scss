@@ -238,3 +238,13 @@ float: right;
     border: solid 3px #c14343ed;
     /* box-shadow: 0px 0px 30px 13px #c14343ed; */
 }
+@media only screen and (max-width: 850px){
+    #login{
+     
+        width: 90%;
+    }
+   #register{
+    width: 90%;
+
+   }
+    }

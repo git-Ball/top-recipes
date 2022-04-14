@@ -92,4 +92,17 @@
   transition: opacity .4s, visibility .4s;
   text-decoration: none;
 }
+
+@media only screen and (max-width: 1350px) {
+  .home-page-wrapper {
+    width: 55%;
+    margin-bottom: 35px;
+  }
+}
+
+@media only screen and (max-width: 850px) {
+  .home-page-wrapper {
+    width: 90%;
+  }
+}
 /*# sourceMappingURL=recipes-page.component.css.map */
