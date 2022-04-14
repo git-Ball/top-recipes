@@ -12,6 +12,7 @@ const apiUrl = environment.apiUrl;
 
 export class RecipeService {
   currentSearch: Array<IRecipe> = [];
+  hasSearch:boolean=false;
   //  headers:Object = {
   //   'Content-Type': 'application/json',
   //   'X-Parse-Application-Id':'0EVXYNppxGut8Cu7AcspZgM7VbEJiVQGj3aANItw',

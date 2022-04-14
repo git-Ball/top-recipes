@@ -1,4 +1,4 @@
-import { Component, OnInit, Output } from '@angular/core';
+import { Component, OnDestroy, OnInit, Output } from '@angular/core';
 import { IRecipe } from 'src/app/core/interfaces';
 // import { IRecipe } from 'src/app/core/interfaces';
 import { RecipeService } from 'src/app/core/recipe.service';
@@ -9,14 +9,15 @@ import { RecipeService } from 'src/app/core/recipe.service';
   styleUrls: ['./recipe-search-list.component.scss']
 })
 
-export class RecipeSearchListComponent implements OnInit {
+export class RecipeSearchListComponent implements OnInit, OnDestroy {
   // recipeList: ;
-// @Output() data 
-getSearch: Array<IRecipe> =
-this.recipeService.currentSearch;
+  // @Output() data 
+  getHasSearch: boolean = this.recipeService.hasSearch;
+  getSearch: Array<IRecipe> =
+    this.recipeService.currentSearch;
 
   constructor(
-    private recipeService:RecipeService
+    private recipeService: RecipeService
 
   ) { }
 
@@ -32,19 +33,28 @@ this.recipeService.currentSearch;
     //   this.recipeList = recipe['results']
     //   // console.log('limit >',this.recipeListLimited)
     // console.log('no limit  >  >>>>',this.recipeList)
-    
-    
-    
+
+
+
     // })
     // this.recipeService.loadRecipesFromBack4App().subscribe(recipe =>{
     //   // console.log(recipe.results)
     //   //TODO limit(3)>?
     //   this.recipeList = recipe['results']
     // console.log('no limit >',this.recipeList)
-     
-    
-    // })
-    
-      }
 
+
+    // })
+
+  }
+  onReset(): void {
+    this.recipeService.hasSearch = false;
+
+
+  }
+  ngOnDestroy(): void {
+    this.recipeService.hasSearch = false;
+    // this.recipeService.currentSearch.length = 0;
+    console.log('YESSSSSSSSSSSSSSSSSSS')
+  }
 }

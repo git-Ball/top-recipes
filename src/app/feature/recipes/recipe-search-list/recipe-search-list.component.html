@@ -3,12 +3,13 @@
     <!--  --> <app-recipe-list-item class="flex" *ngFor="let recipe of getSearch" [recipe]="recipe"></app-recipe-list-item>
     <!-- <div *ngIf="!recipeList">No Themes!</div> -->
     <!-- <div *ngIf="getSearch.length === 0">No Themes!</div> --> 
-    <div *ngIf="getSearch.length === 0" class="not-found-wrapper">
+    <div *ngIf="getSearch.length == 0" class="not-found-wrapper">
       <div class="not-found">
        <!-- <p class="not-found-err">404</p> -->
       </div>
     
-      <p class="not-found-text"> Ooops! No recipes found! </p>
+      <p  class="not-found-text"> Ooops! No recipes found! </p>
+      <span >Click <a class="reset" (click)="onReset()">here</a> to reset your search!</span>
     </div>
   </div>
 

@@ -20,12 +20,14 @@
 
 .not-found-wrapper{
     background: #000000bd;
-      margin: auto;
-      width: 60%;
-      margin-top: 150px;
-      height: 340px;
-      border: solid grey 2px;
-      border-radius: 10px;
+    
+    width: 60%;
+   
+    height: 216px;
+    border: solid grey 2px;
+    border-radius: 10px;
+    margin: 45px;
+
   }
   .not-found{
     display: flex;
@@ -44,5 +46,10 @@
     color: white;
     text-align: center;
     font-size: 1.5em;
+    text-align: center;
+    margin: 88px;
     
   }
+.reset{
+    color: rgb(72, 174, 72);
+}
