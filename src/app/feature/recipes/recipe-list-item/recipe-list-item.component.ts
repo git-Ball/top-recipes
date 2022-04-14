@@ -8,7 +8,7 @@ import { UserService } from 'src/app/core/user.service';
   styleUrls: ['./recipe-list-item.component.scss']
 })
 export class RecipeListItemComponent implements OnInit {
-isLoggedIn:boolean = this.userService.isLogged; //not needed
+isLoggedIn:boolean = this.userService.hasLogged; //not needed
 
 //check s tema useless
 @Input() recipe:IRecipe;

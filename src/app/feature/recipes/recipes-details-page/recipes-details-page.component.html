@@ -12,9 +12,15 @@
   <!-- </div> -->
   <div class="recipe-title">
     <h2> {{ recipe.recipeName }}</h2>
-    <div class="buttons" *ngIf="recipe.owner.objectId == ownerId">
-      <a (click)="onEditMode()"  class="button" id="edit">Edit</a>
-      <a (click)="onDelete()"  class="button" id="delete">Delete</a>
+    <div *ngIf="hasLogged" class="hasUser">
+      <div class="buttons" *ngIf="hasOwner">
+        <a (click)="onEditMode()"  class="button" id="edit">Edit</a>
+        <a (click)="onDelete()"  class="button" id="delete">Delete</a>
+      </div>
+      <div class="buttons" *ngIf="!hasOwner">
+        <a (click)="onEditMode()"  class="button" id="edit">Like</a>
+        
+      </div>
     </div>
   
     <span class="recipe-details">
@@ -24,7 +30,11 @@
       <span class="bold">Created</span>: {{ recipe.createdAt |date:'fullDate'}}
         <!-- {{}} -->
     </span>
-    
+    <span class="recipe-details">
+      <span class="bold">Likes</span>: {{ recipe.likes.length }}
+        <!-- {{}} -->
+    </span>
+  
   </div>
   <div class="recipe-main-details">
     <p class="recipe-details">

@@ -13,7 +13,7 @@ export class HeaderComponent implements OnInit {
   // testa:boolean = false;
 get isLoggedIn(): boolean{
   // return false;
-  return this.userService.isLogged;
+  return this.userService.hasLogged;
 }
 get getUser():IUserInfo{
   return this.userService.currentUser;

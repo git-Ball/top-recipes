@@ -16,10 +16,10 @@ import { UserService } from 'src/app/core/user.service';
 export class RecipesDetailsPageComponent implements OnInit {
   recipe:any;
  ownerId:string = this.userService.currentUser.objectId;
- errorMessage:string='';
+ hasLogged:boolean = this.userService.hasLogged;
  editMode:boolean =false;
  currentUser:any=this.userService.currentUser;
-
+hasOwner:boolean=false;
 @ViewChild('createForm') createForm!:NgForm;
 @ViewChild('recipeName') recipeName!:NgModel;
 @ViewChild('ingredients') ingredients!:NgModel;
@@ -41,6 +41,9 @@ export class RecipesDetailsPageComponent implements OnInit {
       this.recipeService.loadRecipeById(recipeId).subscribe(recipe => {
         // console.log('b4 Results-->',recipe)
         this.recipe = recipe;
+        if(this.recipe.owner.ownerId == this.ownerId){
+          this.hasOwner = true;
+        }
         console.log('after-->',this.recipe)
 console.log('ID ---->',this.ownerId)
         // this.recipe = recipe['results']

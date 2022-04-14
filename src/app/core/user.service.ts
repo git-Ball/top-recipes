@@ -13,7 +13,7 @@ import { IUserInfo } from './interfaces/userInfo';
 })
 export class UserService {
 
-  isLogged: boolean = false;
+  hasLogged: boolean = false;
 
   // className:string;
   // objectId: string;
@@ -46,11 +46,11 @@ getUserId: string =
 
 
   login(): void {
-    this.isLogged = true;
+    this.hasLogged = true;
     console.log(localStorage)
   }
   logout(): void {
-    this.isLogged = false;
+    this.hasLogged = false;
     localStorage.clear();
     console.log(localStorage)
 
