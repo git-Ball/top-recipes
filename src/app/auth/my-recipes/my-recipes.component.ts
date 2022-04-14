@@ -12,7 +12,7 @@ export class MyRecipesComponent implements OnInit {
   getUsername: string =
   this.userService.currentUser.ownerUsername;
   getUserId: string =
-  this.userService.currentUser.objectId;
+ localStorage['objectId']
   recipeList: Array<IRecipe>;
   constructor(
 private userService:UserService,

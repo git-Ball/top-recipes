@@ -77,4 +77,13 @@ updateRecipe$(recipe:IUpdateRecipe,id:string):Observable<IUpdateRecipe>{
   }
   return this.http.put<IUpdateRecipe>(`${apiUrl}/classes/recipes/${id}`,recipe,{headers})
 }
+likeRecipe$(recipe:IUpdateRecipe,id:string):Observable<IUpdateRecipe>{
+  const headers = {
+    'Content-Type': 'application/json',
+    'X-Parse-Application-Id': '0EVXYNppxGut8Cu7AcspZgM7VbEJiVQGj3aANItw',
+    'X-Parse-REST-API-Key': 'zrgbHE3WQom9AF1ocIugdG1WGFaooWQFukuS4BuR'
+  }
+  return this.http.put<IUpdateRecipe>(`${apiUrl}/classes/recipes/${id}`,recipe,{headers})
+}
+
 }

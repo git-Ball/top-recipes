@@ -15,11 +15,13 @@ import { UserService } from 'src/app/core/user.service';
 })
 export class RecipesDetailsPageComponent implements OnInit {
   recipe:any;
+  likes:any={likes:[]}
  ownerId:string = this.userService.currentUser.objectId;
  hasLogged:boolean = this.userService.hasLogged;
  editMode:boolean =false;
  currentUser:any=this.userService.currentUser;
 hasOwner:boolean=false;
+hasLiked:boolean=false;
 @ViewChild('createForm') createForm!:NgForm;
 @ViewChild('recipeName') recipeName!:NgModel;
 @ViewChild('ingredients') ingredients!:NgModel;
@@ -41,11 +43,24 @@ hasOwner:boolean=false;
       this.recipeService.loadRecipeById(recipeId).subscribe(recipe => {
         // console.log('b4 Results-->',recipe)
         this.recipe = recipe;
-        if(this.recipe.owner.ownerId == this.ownerId){
+        if(this.recipe.owner.objectId == this.ownerId){
           this.hasOwner = true;
         }
+        this.hasLiked = false;
+  if(this.hasLogged){
+   if(this.recipe.likes.includes(this.ownerId)){
+    console.log('check',this.recipe.likes,this.ownerId)
+    
+    // console.log(this.recipe.likes.includes(this.ownerId))
+    this.hasLiked = true;
+   }
+  }
         console.log('after-->',this.recipe)
 console.log('ID ---->',this.ownerId)
+console.log(this.hasLiked);
+console.log(this.hasOwner);
+console.log(this.hasLogged);
+
         // this.recipe = recipe['results']
         // console.log('after Results-->',this.recipe)
       })
@@ -108,7 +123,8 @@ onSubmit(createForm:NgForm):void{
   // console.log('All for owner ->>>>>>>>',userId)
   // createForm.value.owner = userId;
   // createForm.value.owner = this.userService.currentUser.userId;
-  this.recipeService.updateRecipe$(createForm.value,recipeId).subscribe({
+
+  this.recipeService.updateRecipe$(this.recipe,recipeId).subscribe({
     next:(recipe)=>{
       this.ngOnInit()
     },
@@ -126,8 +142,40 @@ onSubmit(createForm:NgForm):void{
   this.editMode = false;
 
   }
+  likeIt():void{
+    this.activatedRoute.params.subscribe(params => {
+      const recipeId = params['recipeId']
+    // console.log(createForm.value);
+    // let userId = this.userService.currentUser   //.userId;
+    // console.log('All for owner ->>>>>>>>',userId)
+    // createForm.value.owner = userId;
+    // createForm.value.owner = this.userService.currentUser.userId;
+    
+  
+    console.log('----->',this.recipe)
+    this.likes.likes=this.recipe.likes;
+    this.likes.likes.push(this.ownerId)
+    // this.recipeService.updateRecipe$(,recipeId).subscribe({
+    this.recipeService.likeRecipe$(this.likes,recipeId).subscribe({
+      next:(recipe)=>{
+       this.hasLiked = true;
+        this.ngOnInit()
+      },
+     complete:()=>{
+   console.log('>',this.recipe)
+      
+     },
+      error:(error)=>{
+        console.log(error)
+        this.router.navigate([`/login`])}
+        
+        
+      });
+  
+    })
+  // }
 }
-
+}
   // this.activatedRoute.params.subscribe(params => {
   //   const recipeId = params['recipeId'] // ?
   //   console.log('ID ---->',recipeId)

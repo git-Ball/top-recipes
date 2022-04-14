@@ -6,8 +6,8 @@
       <img src="../../../../assets/no-image.jpg" alt="" />
     </div> -->
     <div class="img-wrapper" >
-      <img *ngIf="recipe.img" src="{{ recipe.img }}" alt="" />
-      <img *ngIf="!recipe.img" src="../../../../assets/no-image.jpg" alt="" />
+      <img *ngIf="recipe.img && recipe.img!=''" src="{{ recipe.img }}" alt="" />
+      <img *ngIf="!recipe.img || recipe.img==''" src="../../../../assets/no-image.jpg" alt="" />
     </div>
   <!-- </div> -->
   <div class="recipe-title">
@@ -17,8 +17,8 @@
         <a (click)="onEditMode()"  class="button" id="edit">Edit</a>
         <a (click)="onDelete()"  class="button" id="delete">Delete</a>
       </div>
-      <div class="buttons" *ngIf="!hasOwner">
-        <a (click)="onEditMode()"  class="button" id="edit">Like</a>
+      <div class="buttons" *ngIf="hasLiked == false && hasOwner == false">
+        <a (click)="likeIt()"  class="button" id="edit">Like</a>
         
       </div>
     </div>
