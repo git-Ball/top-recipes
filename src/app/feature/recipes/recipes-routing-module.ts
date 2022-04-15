@@ -1,4 +1,5 @@
 import { RouterModule, Routes } from "@angular/router";
+import { AuthGuard } from "src/app/core/guards/auth.guard";
 import { AllRecipesComponent } from "./all-recipes/all-recipes.component";
 import { CreatePageComponent } from "./create-page/create-page.component";
 import { RecipesDetailsPageComponent } from "./recipes-details-page/recipes-details-page.component";
@@ -15,6 +16,7 @@ const routes:Routes =[
     },
     {
         path:'create',
+        canActivate:[AuthGuard],
         component:CreatePageComponent,
     },
  

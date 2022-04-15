@@ -35,46 +35,10 @@ console.log('form is submitted',this.loginFormGroup);
       username:this.loginFormGroup.value.username,  
       password:this.loginFormGroup.value.password,  
       }
-      // const userData:Object={};
-      // console.log(body)
-      // return body;
-
-      //raboteshto
-      // this.userService.login$(body).subscribe(()=>{
-      //   this.userService.login()
-      //   this.userService.currentUser = body.username;
-      //   // console.log('Current User --- >', this.userService.getUser)
-      //   console.log('Current User2 --- >', this.userService.currentUser)
-      //   this.router.navigate(['/home']);
-
-
-      // this.userService.login$(params).subscribe({
-      //   next: data => {
-      //     localStorage.setItem('userData', JSON.stringify(data));
-      //   },
-      //   complete: () => {
-      //     this.router.navigate(['/'])
-      //   },
-      //   error: (err) => {
-      //     this.errorMessage = err.error.error
-      //   }
-      // }) 
-
-
-      // })
-      // ()=>{
-      //   this.userService.login()
-      //   this.userService.currentUser = body.username;
-      //   // console.log('Current User --- >', this.userService.getUser)
-      //   console.log('Current User2 --- >', this.userService.currentUser)
-      //   this.router.navigate(['/home']);
-        
-      // }
-      this.userService.login$(body).subscribe({
+   this.userService.login$(body).subscribe({
         next:()=>{
              this.userService.login()
-        // this.userService.currentUser = body.username;
-        // console.log('Current User --- >', this.userService.getUser)
+        
         console.log('Current User --- >', this.userService.currentUser)
         // console.log('Current User --- >', body.username._id)
         this.router.navigate(['/home']);
@@ -86,16 +50,7 @@ console.log('form is submitted',this.loginFormGroup);
         }
       })
 
-      // Simple geolocation API check provides values to publish
-  // if ('geolocation' in navigator) {
-  //   watchId = navigator.geolocation.watchPosition((position: GeolocationPosition) => {
-  //     observer.next(position);
-  //   }, (error: GeolocationPositionError) => {
-  //     observer.error(error);
-  //   });
-  // } else {
-  //   observer.error('Geolocation not available');
-  // }
+      
 
   }
   onSubmit():void{
