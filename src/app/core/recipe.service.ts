@@ -13,13 +13,7 @@ const apiUrl = environment.apiUrl;
 export class RecipeService {
   currentSearch: Array<IRecipe> = [];
   hasSearch:boolean=false;
-  //  headers:Object = {
-  //   'Content-Type': 'application/json',
-  //   'X-Parse-Application-Id':'0EVXYNppxGut8Cu7AcspZgM7VbEJiVQGj3aANItw',
-  //   'X-Parse-REST-API-Key':'zrgbHE3WQom9AF1ocIugdG1WGFaooWQFukuS4BuR'
-  // }
-  // httpOptions = {headers: this.headers }
-  // getSearch
+
   constructor(private http: HttpClient) { }
 
   loadRecipesFromBack4App(): Observable<IRecipe[]> {

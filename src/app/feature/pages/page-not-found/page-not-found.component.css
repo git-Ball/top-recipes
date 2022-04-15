@@ -48,4 +48,11 @@
   -webkit-box-shadow: 0px 0px 30px 0px #e45454;
           box-shadow: 0px 0px 30px 0px #e45454;
 }
+
+@media only screen and (max-width: 850px) {
+  .not-found-wrapper {
+    width: 85%;
+    margin-bottom: 10px;
+  }
+}
 /*# sourceMappingURL=page-not-found.component.css.map */

@@ -1,14 +1,10 @@
-<!-- <div class="auth-page-wrapper">
-    <div class="auth-heading">Register</div>
-    </div> -->
 
-<!-- <section id="login-page" class="auth"> -->
 <form
   id="register"
   [formGroup]="registerFormGroup"
   (ngSubmit)="handleRegister()"
 >
-  <!-- <div class="container"> -->
+
 
   <h1 class="auth-heading">Register</h1>
 
@@ -53,7 +49,7 @@
   <div formGroupName="passwords">
     <label for="password">Password:</label>
 
-    <!-- [class.error-input]="passwordGroups.controls['password'].touched && passwordGroups.controls['password'].invalid" -->
+ 
     <ng-container *ngIf="passwordsGroup.controls['password'].touched && passwordsGroup.controls['password'].invalid">
       <div *ngIf="passwordsGroup.controls['password'].errors['required']" class="error-msg">
         Password is required!
@@ -77,10 +73,10 @@
      
 
     <!-- repass -->
-  <!-- TODO repass s ng Cont -->
+
     <label for="repass">Repeat Password:</label>
     <ng-container *ngIf="passwordsGroup.controls['repass'].touched && passwordsGroup.controls['repass'].invalid">
-      <p class="error-msg"  >
+      <p class="error-msg">
           Passwords didn`t match!
         </p>
       </ng-container>
@@ -105,14 +101,12 @@
   >
     Register
   </button>
-  <p class="field">
-    <!-- <span> -->
-    <a routerLink="/login">Sign up</a>
-    <!-- <a @click=${(event) => redirect(event)} href="/register"
-                    >here</a -->
-    <!-- </span -->
-    >
-  </p>
-  <!-- </div> -->
+  <!-- <p class="field">
+
+    <a routerLink="/login">create check</a>
+
+
+  </p> -->
+
 </form>
-<!-- </section> -->
+

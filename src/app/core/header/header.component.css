@@ -1,6 +1,5 @@
 header {
   position: relative;
-  /* padding: 10px; */
 }
 
 header h1 {
@@ -13,12 +12,7 @@ header h1 {
 header nav {
   font-size: auto;
   font-family: Georgia, 'Times New Roman', Times, serif;
-  /* position: absolute;
-  right: 0;
-  bottom: 26px;
-  margin-right: 16px; */
   margin: 0;
-  /* margin-left: 10px; */
 }
 
 .navbar {
@@ -31,13 +25,11 @@ header nav {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  /* background: #141719d4; */
   background-color: #141719d4;
 }
 
 .navbar:hover {
   background-color: #141719fa;
-  /* color: rgb(118, 201, 98); */
 }
 
 .all-offers-btn {
@@ -55,7 +47,6 @@ header nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  /* text-align: center; */
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -107,15 +98,6 @@ nav a:hover {
   background-color: #8080804f;
 }
 
-/* nav a.welcome:hover{
-  color: rgb(255, 255, 255);
-  font-weight: bolder;
-}
-nav a.welcome{
-  margin-right: 14px;
-  
-   */
-/* } */
 .home:hover {
   cursor: pointer;
   color: white;
@@ -151,11 +133,6 @@ nav a.welcome{
 
 #welcome {
   font-weight: bold;
-  /* border: solid 0.7px;
-  padding: 3.4px;
-  border-radius: 24px;
-  background: #3b515c;
-  border-color: rgb(96, 230, 118); */
 }
 
 .user,
@@ -181,7 +158,7 @@ nav a.welcome{
   }
   .navbar-links {
     width: 100%;
-    padding: 0.5rem;
+    padding: 0px;
   }
   .navbar-links li {
     width: 100%;

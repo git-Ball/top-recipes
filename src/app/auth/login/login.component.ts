@@ -24,8 +24,7 @@ errorMessage:string='';
   ngOnInit(): void {
   }
   loginHandler():void{
-// this.userService.login();
-// this.router.navigate(['/home']);
+
 console.log('form is submitted',this.loginFormGroup);
 
   }
@@ -53,21 +52,5 @@ console.log('form is submitted',this.loginFormGroup);
       
 
   }
-  onSubmit():void{
-    // const body:RegisterModel={
-    //   username:this.loginFormGroup.value.username,  
-    //   password:this.loginFormGroup.value.password,  
-    //   }
-    //   // const userData:Object={};
-    //   // console.log(body)
-    //   // return body;
-    //   this.userService.login$(body).subscribe(()=>{
-    //     this.userService.login()
-    //     this.userService.currentUser = body.username;
-    //     console.log('Current User --- >', this.userService.getUser)
-    //     console.log('Current User2 --- >', this.userService.currentUser)
-    //     this.router.navigate(['/home']);
-        
-    //   })
-  }
+
 }

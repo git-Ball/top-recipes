@@ -1,16 +1,14 @@
 <div class="recipe-wrapper" *ngIf="recipeListLimited; else Loading">
-    <!-- <app-theme-list-item *ngFor="let theme of themeList" [theme]="theme"></app-theme-list-item> -->
+   
     <app-recipe-list-item *ngFor="let recipe of recipeListLimited" [recipe]="recipe"></app-recipe-list-item>
-    <!-- <div *ngIf="!recipeList">No Themes!</div> -->
-    <div *ngIf="recipeListLimited.length == 0">No Themes!</div>
+    
+    <div *ngIf="recipeListLimited.length == 0">No recipes in data base!</div>
   </div>
 
   <app-recipe-list-item></app-recipe-list-item>
   
 
-      <!-- <div *ngIf="!recipeListLimited">
-      Loading...
-    </div> -->
+    
 
   <ng-template #Loading>
     <mat-spinner class="spinner"></mat-spinner>

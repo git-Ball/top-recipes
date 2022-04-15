@@ -8,13 +8,12 @@ import { UserService } from 'src/app/core/user.service';
   styleUrls: ['./recipe-list-item.component.scss']
 })
 export class RecipeListItemComponent implements OnInit {
-isLoggedIn:boolean = this.userService.hasLogged; //not needed
+isLoggedIn:boolean = this.userService.hasLogged; 
 
-//check s tema useless
 @Input() recipe:IRecipe;
-// @Input() recipe:IRecipe;
 
-// @Input() recipe:recipeList;
+
+
   constructor(private userService:UserService) { }
 
   ngOnInit(): void {

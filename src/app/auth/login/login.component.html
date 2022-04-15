@@ -1,17 +1,13 @@
-<!-- 
-<div class="auth-page-wrapper">
-<div class="auth-heading">Login</div>
-</div> -->
 
-<!-- <section id="login-page" class="auth"> -->
+
     <form id="login" [formGroup]="loginFormGroup" (ngSubmit)="handleLogin()">
-      <!-- <div class="container"> -->
+     
 
         <h1 class="auth-heading">Login</h1>
         <p *ngIf="errorMessage" class="error-msg">
           {{errorMessage}}
         </p>
-         <!-- <div class="error-msg"></div> -->
+        
 
          <!-- Username -->
         <label for="username">Username:</label>
@@ -43,16 +39,14 @@
 
         <input formControlName="password" [class.error-input]="loginFormGroup.controls['password'].touched && loginFormGroup.controls['password'].invalid" type="password" id="login-password" name="password" placeholder="*****" />
         <button [disabled]="loginFormGroup.invalid" type="submit" id="submit-button" class="btn-submit" value="Login"> Login</button>
-        <p class="field">
-          <!-- <span> -->
+        <!-- <p class="field">
+       
                <a routerLink="/register">Sign in</a>
-            <!-- <a @click=${(event) => redirect(event)} href="/register"
-              >here</a -->
-           <!-- </span -->
-          >
-        </p>
-      <!-- </div> -->
+       
+         
+        </p> -->
+    
     </form>
-  <!-- </section> -->
+
 
 

@@ -11,41 +11,14 @@
   
     margin-top: 50px;
 }
-// .auth-page-wrapper{
-//     background: #000000b0;
 
-//     border-radius: 20px;
-//     margin: auto;
-//     width: 96%;
-//     height: 500px;
-// }
-#login{
-    padding-bottom: 50px;
-    border-radius: 10px;
-}
-
-// #login-page {
-//     position: relative;
-//     width: 650px;
-//     height: auto;
-//     border-radius: 20px;
-//     padding: 40px;
-//     box-sizing: border-box;
-  
-//     background: #1417199d;
-//     box-shadow: 0px 0px 30px 0px rgb(146 204 131);
-// }
-// #login-page:hover{
-//     background: #141719d4;
-//     box-shadow: 0px 0px 30px 0px #26d17d;
-    
-// }
 #login{
     background: #1417199d;
     width: 40%;
     margin: 0 auto;
     margin-top: 50px;
     margin-bottom: 50px;
+    padding-bottom: 40px;
 }
 #login input{
     width: 60%;
@@ -91,10 +64,7 @@ box-shadow: 0px 0px 30px 0px #26d17d;
     border-radius: 20px;
     padding: 40px;
     box-sizing: border-box;
-    /* background: #3e4443;
-    box-shadow: 0px 0px 32px 0px #49535e, -14px -14px 20px #191c21; */
-    /* background-image: url('/img/login2.jpg');
-    opacity: 0.9; */
+  
     background: #1417199d;
     box-shadow: 0px 0px 30px 0px rgb(146 204 131);
 
@@ -106,15 +76,7 @@ box-shadow: 0px 0px 30px 0px #26d17d;
 }
 
 
-// .brand-logo {
-//     height: 100px;
-//     width: 100px;
-   
-//     margin: auto;
-//     border-radius: 50%;
-//     box-sizing: border-box;
-//     box-shadow: 7px 7px 10px #cbced1, -7px -7px 10px white;
-// }
+
 
 .container>h1 {
     margin-top: 15px;
@@ -126,10 +88,10 @@ box-shadow: 0px 0px 30px 0px #26d17d;
     letter-spacing: 1px;
     font-family: Georgia, 'Times New Roman', Times, serif;
     margin-bottom: 17px;
-    /* background: #00000059; */
+
     border-radius: 42px;
     display: inline-block;
-    /* margin-left: 145px; */
+  
     
    
 }
@@ -221,14 +183,14 @@ float: right;
     padding: 5px 18px 5px 18px;
     margin: 29px;
 
-    // margin: 8px;
+   
 }
 .error-msg{
     margin: 0 auto;
     text-align: center;
     color: #ff1010;
     font-size: 1rem;
-    // font-weight: bold;
+   
     background-color: rgba(0, 0, 0, 0.722);
     width: fit-content;
     padding: 0px 8px 0px 8px;
@@ -236,7 +198,7 @@ float: right;
 }
 .error-input {
     border: solid 3px #c14343ed;
-    /* box-shadow: 0px 0px 30px 13px #c14343ed; */
+    
 }
 @media only screen and (max-width: 850px){
     #login{

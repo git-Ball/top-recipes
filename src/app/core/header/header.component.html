@@ -1,46 +1,4 @@
-<!-- <header>
-    <div class="mini-navbar-wrap">
-      <div class="logo-wrap">
-        <p class="logo"><span class="logo">SoftUni Forum</span></p>
-      </div>
-      <div class="mini-navbar" >
-        <ul>
-          <li>
-            <a routerLink="/login" >Login</a>
-          </li>
-          <li>
-            <a routerLink="/register">Register</a>
-          </li>
-        </ul>
-      </div>
-      <div class="mini-navbar" >
-         <div>HELLO, [username]@localdomain.com</div>
-        <a (click)="logoutHandler()">Logout</a> -->
-        <!-- <ul>
-          <li>
-            <a routerLink="/profile" >John's profile</a>
-          </li>
-          <li> -->
-            <!-- <a >Logout</a> (click)="logoutHandler()" -->
-          <!-- </li>
-        </ul>
-  
-      </div>
-    </div>
-    <nav>
-      <ul>
-        <li>
-          <a routerLink="/home">Home</a>
-        </li>
-        <li>
-          <a routerLink="/themes">Themes</a>
-        </li>
-        <li>
-          <a routerLink="/themes/new">New Theme</a>
-        </li>
-      </ul>
-    </nav>
-  </header>  -->
+
 
 
   <header>
@@ -55,12 +13,12 @@
         </a>
     </div>
     <div *ngIf="isLoggedIn" class="navbar-links">
-      <!-- <div *ngIf="isLoggedIn" class="navbar-links"> -->
+   
         <ul>
             <li class="user" >
-              <!--  {{ getUser.username }}-->
+           
                 <span id="welcome">Welcome,[ {{userInfo.username}}  ]  </span>
-                <!-- <span id="welcome">Welcome,[ {{getUser.ownerUsername}}  ]  </span> -->
+                
                
             </li>
             <li> <a class="home" id="second-home" routerLink="/">Home</a></li>
@@ -68,15 +26,14 @@
             <li><a routerLink="/recipes" class='all-offers-btn'>All Recipes</a></li>
             <li class="user"><a routerLink="/create">Create Recipe</a></li>
             <li class="user"><a routerLink="/profile">My Recipes</a></li>
-            <!-- <li class="guest"><a routerLink="/login">Login</a></li>
-            <li class="guest"><a routerLink="/register">Register</a></li> -->
+         
             <li class="user"><a class="logout" (click)="logoutHandler()" href="javascript:void(0)">Logout</a></li>
         
         </ul>
     </div> 
     
     <div *ngIf="!isLoggedIn" class="navbar-links">
-      <!-- <div *ngIf="!isLoggedIn" class="navbar-links"> -->
+     
       <ul>
          
           <li> <a routerLink="/" class="home" id="second-home">Home</a> </li>
@@ -92,8 +49,3 @@
     </nav>
 </header>
 
-     <!-- <div id="user">
-           
-            <a class="welcome" href="javascript:void(0)"></a> -->
-        <!-- </div> -->
-        <!-- <a id="user" class="welcome" href="javascript:void(0)"></a> -->

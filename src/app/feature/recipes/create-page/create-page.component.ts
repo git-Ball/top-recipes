@@ -25,22 +25,21 @@ errorMessage:string='';
   ngOnInit(): void {
   }
 ngAfterViewInit(): void {
-  // console.log(this.createForm.value)
-  // console.log(this.recipeName)
+
 }
 onSubmit(createForm:NgForm):void{
-console.log(createForm.value);
-let userId = this.userService.currentUser   //.userId;
-console.log('All for owner ->>>>>>>>',userId)
+
+let userId = this.userService.currentUser;
+
 createForm.value.owner = userId;
 createForm.value.ownerUsername =this.userService.currentUser.ownerUsername;
 createForm.value.likes = [];
-// createForm.value.owner = this.userService.currentUser.userId;
+
 this.recipeService.createRecipe$(createForm.value).subscribe({
   next:(recipe)=>{
-    console.log('next >',recipe)
+   
     this.router.navigate(['/recipes'])
-    console.log('after next -->')
+   
 
   },
   error:(error)=>{
@@ -53,23 +52,6 @@ navigateToHome(){
   this.router.navigate(['/home'])
 }
 
-  // if(this.recipeName.errors){
-  //   // this.recipeName.invalid;
-  //   console.log('recipeName')
-
-  // }
-  // if(this.ingredients.errors){
-  //   // this.ingredients.invalid;
-
-  //   console.log('ingredients')
-
-  // }
-  // if(this.preparation.errors){
-  //   // this.preparation.invalid;
-  //   // this.preparation.touched;
-
-  //   console.log('preparation')
-
-  // }
+ 
 
 }

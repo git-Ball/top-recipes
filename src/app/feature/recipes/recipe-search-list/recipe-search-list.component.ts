@@ -10,8 +10,7 @@ import { RecipeService } from 'src/app/core/recipe.service';
 })
 
 export class RecipeSearchListComponent implements OnInit, OnDestroy {
-  // recipeList: ;
-  // @Output() data 
+ 
   getHasSearch: boolean = this.recipeService.hasSearch;
   getSearch: Array<IRecipe> =
     this.recipeService.currentSearch;
@@ -22,29 +21,7 @@ export class RecipeSearchListComponent implements OnInit, OnDestroy {
   ) { }
 
   ngOnInit(): void {
-    // // this.recipeService.loadRecipes().subscribe(themeList=>{
-    // //   this.themeList = themeList;
-    // //   console.log('testvame  .>>>',this.themeList)
-    // // })
-    // this.recipeService.loadRecipesFromBack4App().subscribe(recipe =>{
-    //   // console.log(recipe.results)
-    //   //TODO limit(3)>?
-    //   // this.recipeListLimited = recipe['results'].slice(0, 3) //.limit(3);
-    //   this.recipeList = recipe['results']
-    //   // console.log('limit >',this.recipeListLimited)
-    // console.log('no limit  >  >>>>',this.recipeList)
 
-
-
-    // })
-    // this.recipeService.loadRecipesFromBack4App().subscribe(recipe =>{
-    //   // console.log(recipe.results)
-    //   //TODO limit(3)>?
-    //   this.recipeList = recipe['results']
-    // console.log('no limit >',this.recipeList)
-
-
-    // })
 
   }
   onReset(): void {
@@ -54,7 +31,6 @@ export class RecipeSearchListComponent implements OnInit, OnDestroy {
   }
   ngOnDestroy(): void {
     this.recipeService.hasSearch = false;
-    // this.recipeService.currentSearch.length = 0;
-    console.log('YESSSSSSSSSSSSSSSSSSS')
+   
   }
 }

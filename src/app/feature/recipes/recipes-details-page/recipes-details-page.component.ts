@@ -39,10 +39,8 @@ letsRoll:boolean =false;
 
   ngOnInit(): void {
     this.activatedRoute.params.subscribe(params => {
-      const recipeId = params['recipeId'] // ?
-      console.log('ID ---->',recipeId)
+      const recipeId = params['recipeId']
       this.recipeService.loadRecipeById(recipeId).subscribe(recipe => {
-        // console.log('b4 Results-->',recipe)
         this.recipe = recipe;
         if(this.recipe.owner.objectId == this.ownerId){
           this.hasOwner = true;
@@ -50,45 +48,23 @@ letsRoll:boolean =false;
         this.hasLiked = false;
   if(this.hasLogged){
    if(this.recipe.likes.includes(this.ownerId)){
-    console.log('check',this.recipe.likes,this.ownerId)
     
-    // console.log(this.recipe.likes.includes(this.ownerId))
     this.hasLiked = true;
    }
   }
-        console.log('after-->',this.recipe)
-console.log('ID ---->',this.ownerId)
-console.log(this.hasLiked);
-console.log(this.hasOwner);
-console.log(this.hasLogged);
+//         console.log('after-->',this.recipe)
+// console.log('ID ---->',this.ownerId)
+// console.log(this.hasLiked);
+// console.log(this.hasOwner);
+// console.log(this.hasLogged);
 
-        // this.recipe = recipe['results']
-        // console.log('after Results-->',this.recipe)
       })
     });
   }
-//   onDelete():void{
-//     this.activatedRoute.params.subscribe(params => {
-//       const recipeId = params['recipeId'] // ?
-//       console.log('ID ---->',recipeId)
 
-// //       this.recipeService.deleteRecipe$(recipeId).subscribe({
-// //         next:(recipe)=>{
-// //           console.log('next >',recipe)
-// //           this.router.navigate(['/recipes'])
-// //           console.log('after next -->')
-      
-// //         },
-// //         error:(error)=>{
-// //           this.errorMessage == error.error.error;
-// //           this.router.navigate([`/recipes/${recipeId}`])}
-// // });
-//       }
-//   }
 onDelete(){
 this.activatedRoute.params.subscribe(params => {
-          const recipeId = params['recipeId'] // ?
-    //       console.log('ID ---->',recipeId)
+          const recipeId = params['recipeId']
 this.recipeService.deleteRecipe$(recipeId).subscribe({
 next:()=>{
        console.log('Recipe deleted!')
@@ -120,14 +96,7 @@ onEditMode():void{
 onSubmit(createForm:NgForm):void{
   this.activatedRoute.params.subscribe(params => {
     const recipeId = params['recipeId']
-  console.log(createForm.value);
-  // let userId = this.userService.currentUser   //.userId;
-  // console.log('All for owner ->>>>>>>>',userId)
-  // createForm.value.owner = userId;
-  // createForm.value.owner = this.userService.currentUser.userId;
-  // delete this.recipe.createdAt;
-  // delete this.recipe.updatedAt;
-  console.log(this.recipe)
+
 this.letsRoll =true;
   this.recipeService.updateRecipe$(createForm.value,recipeId).subscribe({
     next:(recipe)=>{

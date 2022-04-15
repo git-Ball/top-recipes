@@ -1,83 +1,8 @@
-// /* header  */
-
-// header {
-//     background: rgb(0, 128, 182);
-//     background: linear-gradient(0deg, rgba(0, 128, 182, 1) 0%, rgba(0, 128, 182, 1) 35%, rgba(0, 212, 255, 1) 100%);
-//   }
-  
-//   header ul {
-//     padding: 0;
-//     display: flex;
-//     align-items: center;
-//     width: 75%;
-//     margin: auto;
-//   }
-  
-//   header ul span {
-//     color: white;
-//     padding: 0.5em;
-//   }
-  
-//   .mini-navbar ul {
-//     border: 1px solid #00d4ff;
-//     border-radius: 0.3em;
-//     padding-left: 0;
-//     width: 100%;
-//   }
-  
-//   header li {
-//     list-style: none;
-//     margin: .35em;
-//     padding: 0 .95em;
-//   }
-  
-//   header a {
-//     text-decoration: none;
-//     color: white;
-//     cursor: pointer;
-//   }
-  
-//   nav {
-//     border-top: 1px solid #00acf4;
-//   }
-  
-//   .logo {
-//     font-size: 1.3em;
-//     color: white;
-//     padding-bottom: 0;
-//   }
-  
-//   .logo-wrap {
-//     font-family: 'Parisienne', cursive;
-//     letter-spacing: .5em;
-//     margin: 0.5em 0;
-//   }
-  
-//   .mini-navbar-wrap {
-//     display: flex;
-//     flex-direction: row;
-//     justify-content: space-between;
-//     align-items: center;
-//     width: 75%;
-//     margin: auto;
-//   }
-  
-//   /* mini-navbar */
-  
-//   .mini-navbar ul {
-//     background-color: #6ba1b8;
-//     border-radius: 5px;
-//   }
-  
-//   .mini-navbar ul li+li {
-//     border-left: 1px solid lightgrey;
-//     padding-left: .5em;
-//   }
 
 
 header {
   position: relative;
-  /* padding: 10px; */
+
 }
 
 header h1 {
@@ -90,18 +15,15 @@ header h1 {
 header nav {
   font-size: auto;
   font-family: Georgia, 'Times New Roman', Times, serif;
-  /* position: absolute;
-  right: 0;
-  bottom: 26px;
-  margin-right: 16px; */
+
   margin: 0;
-  /* margin-left: 10px; */
+ 
 }
 .navbar{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  /* background: #141719d4; */
+
   background-color: #141719d4;
  
 }
@@ -109,7 +31,7 @@ header nav {
 .navbar:hover {
   background-color: #141719fa;
 
-  /* color: rgb(118, 201, 98); */
+
   
   
 }
@@ -124,7 +46,7 @@ margin-left: 15px;
   margin: 0;
   padding: 0;
   display: flex;
-  /* text-align: center; */
+  
   align-items: center;
   list-style: none;
 }
@@ -176,20 +98,12 @@ nav a:hover {
 
   
 }
-/* nav a.welcome:hover{
-  color: rgb(255, 255, 255);
-  font-weight: bolder;
-}
-nav a.welcome{
-  margin-right: 14px;
-  
-   */
-/* } */
+
 
 .home:hover {
   cursor: pointer;
 
-  // font-weight: bolder;
+ 
   color: white;
 
  
@@ -218,11 +132,7 @@ nav a.welcome{
 }
 #welcome{
   font-weight: bold;
- /* border: solid 0.7px;
-  padding: 3.4px;
-  border-radius: 24px;
-  background: #3b515c;
-  border-color: rgb(96, 230, 118); */
+ 
 }
 
 .user,
@@ -230,23 +140,7 @@ nav a.welcome{
   margin: 0;
   padding: 0;
 }
-// @media only screen and (max-width: 880px){
-//   // .navbar-links a, #welcome{
- 
-//   //   padding: 0px;
-//   // }
-//   .brand-title{
-//     padding: 0.5rem
-//   }
-//   .navbar-links{
-//     padding: 0.5rem;
-// //  li{
-// //   width: 100%;
-// //   text-align: center;
-// //  }
-//   }
- 
-//   }
+
   @media only screen and (max-width: 840px){
     .navbar{
       flex-direction: column;
@@ -257,7 +151,7 @@ nav a.welcome{
     }
     .navbar-links{
       width: 100%;
-          padding: 0.5rem;
+          padding: 0px;
        li{
         width: 100%;
         text-align: center;

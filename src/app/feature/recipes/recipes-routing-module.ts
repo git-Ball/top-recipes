@@ -19,6 +19,6 @@ const routes:Routes =[
         canActivate:[AuthGuard],
         component:CreatePageComponent,
     },
- 
+    // {path: '', component: defaultniq, pathMatch : 'full' }
 ]
 export const RecipesRoutingModule = RouterModule.forChild(routes)

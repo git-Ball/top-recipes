@@ -10,7 +10,7 @@ import { RecipeListComponent } from './recipe-list/recipe-list.component';
 import { RecipesDetailsPageComponent } from './recipes-details-page/recipes-details-page.component';
 import { RecipeLimitedComponent } from './recipe-limited/recipe-limited.component';
 import { FormsModule } from '@angular/forms';
-// import {MatProgressBarModule} from '@angular/material/progress-bar';
+
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 import { RecipeSearchListComponent } from './recipe-search-list/recipe-search-list.component';
 
@@ -27,7 +27,7 @@ import { RecipeSearchListComponent } from './recipe-search-list/recipe-search-li
   ],
   imports: [
     CommonModule,
-    // RouterModule
+    // RouterModule,
     RecipesRoutingModule,
     FormsModule,
     MatProgressSpinnerModule
