@@ -26,7 +26,7 @@
           </div>
         </ng-container>
 
-        <input formControlName="username"  [class.error-input]="loginFormGroup.controls['username'].touched && loginFormGroup.controls['username'].invalid" type="text" id="username" name="username" />
+        <input formControlName="username"  [class.error-input]="loginFormGroup.controls['username'].touched && loginFormGroup.controls['username'].invalid" type="text" id="username" name="username" placeholder="username" />
    
        
         <!-- Password -->
@@ -41,7 +41,7 @@
           </div>
         </ng-container>
 
-        <input formControlName="password" [class.error-input]="loginFormGroup.controls['password'].touched && loginFormGroup.controls['password'].invalid" type="password" id="login-password" name="password" />
+        <input formControlName="password" [class.error-input]="loginFormGroup.controls['password'].touched && loginFormGroup.controls['password'].invalid" type="password" id="login-password" name="password" placeholder="*****" />
         <button [disabled]="loginFormGroup.invalid" type="submit" id="submit-button" class="btn-submit" value="Login"> Login</button>
         <p class="field">
           <!-- <span> -->

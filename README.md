@@ -3,9 +3,7 @@ Angular project for SoftUni Angular course.
 Online platform for recipes sharing.
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.2.5.
 ## Application stack:
- -TypesScript
- -HTML
- -SCSS
+ TypesScript, HTML, SCSS
 ## Functionality:
 Guest users can review entire collection with recipes, details for recipe and also to use search functionality in platform.
 

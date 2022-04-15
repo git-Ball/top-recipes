@@ -82,5 +82,25 @@ label {
   label {
     margin: 9px 0px 9px 24px;
   }
+  .not-found-wrapper {
+    width: 80%;
+    height: 150px;
+  }
+  .not-found-text {
+    font-size: 1rem;
+  }
+}
+
+@media only screen and (max-width: 430px) {
+  .all-page-wrapper {
+    width: 100%;
+  }
+  .display-content {
+    width: 290px;
+    height: 270px;
+  }
+  input {
+    width: 45%;
+  }
 }
 /*# sourceMappingURL=all-recipes.component.css.map */

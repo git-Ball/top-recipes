@@ -105,4 +105,10 @@
     width: 90%;
   }
 }
+
+@media only screen and (max-width: 430px) {
+  .home-page-wrapper {
+    width: 100%;
+  }
+}
 /*# sourceMappingURL=recipes-page.component.css.map */

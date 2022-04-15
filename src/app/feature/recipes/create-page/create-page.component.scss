@@ -254,7 +254,7 @@ input {
 
 label {
     margin-bottom: 8px;
-    font-size: 27px;
+    font-size: 19px;
     color: white;
     margin-top: 13px;
     font-family: Georgia, 'Times New Roman', Times, serif;
@@ -334,8 +334,8 @@ float: right;
     margin: 0 auto;
     text-align: center;
     color: #ff1010;
-    font-size: 16px;
-    font-weight: bold;
+    font-size: 14px;
+    // font-weight: bold;
 }
 
 
@@ -387,6 +387,19 @@ textarea:hover {
 
     #create{
      width: 90%;
- 
     }
+    
      }
+     @media only screen and (max-width: 550px){
+        #create{
+            width: 100%;
+            input{
+                width: 75%;
+            
+               }
+           }
+       
+        #submit-button{
+            width: 75%;
+        }
+         }

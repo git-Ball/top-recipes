@@ -31,15 +31,14 @@
 //  margin-bottom: 40px;
 }
 .no-recipes{
-    background: #000000bd;
-    margin: auto 0;
-    margin-top: 30px;
-    margin-bottom: 30px;
-    width: 40%;
-    
-    height: 200px;
-    border: solid grey 2px;
-    border-radius: 10px;
+  background: #000000bd;
+  margin: auto 0;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  width: 66%;
+  height: 200px;
+  border: solid grey 2px;
+  border-radius: 10px;
   
 }
 
@@ -65,4 +64,6 @@
    margin: 0 auto;
 
 }
+@media only screen and (max-width: 1100px){
 
+  }

@@ -1,7 +1,7 @@
 .auth-heading{
     background: rgba(128, 128, 128, 0.5);
     color: white;
-    font-size: 2.5rem;
+    font-size: 2rem;
     text-align: center;
     
 
@@ -42,7 +42,7 @@
 // }
 #login{
     background: #1417199d;
-    width: 50%;
+    width: 40%;
     margin: 0 auto;
     margin-top: 50px;
     margin-bottom: 50px;
@@ -51,7 +51,7 @@
     width: 60%;
   margin: auto ;
   background: #ecf0f3;
-  padding: 30px;
+  padding: 20px;
   padding-left: 20px;
   height: 50px;
   margin-top: 10px;
@@ -147,7 +147,7 @@ input {
 
 label {
     margin-bottom: 8px;
-    font-size: 27px;
+    font-size: 19px;
     color: white;
     margin-top: 13px;
     font-family: Georgia, 'Times New Roman', Times, serif;
@@ -227,8 +227,8 @@ float: right;
     margin: 0 auto;
     text-align: center;
     color: #ff1010;
-    font-size: 1.5rem;
-    font-weight: bold;
+    font-size: 1rem;
+    // font-weight: bold;
     background-color: rgba(0, 0, 0, 0.722);
     width: fit-content;
     padding: 0px 8px 0px 8px;
@@ -248,3 +248,22 @@ float: right;
 
    }
     }
+    @media only screen and (max-width: 800px){
+      #login{
+          input{
+            width: 75%;
+          }
+          #submit-button{
+            width: 75%; 
+          }
+      }
+      #register{
+        input{
+          width: 75%;
+        }
+        #submit-button{
+            width: 75%; 
+          }
+    }
+    
+        }

@@ -197,6 +197,9 @@ nav a.welcome{
  
   
 }
+#second-home{
+  display: none;
+}
 .toggle-button{
   position: absolute;
   top: .75rem;
@@ -227,13 +230,38 @@ nav a.welcome{
   margin: 0;
   padding: 0;
 }
-@media only screen and (max-width: 880px){
-  .navbar-links a, #welcome{
+// @media only screen and (max-width: 880px){
+//   // .navbar-links a, #welcome{
  
-    padding: 10px;
-  }
-  .brand-title{
-    padding: 0px
-  }
+//   //   padding: 0px;
+//   // }
+//   .brand-title{
+//     padding: 0.5rem
+//   }
+//   .navbar-links{
+//     padding: 0.5rem;
+// //  li{
+// //   width: 100%;
+// //   text-align: center;
+// //  }
+//   }
  
-  }
+//   }
+  @media only screen and (max-width: 840px){
+    .navbar{
+      flex-direction: column;
+    }
+    .navbar-links ul{
+      flex-direction: column;
+      flex-wrap: nowrap;
+    }
+    .navbar-links{
+      width: 100%;
+          padding: 0.5rem;
+       li{
+        width: 100%;
+        text-align: center;
+       }
+      }
+    }
+ 
