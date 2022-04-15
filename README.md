@@ -14,8 +14,8 @@ Logged users get additional functionality like creating new recipes, edit and de
 ## Backend and database
 Back4app plaform with custom collections for users and recipes.
 ## Visual views
-### Home view
-https://www.flickr.com/photos/195487262@N08/52005800249/in/dateposted-public/
+Home view
+https://flic.kr/p/2nezjyr
 <!-- ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
