@@ -9,10 +9,13 @@ SCSS
 ## Functionality:
 Guest users can review entire collection with recipes, details for recipe and also to use search functionality in platfrom.
 
-Logged users get additional functionality like creating new recipes, edit and delete own recipes, like other recipes and access to their own recipes.
+Logged users get additional functionality like creating new recipes, edit and delete own recipes, like others recipes and access to their own recipes.
 
 ## Backend and database
 Back4app plaform with custom collections for users and recipes.
+## Visual views
+### Home view
+https://www.flickr.com/photos/195487262@N08/52005800249/in/dateposted-public/
 <!-- ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
