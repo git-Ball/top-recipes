@@ -3,19 +3,18 @@ Angular project for SoftUni Angular course.
 Online platform for recipes sharing.
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.2.5.
 ## Application stack:
-TypesScript
-HTML
-SCSS
+ -TypesScript
+ -HTML
+ -SCSS
 ## Functionality:
-Guest users can review entire collection with recipes, details for recipe and also to use search functionality in platfrom.
+Guest users can review entire collection with recipes, details for recipe and also to use search functionality in platform.
 
 Logged users get additional functionality like creating new recipes, edit and delete own recipes, like others recipes and access to their own recipes.
-
+Logged users are also to use search functionality in platform.
 ## Backend and database
-Back4app plaform with custom collections for users and recipes.
-## Visual views
-Home view
-https://photos.google.com/photo/AF1QipOamsWlZmE-oYaCsV2I4hnN9aYaWtD9sjSfWTKB
+Back4App plaform with custom collections for users and recipes.
+
+
 <!-- ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
