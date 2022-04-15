@@ -5,7 +5,11 @@ import { PageNotFoundComponent } from './feature/pages/page-not-found/page-not-f
 import { RecipesDetailsPageComponent } from './feature/recipes/recipes-details-page/recipes-details-page.component';
 
 const routes: Routes = [
-  {path: '', component: HomePageComponent, pathMatch : 'full' },
+  {
+    path: '',
+    pathMatch: 'full',
+    redirectTo: 'home',
+},
 {path:'home',component:HomePageComponent},
 {path:'home/:recipeId',
         component:RecipesDetailsPageComponent},
