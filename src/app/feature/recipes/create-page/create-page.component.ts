@@ -38,7 +38,7 @@ createForm.value.likes = [];
 this.recipeService.createRecipe$(createForm.value).subscribe({
   next:(recipe)=>{
    
-    this.router.navigate(['/recipes'])
+    this.router.navigate(['/profile'])
    
 
   },

@@ -60,40 +60,50 @@ getUserId: string =
   }
   login$(user: RegisterModel): Observable<RegisterModel> {
 
-
+    // const newUser$ = this.http.post<RegisterModel>(${environment.apiUrl}/login, user, this.httpOptions)$.pipe(tap(res => ...))
     const newUser$ = this.http.post<RegisterModel>(`${environment.apiUrl}/login`, user, this.httpOptions)
-    newUser$.pipe().subscribe(res => {
-     
-    
-      for (const prop in res) {
+    .pipe(tap(res =>{ 
+      console.log(res)
+    for (const prop in res) {
         console.log(prop)
         if (prop == 'objectId') {
+          console.log(prop)
+          console.log(res[prop])
+
           this.currentUser.objectId = res[prop];
-          console.log('sessionToken ->>>',localStorage.setItem('objectId',res[prop]))
+         localStorage.setItem('objectId',res[prop])
+        // this.currentUser.objectId = res[prop];
 
         }
         if(prop=='sessionToken'){
-          console.log('sessionToken ->>>',localStorage.setItem('sessionToken',res[prop]))
+          console.log(prop)
+          console.log(res[prop])
+
+         localStorage.setItem('sessionToken',res[prop])
         }
         if (prop == 'username') {
-          // this.currentUser.ownerUsername = res[prop];
-          console.log('sessionToken ->>>',localStorage.setItem('username',res[prop]))
+          console.log(prop)
+          console.log(res[prop])
 
-        }
+          this.currentUser.ownerUsername = res[prop];
+        localStorage.setItem('username',res[prop])
+}
 
       }
-      // console.log('po dolu',user)
-      // console.log('USER DATA',localStorage)
-      // console.log('USER sessionToken',localStorage.getItem('sessionToken'))
-      // console.log('USER objectId',localStorage.getItem('objectId'))
-      // console.log('USER username',localStorage.getItem('username'))
-      // console.log(this.currentUser.userId = res.objectId)
-    this.currentUser.ownerUsername = user.username;
-
-    })
-    return newUser$;
-
+  
+this.currentUser.ownerUsername = user.username;
+    console.log('>>',localStorage)
+    console.log('->>',this.currentUser)
   }
+  ))
+  return newUser$;
+     }
+    
+
+  //   })
+  //   return newUser$;
+
+  // }))
 
   
   register$(user: RegisterModel): Observable<RegisterModel> {
@@ -128,20 +138,46 @@ return this.http.post<RegisterModel>(`${environment.apiUrl}/users`, user, this.h
 
     }
     
-   
-    
 }
   ))
-     
-  
-  }
+     }
  
- 
-
-
 }
 
 
 
 
 
+// const newUser$ = this.http.post<RegisterModel>(`${environment.apiUrl}/login`, user, this.httpOptions)
+// newUser$.pipe().subscribe(res => {
+ 
+
+//   for (const prop in res) {
+//     console.log(prop)
+//     if (prop == 'objectId') {
+//       this.currentUser.objectId = res[prop];
+//       console.log('sessionToken ->>>',localStorage.setItem('objectId',res[prop]))
+
+//     }
+//     if(prop=='sessionToken'){
+//       console.log('sessionToken ->>>',localStorage.setItem('sessionToken',res[prop]))
+//     }
+//     if (prop == 'username') {
+//       // this.currentUser.ownerUsername = res[prop];
+//       console.log('sessionToken ->>>',localStorage.setItem('username',res[prop]))
+
+//     }
+
+//   }
+//   // console.log('po dolu',user)
+//   // console.log('USER DATA',localStorage)
+//   // console.log('USER sessionToken',localStorage.getItem('sessionToken'))
+//   // console.log('USER objectId',localStorage.getItem('objectId'))
+//   // console.log('USER username',localStorage.getItem('username'))
+//   // console.log(this.currentUser.userId = res.objectId)
+// this.currentUser.ownerUsername = user.username;
+
+// })
+// return newUser$;
+
+// }
