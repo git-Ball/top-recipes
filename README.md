@@ -24,4 +24,6 @@ Logged users can:
 Back4App plaform with custom collections for users and recipes.
 
 ## Run application
-To start the application install all dependecies for the client and the server with npm install. Start the client with ng s --o. Than browser will pop be opened with application running on http://localhost:4200/ .
+To start the application install all dependecies for the client with npm install.
+Start the client with ng s --o. Than browser will pop with application running on:
+ http://localhost:4200/ .
