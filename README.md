@@ -7,10 +7,19 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
  - HTML
  - SCSS
 ## Functionality:
-Guest users can review entire collection with recipes, details for recipe and also to use search functionality in platform.
+Guest users can :
+ - Review entire collection with recipes
+ - Details for every recipe
+ - Search for recipes
 
-Logged users get additional functionality like creating new recipes, edit and delete own recipes, like others recipes and access to their own recipes.
-Logged users are also to use search functionality in platform.
+
+Logged users can:
+- All guest functionality
+- Creating new recipes.
+- Edit and delete own recipes.
+- Like others recipes.
+- Access to their own recipes.
+
 ## Backend and database
 Back4App plaform with custom collections for users and recipes.
 
