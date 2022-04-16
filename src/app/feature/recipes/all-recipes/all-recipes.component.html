@@ -1,14 +1,12 @@
 <div class="all-page-wrapper" >
     <div class="all-heading">All Recipes</div>
     <form #form="ngForm" (ngSubmit)="searchResult(form.value)">
-      <!-- <h1 class="auth-heading">Search</h1> -->
-  <label for="username">Search for recipe</label>
+     >
+  <label for="search">Search for recipe</label>
       <input  [defaultValue]="''" type="text" id="search" name="search" placeholder="Type recipe title here.." ngModel />
       <button  type="submit" id="submit-button" class="btn-submit"  value="Submit" > Search</button>
     </form>
-   <ng-container>
 
-   </ng-container>
     <app-recipe-list *ngIf="!searched"></app-recipe-list> 
     <app-recipe-search-list *ngIf="searched"></app-recipe-search-list>
   
