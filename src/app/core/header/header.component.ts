@@ -19,8 +19,9 @@ get getUser():IUserInfo{
   return this.userService.currentUser;
   return this.userService.currentUser;
 }
-get userInfo():any{
-  return localStorage;
+get userInfo():string{
+ 
+  return localStorage.getItem('username')
 }
   constructor(
     private userService:UserService,

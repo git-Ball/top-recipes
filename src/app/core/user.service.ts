@@ -11,6 +11,8 @@ import { IUserInfo } from './interfaces/userInfo';
 @Injectable({
   providedIn: 'root'
 })
+
+
 export class UserService {
 
   hasLogged: boolean = false;
@@ -31,11 +33,13 @@ getUserId: string =
   
 
 
-  constructor(
+   constructor(
     private http: HttpClient,
     private router:Router
-
-  ) { }
+  
+  ) { 
+  console.log('testa',localStorage.getItem('username'))
+  }
 
 
   login(): void {

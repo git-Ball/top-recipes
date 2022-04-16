@@ -12,12 +12,12 @@
             <span class="bar"></span>
         </a>
     </div>
-    <div *ngIf="isLoggedIn" class="navbar-links">
+    <div *ngIf="userInfo" class="navbar-links">
    
         <ul>
             <li class="user" >
            
-                <span id="welcome">Welcome,[ {{userInfo.username}}  ]  </span>
+                <span id="welcome">Welcome,[ {{userInfo}}  ]  </span>
                 
                
             </li>
@@ -32,7 +32,7 @@
         </ul>
     </div> 
     
-    <div *ngIf="!isLoggedIn" class="navbar-links">
+    <div *ngIf="!userInfo" class="navbar-links">
      
       <ul>
          
