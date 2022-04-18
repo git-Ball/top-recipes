@@ -19,12 +19,12 @@ const routes: Routes = [
         component: LoginComponent,
     },
     {
-        path: 'profile',
+        path: 'my-recipes',
         canActivate:[AuthGuard],
         component: MyRecipesComponent,
         
     },
-    {path:'profile/:recipeId',
+    {path:'my-recipes/:recipeId',
         component:RecipesDetailsPageComponent},
 ]
 export const AuthRoutingModule = RouterModule.forChild(routes);
