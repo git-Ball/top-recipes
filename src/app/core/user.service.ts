@@ -5,7 +5,7 @@ import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
 import { tap } from 'rxjs/operators';
 import { environment } from 'src/environments/environment';
-import { IUser, RegisterModel } from './interfaces';
+import { IRecipe, IUser, RegisterModel } from './interfaces';
 import { IUserInfo } from './interfaces/userInfo';
 
 @Injectable({
@@ -32,7 +32,10 @@ export class UserService {
 getUserId: string =
    this.currentUser.objectId;
   
-
+//user info
+recipeOwner:string;
+recipeOwnerUsername:string;
+userAllRecipes:Array<IRecipe>;
 
    constructor(
     private http: HttpClient,

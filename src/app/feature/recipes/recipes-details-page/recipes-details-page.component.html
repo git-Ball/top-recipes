@@ -25,8 +25,8 @@
       </div>
     </div>
   
-    <span class="recipe-details" (click)="loadAll()">
-        <span class="bold">Owner</span>: {{ recipe.ownerUsername }}
+    <span class="recipe-details" >
+        <span class="bold">Owner</span>: <a routerLink="/info">{{ recipe.ownerUsername }}</a>
     </span>
     <span class="recipe-details">
       <span class="bold">Created</span>: {{ recipe.createdAt |date:'fullDate'}}
@@ -125,8 +125,8 @@
     </form>
   </div>
 </div>
-
-<div class="auth-page-wrapper" *ngIf="loadAllRecipes==true">
+<div class="details-spacer"></div>
+<!-- <div class="auth-page-wrapper" *ngIf="loadAllRecipes==true">
   <div class="auth-heading">Recipes of {{recipeOwnerUsername}}</div>
   <div class="recipe-wrapper" *ngIf="userAllRecipes; else Loading">
      
@@ -141,14 +141,14 @@
   </div>
 
 
-<div class="details-spacer"></div>
+
 
 
  
 <ng-template #Loading>
   <mat-spinner class="spinner"></mat-spinner>
 
-</ng-template>
+</ng-template> -->
 
 
        

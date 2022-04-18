@@ -1,0 +1,23 @@
+<div class="auth-page-wrapper">
+    <div class="auth-heading">Recipes of {{recipeOwnerUsername}}</div>
+    <div class="recipe-wrapper" *ngIf="userAllRecipes; else Loading">
+       
+       <app-recipe-list-item class="flex" *ngFor="let recipe of userAllRecipes" [recipe]="recipe"></app-recipe-list-item>
+        
+      <div class="no-recipes" *ngIf="userAllRecipes.length === 0">
+        <p class="no-recipes-text">No recipes!! Let's go <a routerLink="/create" >create </a> your first recipe.</p>
+        </div>
+      </div>
+    
+      <app-recipe-list-item></app-recipe-list-item>
+    </div>
+  
+  
+  
+  
+  
+   
+  <ng-template #Loading>
+    <mat-spinner class="spinner"></mat-spinner>
+  
+  </ng-template>

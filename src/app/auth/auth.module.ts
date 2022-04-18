@@ -9,6 +9,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { RecipesModule } from '../feature/recipes/recipes.module';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 import { ProfileComponent } from './profile/profile.component';
+import { InfoComponent } from './info/info.component';
 
 
 
@@ -18,6 +19,7 @@ import { ProfileComponent } from './profile/profile.component';
     LoginComponent,
     MyRecipesComponent,
     ProfileComponent,
+    InfoComponent,
   ],
   imports: [
     CommonModule,

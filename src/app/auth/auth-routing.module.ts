@@ -2,6 +2,7 @@ import { RouterModule, Routes } from "@angular/router";
 import { AuthGuard } from "../core/guards/auth.guard";
 import { AuthenticatedGuard } from "../core/guards/authenticated.guard";
 import { RecipesDetailsPageComponent } from "../feature/recipes/recipes-details-page/recipes-details-page.component";
+import { InfoComponent } from "./info/info.component";
 import { LoginComponent } from "./login/login.component";
 import { MyRecipesComponent } from "./my-recipes/my-recipes.component";
 import { ProfileComponent } from "./profile/profile.component";
@@ -41,5 +42,17 @@ const routes: Routes = [
         canActivate:[AuthGuard],
 
         component:RecipesDetailsPageComponent},
+        {
+            path: 'info',
+            // canActivate:[AuthGuard],
+            component: InfoComponent,
+            
+        },
+        {
+            path: 'info/:recipeId',
+            // canActivate:[AuthGuard],
+            component:RecipesDetailsPageComponent ,
+            
+        },
 ]
 export const AuthRoutingModule = RouterModule.forChild(routes);
