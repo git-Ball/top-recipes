@@ -1,4 +1,4 @@
-<div *ngIf="!editMode" class="details-page-wrapper">
+<div *ngIf="!editMode && loadAllRecipes==false" class="details-page-wrapper">
  
     <div class="details-heading" *ngIf="recipe">Details</div>
   <!-- <div class="recipe-img"> -->
@@ -25,7 +25,7 @@
       </div>
     </div>
   
-    <span class="recipe-details">
+    <span class="recipe-details" (click)="loadAll()">
         <span class="bold">Owner</span>: {{ recipe.ownerUsername }}
     </span>
     <span class="recipe-details">
@@ -125,26 +125,30 @@
     </form>
   </div>
 </div>
+
+<div class="auth-page-wrapper" *ngIf="loadAllRecipes==true">
+  <div class="auth-heading">Recipes of {{recipeOwnerUsername}}</div>
+  <div class="recipe-wrapper" *ngIf="userAllRecipes; else Loading">
+     
+     <app-recipe-list-item class="flex" *ngFor="let recipe of userAllRecipes" [recipe]="recipe"></app-recipe-list-item>
+      
+    <div class="no-recipes" *ngIf="userAllRecipes.length === 0">
+      <p class="no-recipes-text">No recipes!! Let's go <a routerLink="/create" >create </a> your first recipe.</p>
+      </div>
+    </div>
+  
+    <app-recipe-list-item></app-recipe-list-item>
+  </div>
+
+
 <div class="details-spacer"></div>
 
-<!-- <div *ngIf="!!theme; else loadingIndicator" class="theme-content"> -->
-<!-- theme-title 
-        <div class="theme-title">
-            <div class="theme-name-wrapper">
-                <div class="theme-name">
-                    <h2>{{ theme.themeName}}</h2>
-                    <p>Date: <time> {{theme.created_at}}</time></p>
-                </div>
-                <div class="subscribers">
-                    <p>Subscribers: <span>{{theme.subscribers.length}}</span></p>
-                    <ng-container *ngIf="isLoggedIn">
-                        <button *ngIf="canSubscribe" class="subscribe">Subscribe</button>
-                        <button *ngIf="!canSubscribe" class="unsubscribe">Unsubscribe</button>
-                    </ng-container>
-                </div>
-            </div>
-        </div>  -->
 
+ 
+<ng-template #Loading>
+  <mat-spinner class="spinner"></mat-spinner>
+
+</ng-template>
 
 
        

@@ -17,9 +17,13 @@ export class RecipesDetailsPageComponent implements OnInit {
   recipe:any;
   likes:any={likes:[]}
  ownerId:string = this.userService.currentUser.objectId;
+ recipeOwner:string =''
+ recipeOwnerUsername:string=''
  hasLogged:boolean = this.userService.hasLogged;
  editMode:boolean =false;
  currentUser:any=this.userService.currentUser;
+ loadAllRecipes:boolean=false;
+ userAllRecipes:Array<IRecipe>;
 hasOwner:boolean=false;
 hasLiked:boolean=false;
 letsRoll:boolean =false;
@@ -42,6 +46,8 @@ letsRoll:boolean =false;
       const recipeId = params['recipeId']
       this.recipeService.loadRecipeById(recipeId).subscribe(recipe => {
         this.recipe = recipe;
+        this.recipeOwner = this.recipe.owner.objectId;
+        this.recipeOwnerUsername= this.recipe.ownerUsername
         if(this.recipe.owner.objectId == this.ownerId){
           this.hasOwner = true;
         }
@@ -53,9 +59,11 @@ letsRoll:boolean =false;
    }
   }
 
+  console.log(this.recipe)
 
       })
     });
+    
   }
 
 onDelete(){
@@ -142,6 +150,16 @@ onSubmit(createForm:NgForm):void{
       });
   
     })
-  // }
+
 }
+loadAll(){
+  this.loadAllRecipes =true;
+  this.recipeService.loadRecipesFromBack4App().subscribe(recipe =>{
+    
+    this.userAllRecipes = recipe['results'].filter(recipe=>recipe.owner.objectId == this.recipeOwner)
+     
+  console.log(` Recipe owner >>${this.recipeOwner} all recipes >>>`,this.userAllRecipes)
+})
+}
+
 }

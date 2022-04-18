@@ -14,6 +14,10 @@ const routes:Routes =[
         path:'recipes/:recipeId',
         component:RecipesDetailsPageComponent,
     },
+    // {
+    //     path:'recipes/:recipeId/:recipeId',
+    //     component:RecipesDetailsPageComponent,
+    // },
     {
         path:'create',
         canActivate:[AuthGuard],

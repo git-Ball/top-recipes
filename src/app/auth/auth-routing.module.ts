@@ -28,11 +28,18 @@ const routes: Routes = [
     },
     {
         path: 'profile',
-        // canActivate:[AuthGuard],
+        canActivate:[AuthGuard],
         component: ProfileComponent,
         
     },
     {path:'my-recipes/:recipeId',
+    canActivate:[AuthGuard],
+
+        component:RecipesDetailsPageComponent},
+        
+        {path:'profile/:recipeId',
+        canActivate:[AuthGuard],
+
         component:RecipesDetailsPageComponent},
 ]
 export const AuthRoutingModule = RouterModule.forChild(routes);
