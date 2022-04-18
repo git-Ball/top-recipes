@@ -4,6 +4,8 @@ import { AuthenticatedGuard } from "../core/guards/authenticated.guard";
 import { RecipesDetailsPageComponent } from "../feature/recipes/recipes-details-page/recipes-details-page.component";
 import { LoginComponent } from "./login/login.component";
 import { MyRecipesComponent } from "./my-recipes/my-recipes.component";
+import { ProfileComponent } from "./profile/profile.component";
+
 import { RegisterComponent } from "./register/register.component";
 
 const routes: Routes = [
@@ -22,6 +24,12 @@ const routes: Routes = [
         path: 'my-recipes',
         canActivate:[AuthGuard],
         component: MyRecipesComponent,
+        
+    },
+    {
+        path: 'profile',
+        // canActivate:[AuthGuard],
+        component: ProfileComponent,
         
     },
     {path:'my-recipes/:recipeId',

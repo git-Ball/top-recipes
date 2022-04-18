@@ -8,6 +8,7 @@ import { RouterModule } from '@angular/router';
 import { ReactiveFormsModule } from '@angular/forms';
 import { RecipesModule } from '../feature/recipes/recipes.module';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
+import { ProfileComponent } from './profile/profile.component';
 
 
 
@@ -16,6 +17,7 @@ import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
     RegisterComponent,
     LoginComponent,
     MyRecipesComponent,
+    ProfileComponent,
   ],
   imports: [
     CommonModule,
