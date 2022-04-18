@@ -95,6 +95,9 @@
 }
 
 @media only screen and (max-width: 430px) {
+  #image-title {
+    margin: 124px 4px 124px 4px;
+  }
   .display-content {
     width: 290px;
     height: 270px;

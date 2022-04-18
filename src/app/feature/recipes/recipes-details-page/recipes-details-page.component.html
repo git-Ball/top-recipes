@@ -32,8 +32,8 @@
       <span class="bold">Created</span>: {{ recipe.createdAt |date:'fullDate'}}
         <!-- {{}} -->
     </span>
-    <span class="recipe-details">
-      <span class="bold">Likes</span>: {{ recipe.likes.length }}
+    <span class="recipe-details" [class.liked]="hasLiked==true">
+      <span class="bold" >Likes</span>: {{ recipe.likes.length }}
         <!-- {{}} -->
     </span>
   
@@ -43,7 +43,7 @@
       <span class="bold">Ingredients</span>: {{recipe.ingredients}}
     </p>
     <p class="recipe-details prep">
-      <span class="bold">Preparation</span>{{recipe.preparation}}
+      <span class="bold">Preparation</span>: {{recipe.preparation}}
         
     </p>
   </div>

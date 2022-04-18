@@ -28,7 +28,7 @@ letsRoll:boolean =false;
 @ViewChild('ingredients') ingredients!:NgModel;
 @ViewChild('preparation') preparation!:NgModel;
 
-// @Input() data:IRecipe
+
   constructor(
     private recipeService: RecipeService,
     private activatedRoute: ActivatedRoute,
@@ -52,11 +52,7 @@ letsRoll:boolean =false;
     this.hasLiked = true;
    }
   }
-//         console.log('after-->',this.recipe)
-// console.log('ID ---->',this.ownerId)
-// console.log(this.hasLiked);
-// console.log(this.hasOwner);
-// console.log(this.hasLogged);
+
 
       })
     });
@@ -97,7 +93,7 @@ onSubmit(createForm:NgForm):void{
   this.activatedRoute.params.subscribe(params => {
     const recipeId = params['recipeId']
 
-this.letsRoll =true;
+// this.letsRoll =true;
   this.recipeService.updateRecipe$(createForm.value,recipeId).subscribe({
     next:(recipe)=>{
      
@@ -107,7 +103,7 @@ this.letsRoll =true;
    complete:()=>{
  console.log('>>>>','Done')
 
- console.log('>>>>',this.recipe)
+//  console.log('>>>>',this.recipe)
     
    },
     error:(error)=>{
@@ -123,17 +119,12 @@ this.letsRoll =true;
   likeIt():void{
     this.activatedRoute.params.subscribe(params => {
       const recipeId = params['recipeId']
-    // console.log(createForm.value);
-    // let userId = this.userService.currentUser   //.userId;
-    // console.log('All for owner ->>>>>>>>',userId)
-    // createForm.value.owner = userId;
-    // createForm.value.owner = this.userService.currentUser.userId;
+  
     
   
-    console.log('----->',this.recipe)
-    this.likes.likes=this.recipe.likes;
+    this.likes.likes = this.recipe.likes;
     this.likes.likes.push(this.ownerId)
-    // this.recipeService.updateRecipe$(,recipeId).subscribe({
+    
     this.recipeService.likeRecipe$(this.likes,recipeId).subscribe({
       next:(recipe)=>{
        this.hasLiked = true;
@@ -154,36 +145,3 @@ this.letsRoll =true;
   // }
 }
 }
-  // this.activatedRoute.params.subscribe(params => {
-  //   const recipeId = params['recipeId'] // ?
-  //   console.log('ID ---->',recipeId)
-
-    // this.recipeService.deleteRecipe$(recipeId).subscribe({
-    //   next:(recipe)=>{
-    //     console.log('next >',recipe)
-    //     this.router.navigate(['/recipes'])
-    //     console.log('after next -->')
-    
-    //   },
-    //   error:(error)=>{
-    //     this.errorMessage == error.error.error;
-    //     this.router.navigate([`/recipes/${recipeId}`])
-
-        
-    //   });
-    // };
-    // }
-
-
-        // this.recipe = recipe['results']
-        // console.log('after Results-->',this.recipe)
-
-
-  
-
-
-          // this.router.navigate([`/recipes/${recipeId}`]);
-      // this.router.routeReuseStrategy.shouldReuseRoute=() => false;
-      // this.router.onSameUrlNavigation = 'reload';
-      // this.router.navigate(['/']),
-      // {relativeTo: this.route }

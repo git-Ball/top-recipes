@@ -12,4 +12,13 @@
 .recipe-wrapper .display-content {
   margin-right: 30px;
 }
+
+@media only screen and (max-width: 1350px) {
+  .recipe-wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
 /*# sourceMappingURL=recipe-limited.component.css.map */

@@ -25,9 +25,9 @@ private recipeService:RecipeService,
 
     this.recipeService.loadRecipesFromBack4App().subscribe(recipe =>{
     
-      this.recipeList = recipe['results'].filter(recipe=>recipe.owner.objectId == this.getUserId)
+      this.recipeList = recipe['results'].filter(recipe=>recipe.owner.objectId == this.userService.currentUser.objectId)
        
-    // console.log('all > >',this.recipeList)
+    console.log('all > >',this.recipeList)
   })
   }
 }
