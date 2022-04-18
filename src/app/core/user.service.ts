@@ -25,6 +25,7 @@ export class UserService {
   ownerUsername: ''
 
   };
+  accountCreatedAt: string = '';
   getUsername: string =
    this.currentUser.ownerUsername;
   
@@ -67,7 +68,9 @@ getUserId: string =
     // const newUser$ = this.http.post<RegisterModel>(${environment.apiUrl}/login, user, this.httpOptions)$.pipe(tap(res => ...))
     const newUser$ = this.http.post<RegisterModel>(`${environment.apiUrl}/login`, user, this.httpOptions)
     .pipe(tap(res =>{ 
-      console.log(res)
+      // console.log(res['createdAt'])
+      this.accountCreatedAt = res['createdAt']
+      console.log(this.accountCreatedAt)
     for (const prop in res) {
         console.log(prop)
         if (prop == 'objectId') {

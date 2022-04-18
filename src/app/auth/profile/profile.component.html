@@ -1,1 +1,38 @@
-<p>profile works!</p>
+<div class="auth-page-wrapper">
+    <div class="auth-heading">My Profile</div>
+    <!-- <div class="recipe-wrapper" *ngIf="recipeList; else Loading"> -->
+       <div class="profile-wrapper">
+        <span class="profile-details bold">
+           Username: {{ getUser }} </span>
+       
+        <span class="profile-details bold">
+          Account created: {{ accountCreatedAt |date:'fullDate'}}</span>
+            <!-- {{}} -->
+        
+        <span class="profile-details bold">
+         Total likes: {{ 0 }}
+            <!-- {{ <span class="bold" ></span>}} -->
+        </span>
+       <!-- <app-recipe-list-item class="flex" *ngFor="let recipe of recipeList" [recipe]="recipe"></app-recipe-list-item> -->
+        
+      <!-- <div class="no-recipes" *ngIf="recipeList.length === 0">
+        <p class="no-recipes-text">No recipes!! Let's go <a routerLink="/create" >create </a> your first recipe.</p>
+        </div> -->
+      </div>
+    <div class="liked-recipes">
+        <h2 class="profile-heading">Liked recipes</h2>
+         <div class="recipe-wrapper" *ngIf="recipeList; else Loading">
+              <app-recipe-list-item class="flex" *ngFor="let recipe of recipeList" [recipe]="recipe"></app-recipe-list-item>
+    </div>
+    <div class="no-recipes" *ngIf="recipeList.length === 0">
+        <p class="no-recipes-text">No likes yet!! Let's go and <a routerLink="/recipes" > like </a> your first recipe.</p>
+        </div>
+      </div>
+      <app-recipe-list-item></app-recipe-list-item>
+    </div>
+
+
+    <ng-template #Loading>
+        <mat-spinner class="spinner"></mat-spinner>
+
+    </ng-template>
