@@ -7,7 +7,8 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
  - HTML
  - SCSS
 ## Functionality:
- - Custom errors and validation in all forms.
+Custom errors and validation in all forms.
+
 Guest users can :
  - Review entire collection with recipes
  - Details for every recipe, without info for owner.
