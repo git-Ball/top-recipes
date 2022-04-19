@@ -62,7 +62,7 @@ search.search = ''
  
     this.recipeService.loadRecipesFromBack4App().subscribe(recipe => {
 
-      this.recipeList = recipe['results'].reverse();
+      this.recipeList = recipe['results']
       
   
  

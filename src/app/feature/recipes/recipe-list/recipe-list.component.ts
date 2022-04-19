@@ -12,7 +12,7 @@ export class RecipeListComponent implements OnInit, AfterViewInit {
   constructor(private recipeService:RecipeService) { }
   
  
-  recipeListLimited: Array<IRecipe>;
+  // recipeListLimited: Array<IRecipe>;
   recipeList: Array<IRecipe>;
   
   ngOnInit(): void {
@@ -20,8 +20,8 @@ export class RecipeListComponent implements OnInit, AfterViewInit {
 
 this.recipeService.loadRecipesFromBack4App().subscribe(recipe =>{
  
-  this.recipeListLimited = recipe['results'].slice(0, 3) //.limit(3);
-  this.recipeList = recipe['results']
+  // this.recipeListLimited = recipe['results'].slice(0, 3) //.limit(3);
+  this.recipeList = recipe['results'].reverse()
  
 
 
