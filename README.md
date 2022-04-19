@@ -7,9 +7,10 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
  - HTML
  - SCSS
 ## Functionality:
+ - Custom errors and validation in all forms.
 Guest users can :
  - Review entire collection with recipes
- - Details for every recipe
+ - Details for every recipe, without info for owner.
  - Search for recipes
 
 
@@ -19,7 +20,8 @@ Logged users can:
 - Edit and delete own recipes.
 - Like others recipes.
 - Access to their own recipes.
-
+- Access to their own liked recipes.
+- Access to other users profile with recipes list.
 ## Backend and database
 Back4App plaform with custom collections for users and recipes.
 
