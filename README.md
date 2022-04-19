@@ -21,7 +21,7 @@ Logged users can:
 - Edit and delete own recipes.
 - Like others recipes.
 - Access to their own recipes.
-- Access to their own liked recipes.
+- Access to profile page with info for user(account created,username and total likes) and own liked recipes.
 - Access to other users profile with recipes list.
 ## Backend and database
 Back4App plaform with custom collections for users and recipes.
