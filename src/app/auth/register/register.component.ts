@@ -49,10 +49,8 @@ errorMessage:string='';
       next:()=>{
         this.userService.register$(body)
         .pipe().subscribe(res => {
-            console.log(res)
            
             for (const prop in res) {
-              console.log(res[prop])
               if (prop == 'objectId') {
                 this.userService.currentUser.objectId = res[prop];
               }
@@ -61,7 +59,6 @@ errorMessage:string='';
             this.userService.currentUser.ownerUsername = body.username;
             
           
-            console.log(this.userService.currentUser)
           
           
           })
@@ -72,9 +69,7 @@ errorMessage:string='';
       complete:() =>{
         this.userService.login()
     
-        console.log('Current User ---  sled register>', this.userService.currentUser)
         this.router.navigate(['/home']);
-        console.log('vechte trqbva navigate')
       },
       error:(err)=>{
         this.errorMessage = err.error.error;

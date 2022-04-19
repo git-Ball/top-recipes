@@ -28,7 +28,6 @@ recipeOwner:string = this.userService.recipeOwner;
     
     this.userAllRecipes = recipe['results'].filter(recipe=>recipe.owner.objectId == this.recipeOwner)
      
-  console.log(` Recipe owner >>${this.recipeOwner} all recipes >>>`,this.userAllRecipes)
 })
 
   }

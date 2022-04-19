@@ -23,11 +23,7 @@ errorMessage:string='';
 
   ngOnInit(): void {
   }
-  loginHandler():void{
 
-console.log('form is submitted',this.loginFormGroup);
-
-  }
   handleLogin():void{
     this.errorMessage =''
     const body:RegisterModel={
@@ -38,8 +34,6 @@ console.log('form is submitted',this.loginFormGroup);
         next:()=>{
              this.userService.login()
         
-        console.log('Current User --- >', this.userService.currentUser)
-        // console.log('Current User --- >', body.username._id)
         this.router.navigate(['/home']);
        
         },

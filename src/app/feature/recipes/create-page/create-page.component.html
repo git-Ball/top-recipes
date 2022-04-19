@@ -1,54 +1,9 @@
-<!-- <p>create-page works!</p>
-<section
-    id="create-page"
-    class="auth"
-  >
-<form  id="create">
-  <h1 class="create-heading">Create Offer</h1>
-
-    <div class="container">
-      <label for="leg-title"
-        >Offer title: <span class="red-star"> *</span></label
-      >
-      <input
-        type="text"
-        id="title"
-        name="title"
-        placeholder="Enter offer title..."
-      />
-      <label for="manufacturer"
-        >Manufacture: <span class="red-star"> *</span></label
-      >
-      <input
-        type="text"
-        id="manufacturer"
-        name="manufacturer"
-        placeholder="Enter item manufacture..."
-      />
-
-      <label for="offer-img">Image:</label>
-      <input
-        type="text"
-        id="img"
-        name="img"
-        placeholder="Upload image url here..."
-      />
-      <label for="description"
-        >Description: <span class="red-star"> *</span></label
-      >
-      <textarea name="description" id="description"></textarea>
-      <input class="btn submit" type="submit" value="Create Offer" />
-    </div>
-  </form>
-</section> -->
-
-
 <form #createForm="ngForm" id="create" (ngSubmit)="onSubmit(createForm)">
-  <!-- <div class="container"> -->
+
 
     <h1 class="create-heading">Create Recipe</h1>
     
-     <!-- <div class="error-msg"></div> -->
+    
      
     <label for="recipeName">Recipe title<span class="red-star">*</span></label>
 <!-- TODO Check validations -->
@@ -63,7 +18,7 @@
         Recipe title max length is 16 charcters!
       </div>
     </ng-container>
-    <!-- [class.error-input]="createForm.controls['recipeName'].touched && createForm.controls['recipeName'].invalid"  -->
+   
     <input  #recipeName="ngModel"  ngModel name="recipeName" required minlength="5" maxlength="16" placeholder="Chicken with BBQ Souse" />
   
 
@@ -104,17 +59,10 @@
 
     <textarea #preparation="ngModel" name="preparation" ngModel required minlength="20" id="preparation" placeholder="1.Wash and cut mashrooms.."></textarea>
 
-    <!-- [disabled]="createForm.invalid" -->
     <button [disabled]="createForm.invalid"    type="submit" id="submit-button" class="btn-submit" value="Create">Create new recipe</button>
     <p class="field">
-      <!-- <span> -->
-      
-        <!-- <a @click=${(event) => redirect(event)} href="/register"
-          >here</a -->
-       <!-- </span -->
-      <!-- > -->
+
     </p>
-  <!-- </div> -->
+
 </form>
 
-<!-- <div class="spacer"></div> -->

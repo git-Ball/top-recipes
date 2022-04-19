@@ -21,13 +21,11 @@ private recipeService:RecipeService,
   ) { }
 
   ngOnInit(): void {
-    console.log(this.getUsername)
 
     this.recipeService.loadRecipesFromBack4App().subscribe(recipe =>{
     
       this.recipeList = recipe['results'].filter(recipe=>recipe.owner.objectId == this.userService.currentUser.objectId)
        
-    console.log('all > >',this.recipeList)
   })
   }
 }

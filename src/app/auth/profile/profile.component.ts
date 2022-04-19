@@ -25,23 +25,19 @@ private recipeService:RecipeService
   ) { }
 
   ngOnInit(): void {
-    // console.log(this.getUsername)
 
     this.recipeService.loadRecipesFromBack4App().subscribe(recipe =>{
       this.ownerList = recipe['results'].filter(recipe=>recipe.owner.objectId == this.getUserId)
       .forEach(recipe => {
         this.totalLikes +=recipe.likes.length;
       });
-      // console.log('Owner Recipes',this.ownerList)
       
-      // this.likesCounter = recipe['results'].filter(recipe=>recipe.likes.includes(this.getUserId) )
-      // console.log('Owner Recipes',this.likesCounter)
+   
 
     
       this.recipeList = recipe['results'].filter(recipe=>recipe.likes.includes(this.getUserId) )
        
-    console.log('all liked> >',this.recipeList)
-    console.log(this.totalLikes)
+  
   })
   }
 

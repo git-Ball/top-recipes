@@ -10,7 +10,7 @@ export class RecipesPageComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    console.log(localStorage)
+
   }
 
 }

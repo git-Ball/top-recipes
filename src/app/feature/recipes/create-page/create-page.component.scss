@@ -1,107 +1,3 @@
-// .create-heading{
-//     background: rgba(128, 128, 128, 0.5);
-//     color: white;
-//     font-size: 2.5rem;
-//     text-align: center;
-    
-
-//     border-top-right-radius: 10px;
-//     border-top-left-radius: 10px;
-//     padding: 8px;
-  
-//     margin-top: 50px;
-// }
-// #create-page,
-// #edit-page {
-//     position: relative;
-
-//     width: 40%;
-//     height: auto;
-//     border-radius: 20px;
-//     padding: 40px;
-//     box-sizing: border-box;
-//     text-align: center;
-//     background: #1417199d;
-//     box-shadow: 0px 0px 30px 0px rgb(146 204 131);
-    
-
-// }
-// #create-page:hover,
-// #edit-page:hover {
-
-//     background: #141719d4;
-//     box-shadow: 0px 0px 30px 0px #26d17d;
-    
-// }
-// #description{
-//     margin-bottom: 10px;
-// }
-// input[type="text"] {
-//     background: #ecf0f3;
-//     padding: 30px;
-//     padding-left: 20px;
-//     height: 50px;
-//     margin-top: 10px;
-//     font-size: 24px;
-//     border-radius: 50px;
-//     box-shadow: inset 6px 6px 6px #c0c2c5, inset -6px -6px 6px white;
-// }
-
-// textarea {
-//     width: 100%;
-//     min-width: 20vw;
-//     min-height: 7em;
-//     border: 2px solid #86a480;
-//     border-radius: 0.7em;
-//     font-size: 26px;
-//     border-bottom-color: #ecf0f3;
-//     background-color: #ecf0f3;
-//     border-right-color: #ecf0f3;
-//     margin-top: 7px;
-//     color: black;
-//     box-shadow: inset 6px 6px 6px #c0c2c5, inset -6px -6px 6px white;
-//     padding: 10px;
-//     line-height: 1.2;
-// }
-// textarea:hover {
-//     box-shadow: 0px 0px 30px 0px rgb(255, 255, 254); 
-// }
-// .type-wrap{
-//     display: flex;
-//     align-content: center;
-//     flex-wrap: nowrap;
-//     align-items: center;
-//     margin: 0px;
- 
-// }
-// .create-type{
-//     font-size:20px;
-//     margin: 5px;
-// }
-// .type-check{
-//     width: 10%;
-//    transition: 1s;
-// }
-// .type-check:hover{
-
-//    transform: scale(1.5);
-// }
-// #bike,#parts,#equipment:hover{
-//     box-shadow: 0px 0px 30px 0px rgba(255, 255, 254, 0); 
-// }
-// .red-star{
-//     color: rgb(240, 87, 87);
-// font-size: 1.5rem;
-// }
-
-// .error-input{
-//     border: solid 3px #c14343ed;
-
-// }
-
-
-
-
 .create-heading{
     background: rgba(128, 128, 128, 0.5);
     color: white;
@@ -115,36 +11,14 @@
   
     margin-top: 50px;
 }
-// .auth-page-wrapper{
-//     background: #000000b0;
 
-//     border-radius: 20px;
-//     margin: auto;
-//     width: 96%;
-//     height: 500px;
-// }
 #create{
-    // padding-bottom: 50px;
     border-radius: 10px;
     padding-bottom: 15px;
 }
 
-// #login-page {
-//     position: relative;
-//     width: 650px;
-//     height: auto;
-//     border-radius: 20px;
-//     padding: 40px;
-//     box-sizing: border-box;
-  
-//     background: #1417199d;
-//     box-shadow: 0px 0px 30px 0px rgb(146 204 131);
-// }
-// #login-page:hover{
-//     background: #141719d4;
-//     box-shadow: 0px 0px 30px 0px #26d17d;
-    
-// }
+
+
 #create{
 
     background: #1417199d;
@@ -198,10 +72,7 @@ box-shadow: 0px 0px 30px 0px #26d17d;
     border-radius: 20px;
     padding: 40px;
     box-sizing: border-box;
-    /* background: #3e4443;
-    box-shadow: 0px 0px 32px 0px #49535e, -14px -14px 20px #191c21; */
-    /* background-image: url('/img/login2.jpg');
-    opacity: 0.9; */
+
     background: #1417199d;
     box-shadow: 0px 0px 30px 0px rgb(146 204 131);
 
@@ -213,15 +84,7 @@ box-shadow: 0px 0px 30px 0px #26d17d;
 }
 
 
-// .brand-logo {
-//     height: 100px;
-//     width: 100px;
-   
-//     margin: auto;
-//     border-radius: 50%;
-//     box-sizing: border-box;
-//     box-shadow: 7px 7px 10px #cbced1, -7px -7px 10px white;
-// }
+
 
 .container>h1 {
     margin-top: 15px;
@@ -233,10 +96,10 @@ box-shadow: 0px 0px 30px 0px #26d17d;
     letter-spacing: 1px;
     font-family: Georgia, 'Times New Roman', Times, serif;
     margin-bottom: 17px;
-    /* background: #00000059; */
+   
     border-radius: 42px;
     display: inline-block;
-    /* margin-left: 145px; */
+   
 
    
 }
@@ -328,14 +191,14 @@ float: right;
     padding: 5px 18px 5px 18px;
     margin: 29px;
 
-    // margin: 8px;
+ 
 }
 .error-msg{
     margin: 0 auto;
     text-align: center;
     color: #ff1010;
     font-size: 14px;
-    // font-weight: bold;
+  
 }
 
 
@@ -344,7 +207,7 @@ textarea {
     margin-left: auto;
     margin-right: auto;
     width: 85%;
-    // min-width: 20vw;
+    
     min-height: 3em;
     border: 2px solid #86a480;
     border-radius: 0.7em;
@@ -380,7 +243,7 @@ textarea:hover {
 }
 .error-input {
     border: solid 3px #c14343ed;
-    /* box-shadow: 0px 0px 30px 13px #c14343ed; */
+    
 }
 
 @media only screen and (max-width: 850px){

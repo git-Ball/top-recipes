@@ -61,8 +61,7 @@ letsRoll:boolean =false;
    }
   }
 
-  console.log(this.recipe)
-
+ 
       })
     });
     
@@ -113,7 +112,6 @@ onSubmit(createForm:NgForm):void{
    complete:()=>{
  console.log('>>>>','Done')
 
-//  console.log('>>>>',this.recipe)
     
    },
     error:(error)=>{
@@ -141,7 +139,6 @@ onSubmit(createForm:NgForm):void{
         this.ngOnInit()
       },
      complete:()=>{
-   console.log('>',this.recipe)
       
      },
       error:(error)=>{
@@ -154,14 +151,6 @@ onSubmit(createForm:NgForm):void{
     })
 
 }
-// loadAll(){
-//   this.loadAllRecipes =true;
-//   this.recipeService.loadRecipesFromBack4App().subscribe(recipe =>{
-    
-//     this.userAllRecipes = recipe['results'].filter(recipe=>recipe.owner.objectId == this.recipeOwner)
-     
-//   console.log(` Recipe owner >>${this.recipeOwner} all recipes >>>`,this.userAllRecipes)
-// })
-// }
+
 
 }

@@ -1,15 +1,12 @@
 <div *ngIf="!editMode && loadAllRecipes==false" class="details-page-wrapper">
  
     <div class="details-heading" *ngIf="recipe">Details</div>
-  <!-- <div class="recipe-img"> -->
-    <!-- <div class="img-wrapper" *ngIf="recipe.img == ''">
-      <img src="../../../../assets/no-image.jpg" alt="" />
-    </div> -->
+ 
     <div class="img-wrapper" >
       <img *ngIf="recipe.img && recipe.img!=''" src="{{ recipe.img }}" alt="" />
       <img *ngIf="!recipe.img || recipe.img==''" src="../../../../assets/no-image.jpg" alt="" />
     </div>
-  <!-- *ngIf="letsRoll" -->
+
  <div class="details-info" >
   
   <div class="recipe-title">
@@ -28,9 +25,7 @@
     <span class="recipe-details" *ngIf="hasLogged && hasOwner==false">
         <span  class="bold">Owner</span>: <a class="ownerInfo" id="owner" routerLink="/info">{{ recipe.ownerUsername }}</a>
     </span>
-    <!-- <span class="recipe-details" *ngIf="hasLogged == true ">
-      <span  class="bold">Owner</span>: {{ recipe.ownerUsername }}
-  </span> -->
+
     <span class="recipe-details" *ngIf="hasLogged == true ">
       <span class="bold">Created</span>: {{ recipe.createdAt |date:'fullDate'}}
         <!-- {{}} -->
@@ -129,32 +124,5 @@
   </div>
 </div>
 <div class="details-spacer"></div>
-<!-- <div class="auth-page-wrapper" *ngIf="loadAllRecipes==true">
-  <div class="auth-heading">Recipes of {{recipeOwnerUsername}}</div>
-  <div class="recipe-wrapper" *ngIf="userAllRecipes; else Loading">
-     
-     <app-recipe-list-item class="flex" *ngFor="let recipe of userAllRecipes" [recipe]="recipe"></app-recipe-list-item>
-      
-    <div class="no-recipes" *ngIf="userAllRecipes.length === 0">
-      <p class="no-recipes-text">No recipes!! Let's go <a routerLink="/create" >create </a> your first recipe.</p>
-      </div>
-    </div>
-  
-    <app-recipe-list-item></app-recipe-list-item>
-  </div>
 
-
-
-
-
- 
-<ng-template #Loading>
-  <mat-spinner class="spinner"></mat-spinner>
-
-</ng-template> -->
-
-
-       
-
-      
         
