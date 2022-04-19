@@ -44,7 +44,7 @@ const routes: Routes = [
         component:RecipesDetailsPageComponent},
         {
             path: 'info',
-            // canActivate:[AuthGuard],
+            canActivate:[AuthGuard],
             component: InfoComponent,
             
         },

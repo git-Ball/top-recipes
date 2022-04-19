@@ -25,14 +25,17 @@
       </div>
     </div>
   
-    <span class="recipe-details" >
-        <span class="bold">Owner</span>: <a routerLink="/info">{{ recipe.ownerUsername }}</a>
+    <span class="recipe-details" *ngIf="hasLogged && hasOwner==false">
+        <span  class="bold">Owner</span>: <a class="ownerInfo" id="owner" routerLink="/info">{{ recipe.ownerUsername }}</a>
     </span>
-    <span class="recipe-details">
+    <!-- <span class="recipe-details" *ngIf="hasLogged == true ">
+      <span  class="bold">Owner</span>: {{ recipe.ownerUsername }}
+  </span> -->
+    <span class="recipe-details" *ngIf="hasLogged == true ">
       <span class="bold">Created</span>: {{ recipe.createdAt |date:'fullDate'}}
         <!-- {{}} -->
     </span>
-    <span class="recipe-details" [class.liked]="hasLiked==true">
+    <span *ngIf="hasLogged == true " class="recipe-details" [class.liked]="hasLiked==true">
       <span class="bold" >Likes</span>: {{ recipe.likes.length }}
         <!-- {{}} -->
     </span>
